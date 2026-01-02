@@ -8,7 +8,7 @@
             type: Boolean,
             required: true
         }
-    });
+    });   
 </script>
 
 <template>
@@ -35,7 +35,7 @@
             </Boton>
         </div>
         <Boton 
-            @click="initfDownload(
+            @click="initFileDownload(
                 'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing',
                 'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U',
                 props.esMovil
