@@ -126,6 +126,7 @@
             height: 1.2rem;
         }
         border: solid var(--gris-oscuro) 2px;
+        margin-bottom: 2rem; /* añade espacio debajo */
     }
     .btn-cv span {
         font-size: 1rem;
