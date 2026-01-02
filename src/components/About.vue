@@ -135,4 +135,33 @@
         background-color: transparent;
         border: solid var(--gris-claro) 2px;
     }
+    @media (max-height: 670px) {
+        .about {
+            margin-top:-4rem;
+        }
+        .btn-cv{
+            padding: .6rem;
+        }
+        .imagen {
+            width: 8rem;
+            height: 8rem;
+        }
+        .border {
+            width: 10rem;
+            height: 10rem;
+        }
+        .about h1 {
+            font-size: 1.5rem;    
+        }
+        .about span {
+            font-size: 1rem;    
+        }
+        .linkedin, .github {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        .contenedor-btn {
+            gap: 1.2rem;
+        }
+    }
 </style>
