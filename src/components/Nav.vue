@@ -12,9 +12,13 @@
         }
     });
 
-    const menuToggle = (tipo = '') => {
-        if (menuAbierto.value === true && tipo === '') return
-        menuAbierto.value = !menuAbierto.value;
+    const menuToggle = (tipo) => {
+        if (!menuAbierto.value && tipo == 'menu') {
+            menuAbierto.value = true; // solo abre si está cerrado
+        }
+        if (menuAbierto.value && tipo != 'menu') {
+            menuAbierto.value = false; // solo cierra si está abierto
+        }
     };
 </script>
 
@@ -39,11 +43,11 @@
             <Boton
                 v-if="props.esMovil"
                 class="menu"
-                @click="menuToggle"
+                @click="menuToggle('menu')"
             ><img src="https://i.postimg.cc/Twj9YL0m/MENU.png" alt="menu">
             </Boton>
         </div>
-        <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
+        <div class="contenedor-btn-inferior" v-if="menuAbierto">
             <Boton
                 @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"
