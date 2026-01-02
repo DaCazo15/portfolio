@@ -6,14 +6,15 @@ export default function useDownloadPDF() {
     const descargarFile = (url) => {
         const link = document.createElement('a');
         link.href = url;   
-        link.download = 'Daniel-Cazorla-CV.pdf'; 
         document.body.appendChild(link); 
         link.click();
         document.body.removeChild(link);
     };
 
-const initPdfDownload = (url, urlDownload) => {
+const initPdfDownload = (url, urlDownload, tlf = false) => {
+    console.log(tlf)
     abrirPage(url);
+    if (tlf) return;
     setTimeout(() => {
         descargarFile(urlDownload);
     }, 1000);

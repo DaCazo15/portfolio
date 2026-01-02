@@ -6,8 +6,8 @@
     const menuAbierto = ref(false);
 
     const props = defineProps({
-        ancho: {
-            type: Number,
+        esMovil: {
+            type: Boolean,
             required: true
         }
     });
@@ -16,15 +16,13 @@
         if (menuAbierto.value === true && tipo === '') return
         menuAbierto.value = !menuAbierto.value;
     };
-
-    const esMovil = computed(() => props.ancho <= 790);
 </script>
 
 <template>
     <nav>
         <div class="contenedor-nav">
             <p class="nombre">Daniel Cazorla</p>
-            <div class="contenedor-btn" v-if="!esMovil">
+            <div class="contenedor-btn" v-if="!props.esMovil">
                 <Boton
                     @click="emit('setPage', 'inicio')"
                 >Inicio</Boton>
@@ -39,13 +37,13 @@
                 >Proyectos</Boton>
             </div>
             <Boton
-                v-if="esMovil"
+                v-if="props.esMovil"
                 class="menu"
                 @click="menuToggle"
             ><img src="https://i.postimg.cc/Twj9YL0m/MENU.png" alt="menu">
             </Boton>
         </div>
-        <div class="contenedor-btn-inferior" v-if="menuAbierto && esMovil">
+        <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
             <Boton
                 @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"

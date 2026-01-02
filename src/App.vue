@@ -1,4 +1,5 @@
 <script setup>
+  import { computed } from 'vue';
   import Nav from './components/Nav.vue';
   import About from './components/About.vue';
   import usePage from './composables/usePage';
@@ -7,19 +8,23 @@
   const { page, setPage } = usePage();
   const { ancho } = useAnchoViewport();
 
+  const esMovil = computed(() => ancho.value <= 790);
+
 </script>
 
 <template>
   <Nav 
     @setPage="setPage"
-    :ancho="ancho"
+    :esMovil="esMovil"
   />
   <div 
     v-if="page.inicio" 
     class="inicio" 
-    :class="{ mobile : ancho <= 790 }"
+    :class="{ mobile : esMovil.value }"
   >
-    <About />
+    <About 
+      :esMovil="esMovil"
+    />
   </div>
 </template>
 

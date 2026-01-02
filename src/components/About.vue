@@ -1,7 +1,15 @@
 <script setup>
-    import useDownloadPDF from '../composables/useDonwloadPDF';
+    import useDownloadPDF from '../composables/useDonwloadFile';
     import Boton from './Boton.vue';    
     const { initPdfDownload, abrirPage } = useDownloadPDF();
+
+    const props = defineProps({
+        esMovil: {
+            type: Boolean,
+            required: true
+        }
+    });
+    console.log(props.esMovil);
 </script>
 
 <template>
@@ -30,7 +38,8 @@
         <Boton 
             @click="initPdfDownload(
                 'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing',
-                'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U'
+                'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U',
+                props.esMovil
             )"
             class="btn-cv"
         >
