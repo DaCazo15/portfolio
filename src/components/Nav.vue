@@ -101,6 +101,9 @@
         filter: invert(1) brightness(2);
     }
     @media (max-width: 790px) {
+        .nombre {
+            font-size: 1.2rem;
+        }
         .menu {
             padding: .5rem;
         }
@@ -108,7 +111,7 @@
             height: 2rem;
             filter: invert(1) brightness(2);
         }
-        .menu img:active {
+        .menu img:hover {
             filter: invert(0) brightness(0);
         }
     }
