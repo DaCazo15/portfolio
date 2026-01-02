@@ -12,7 +12,6 @@ export default function useDownloadPDF() {
     };
 
 const initFileDownload = (url, urlDownload, tlf = false) => {
-    console.log(tlf)
     abrirPage(url);
     if (tlf) return;
     setTimeout(() => {
