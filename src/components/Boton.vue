@@ -21,7 +21,7 @@
         transition: all 0.3s ease-in-out;
     }
     .btn:hover{
-        font-weight: 500;
+        font-weight: 400;
         background-color: var(--gris-claro);
         color: var(--gris-oscuro);
         box-shadow: 0 0 10px rgba(0,0,0,0.2);

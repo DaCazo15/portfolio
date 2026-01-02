@@ -13,7 +13,7 @@
     });
 
     const menuToggle = (tipo = '') => {
-        if (menuAbierto.value === true || tipo === '') return
+        if (menuAbierto.value === true && tipo === '') return
         menuAbierto.value = !menuAbierto.value;
     };
 
@@ -103,6 +103,7 @@
     }
     .btn-inferior:hover {
         background-color: var(--gris-oscuro);
+        box-shadow: none;
     }
     @media (max-width: 790px) {
         .nombre {
