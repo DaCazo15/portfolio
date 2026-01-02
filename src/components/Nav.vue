@@ -108,7 +108,7 @@
             height: 2rem;
             filter: invert(1) brightness(2);
         }
-        .menu img:hover {
+        .menu img:focus {
             filter: invert(0) brightness(0);
         }
     }
