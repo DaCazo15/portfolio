@@ -11,7 +11,7 @@ export default function useDownloadPDF() {
         document.body.removeChild(link);
     };
 
-const initPdfDownload = (url, urlDownload, tlf = false) => {
+const initFileDownload = (url, urlDownload, tlf = false) => {
     console.log(tlf)
     abrirPage(url);
     if (tlf) return;
@@ -23,6 +23,6 @@ const initPdfDownload = (url, urlDownload, tlf = false) => {
     return {
         abrirPage,
         descargarFile,
-        initPdfDownload
+        initFileDownload
     }
 }

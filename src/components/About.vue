@@ -1,7 +1,7 @@
 <script setup>
     import useDownloadPDF from '../composables/useDonwloadFile';
     import Boton from './Boton.vue';    
-    const { initPdfDownload, abrirPage } = useDownloadPDF();
+    const { initFileDownload, abrirPage } = useDownloadPDF();
 
     const props = defineProps({
         esMovil: {
@@ -36,7 +36,7 @@
             </Boton>
         </div>
         <Boton 
-            @click="initPdfDownload(
+            @click="initfDownload(
                 'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing',
                 'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U',
                 props.esMovil
