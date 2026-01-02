@@ -1,5 +1,7 @@
 <script setup>
-    import Boton from './Boton.vue';
+    import useDownloadPDF from '../composables/useDonwloadPDF';
+    import Boton from './Boton.vue';    
+    const { initPdfDownload, abrirPage } = useDownloadPDF();
 </script>
 
 <template>
@@ -10,14 +12,28 @@
         <h1>Daniel Cazorla</h1>
         <span>Ingeniero de Sistemas con experiencia en desarrollo web y Python Full-Stack</span>
         <div class="contenedor-btn">
-            <Boton class="btn-red-social">
+            <Boton 
+                class="btn-red-social" 
+                target="_blank"
+                @click="abrirPage('https://www.linkedin.com/in/danielcp5150190/')"
+            >
                 <img class="linkedin" src="https://i.postimg.cc/zXy9gppP/linkedin-negro.png" alt="LinkedIn">
             </Boton>
-            <Boton class="btn-red-social">
+            <Boton 
+                class="btn-red-social" 
+                target="_blank"
+                @click="abrirPage('https://github.com/DaCazo15')"
+            >
                 <img class="github" src="https://i.postimg.cc/xTjdVrfc/github.png" alt="GitHub">
             </Boton>
         </div>
-        <Boton class="btn-cv">
+        <Boton 
+            @click="initPdfDownload(
+                'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing',
+                'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U'
+            )"
+            class="btn-cv"
+        >
             <img src="https://i.postimg.cc/Njb5Ssqd/download.png" alt="Descargar CV">
             <span>Descargar CV</span>
         </Boton>
