@@ -13,6 +13,7 @@
     });
 
     const menuToggle = () => {
+        if (menuAbierto.value === true) return
         menuAbierto.value = !menuAbierto.value;
     };
 

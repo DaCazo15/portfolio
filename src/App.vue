@@ -35,6 +35,6 @@
     overflow: hidden; /* evita que se muestre el scrollbar si algo se sale */
   }
   .inicio.mobile {
-    padding-top: .2rem;
+    padding-top: 0;
   }
 </style>
