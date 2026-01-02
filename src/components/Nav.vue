@@ -12,8 +12,8 @@
         }
     });
 
-    const menuToggle = () => {
-        if (menuAbierto.value === true) return
+    const menuToggle = (tipo = '') => {
+        if (menuAbierto.value === true || tipo === '') return
         menuAbierto.value = !menuAbierto.value;
     };
 
@@ -47,22 +47,22 @@
         </div>
         <div class="contenedor-btn-inferior" v-if="menuAbierto && esMovil">
             <Boton
-                @click="[emit('setPage', 'inicio'), menuToggle()]"
+                @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/2y2MJQZq/home_10263239.png" alt="home" width="40">
             </Boton>
             <Boton
-                @click="[emit('setPage', 'experiencia'), menuToggle()]"
+                @click="[emit('setPage', 'experiencia'), menuToggle('experiencia')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/sDfRcXhY/clock_9882847.png" alt="experiencia" width="40">
             </Boton>
             <Boton
-                @click="[emit('setPage', 'participacion'), menuToggle()]"
+                @click="[emit('setPage', 'participacion'), menuToggle('participacion')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/Y0bZV6WG/puzzle_17712024.png" alt="participaciones" width="40">
             </Boton>
             <Boton
-                @click="[emit('setPage', 'proyectos'), menuToggle()]"
+                @click="[emit('setPage', 'proyectos'), menuToggle('proyectos')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/tJ2wf3xn/startup_6884318.png" alt="proyectos" width="40">
             </Boton>
