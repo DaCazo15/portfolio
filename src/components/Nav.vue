@@ -108,7 +108,7 @@
             height: 2rem;
             filter: invert(1) brightness(2);
         }
-        .menu img:focus {
+        .menu img:active {
             filter: invert(0) brightness(0);
         }
     }
