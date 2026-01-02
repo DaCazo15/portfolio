@@ -9,7 +9,7 @@
     box-sizing: border-box;
   }
   html{
-    background-image: url('fondo.png') ;
+    background-image: url('fondo.png');
     min-height: 100vh;
     overflow-x: hidden;
     background-size: cover;
