@@ -101,6 +101,9 @@
         padding: .4rem;
         filter: invert(1) brightness(2);
     }
+    .btn-inferior img:hover {
+        background-color: var(--gris-oscuro);
+    }
     @media (max-width: 790px) {
         .nombre {
             font-size: 1.2rem;
