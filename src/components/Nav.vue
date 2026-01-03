@@ -25,7 +25,7 @@
 <template>
     <nav>
         <div class="contenedor-nav">
-            <p class="nombre">Daniel Cazorla</p>
+            <p class="nombre">Dacazo15</p>
             <div class="contenedor-btn" v-if="!props.esMovil">
                 <Boton
                     @click="emit('setPage', 'inicio')"

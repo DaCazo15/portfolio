@@ -70,6 +70,8 @@
         font-weight: 400;
         margin: .5rem;
         padding: 0 .8rem;
+        text-wrap: balance;  
+
     }
     .border {
         width: 12rem;
@@ -154,7 +156,7 @@
             font-size: 1.5rem;    
         }
         .about span {
-            font-size: 1rem;    
+            font-size: 1rem;  
         }
         .linkedin, .github {
             width: 1.2rem;
