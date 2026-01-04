@@ -2,8 +2,8 @@ import { reactive } from "vue";
 
 export default function usePage() {
     const page = reactive({
-        inicio: true,
-        experiencia: false,
+        inicio: false,
+        experiencia: true,
         proyectos: false,
         participacion: false,
         // Agrega más páginas si es necesario

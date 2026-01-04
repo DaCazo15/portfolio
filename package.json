@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@ilovepdf/ilovepdf-nodejs": "^0.3.1",
+    "exceljs": "^4.4.0",
     "marked": "^17.0.1",
-    "vue": "^3.5.24"
+    "read-excel-file": "^6.0.1",
+    "vue": "^3.5.24",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",

@@ -74,6 +74,7 @@
 
     }
     .border {
+        margin-top: 5rem;
         width: 12rem;
         height: 12rem;
         aspect-ratio: 1 / 1; /* Mantén el círculo siempre redondo */
@@ -137,7 +138,7 @@
         background-color: transparent;
         border: solid var(--gris-claro) 2px;
     }
-    @media (max-height: 670px) {
+    @media (max-height: 740px) {
         .about {
             margin-top:-4rem;
         }

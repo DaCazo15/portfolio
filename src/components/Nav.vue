@@ -47,7 +47,7 @@
             ><img src="https://i.postimg.cc/Twj9YL0m/MENU.png" alt="menu">
             </Boton>
         </div>
-        <div class="contenedor-btn-inferior" v-if="menuAbierto">
+        <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
             <Boton
                 @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"
