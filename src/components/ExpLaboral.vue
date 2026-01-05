@@ -42,7 +42,6 @@
     }
     @media (max-width: 791px){
         .contenedor-text p{
-            padding: 1rem;
             font-size: .5rem;
             font-weight: 400;
             color: var(--verde-cian);

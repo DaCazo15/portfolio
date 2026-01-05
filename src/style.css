@@ -167,7 +167,7 @@
     color:  #767676;
     font-size: 1rem;
     font-weight: 500;
-    margin-top: -.2rem;
+    margin: -.2rem 0 0 0;
     text-align: center;
   }
   .contenedor-text{
@@ -220,6 +220,7 @@
   }
   @media (max-width: 791px){
     h2{
+      margin: .5rem 0 .5rem 0;
       font-size: 1.5rem;
     }
     h3{
