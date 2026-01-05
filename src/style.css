@@ -104,15 +104,15 @@
     gap: 1rem;
   }
   .contenido-informacion .competencias{
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 1rem;
     border-left: solid 2px var(--gris-claro);
     border-radius: 0 1rem 1rem 0;
-    padding-left: 1rem;
     background-color: var(--gris-oscuro);
     font-size: 1.2rem;
     line-height: 1.6;
     text-wrap: balance;
     font-weight: 400;
+    margin-bottom: 0;
   }
   .contenido .gif,
   .contenido .info {
@@ -154,6 +154,7 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 
     background-color: rgba(var(--gris-oscuroRGB), 0.8);
     padding: 1rem;
@@ -185,7 +186,11 @@
     color: var(--gris-claro);
     width: 100%;
   }
+  .cont-descripcion{
+    width: 100%;    
+  }
   .cont-descripcion p{
+    margin-bottom: 0;
     padding-left: 1.5rem;
   }
   .STB{
@@ -198,7 +203,7 @@
     margin: 0;
     border: none;
   }
-  @media (max-width: 1137px){
+  @media (max-width: 1231px){
     .contenido .gif img{
       border: solid 4px var(--gris-claro);
       border-radius: 50%;
@@ -245,6 +250,9 @@
       padding: 1rem;
       font-size: .5rem;
       font-weight: 400;
+    }
+    .contenedor-card{
+      width: 100%;    
     }
     .card {
       width: auto;
