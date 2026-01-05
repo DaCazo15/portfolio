@@ -13,12 +13,17 @@
         font-family: var(--font-titulo);
         color: var(--gris-claro);
         width: auto;
+        height: 4rem;
         padding: 1rem;
         border-radius: 1rem;
         font-weight: 300;
         font-size: 1rem;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+    }
+    .btn img{
+        height: auto;
+        width: 40px;
     }
     .btn:hover{
         font-weight: 400;

@@ -1,31 +1,47 @@
 <script setup>
-    import { logosTrabajos } from '../helpers/informacion';
-    import useData from '../composables/useData'
+    import Tecno from './Tecno.vue'
+    import { logosTrabajos, logoTecno } from '../helpers/informacion';
 
-    const {data} = useData();
+    import useData from '../composables/useData'
+    import useAnchoViewport from '../composables/useAnchoViewport'
+
+    const { ancho } = useAnchoViewport();
+    const {data, loading, error} = useData();
 </script>
 
 <template>
     <h2 class="titulo-experiencia">Experiencia</h2>
-    <div class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
+
+    <div v-if="loading">Loading...</div>
+    <div v-else-if="error" class="error-message">Error: {{ error }}</div>
+    
+    <div v-else class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
         <div class="contenedor-text">
-            <div class="contenido-informacion">
-                <div class="contenedor-card">
-                    <div class="card" >
-                        <img :src="logosTrabajos[item.Abreviatura]" :alt="item.Name" :class="item.Abreviatura">
-                        <h3>{{ item.Name }}</h3>
-                        <p v-html="item.Cargo"></p>
+            <div class="flex-column-center contenido-informacion">
+                <div class="flex-row-center" :class="{ancho : ancho <= 1231}">
+                    <div class="contenedor-card">
+                        <div class="card" >
+                            <img :src="logosTrabajos[item.Abreviatura]" :alt="item.Name" :class="item.Abreviatura">
+                            <h3>{{ item.Name }}</h3>
+                            <p v-html="item.Cargo"></p>
+                        </div>
+                    </div>
+                    <div class="cont-descripcion">
+                        <h2 class="descripcion">Descripcion</h2>
+                        <p v-html="item.Descripcion"></p>
                     </div>
                 </div>
-                <div class="cont-descripcion">
-                    <h2 class="descripcion">Descripcion</h2>
-                    <p v-html="item.Descripcion"></p>
-                </div>
+                <Tecno 
+                    :logoTecno="logoTecno" 
+                    :tecnologias="item.Tecnologias" 
+                    v-if="item.Tecnologias && item.Tecnologias.length"
+                />
             </div>
             <div class="contenido-informacion">
                 <h2 class="competencia">Competencias</h2>
                 <p class="competencias" v-html="item.competencias"></p>
             </div>
+            
         </div>
     </div>
 </template>
@@ -34,12 +50,16 @@
     h2.titulo-experiencia{
         margin-top: 3rem;
     }
-    h2.competencia, h2.descripcion {
+    h2.competencia, h2.descripcion, h2.Tecnologias-titulo {
         margin-bottom: 0;
     }
     .card img{
         width: 280px
     }
+    .ancho{
+        flex-direction: column;
+    }
+
     @media (max-width: 791px){
         .contenedor-text p{
             font-size: .5rem;

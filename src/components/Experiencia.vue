@@ -1,9 +1,7 @@
 <script setup>
-    import Boton from './Boton.vue';
-    import Tecnologias from './Tecnologias.vue';
     import ExpLaboral from './ExpLaboral.vue';
 
-    import { listGif, infAbout, tecnologias, logosTrabajos } from '../helpers/informacion';
+    import { listGif, infAbout } from '../helpers/informacion';
 
 </script>
 
@@ -25,11 +23,6 @@
                 </div>
             </div>           
         </div>
-        <!-- <Tecnologias>
-            <Boton class="btn-tecnologia" v-for="value in tecnologias">
-                <img :src="value.logo" :alt="value.nombre" width="30px">
-            </Boton>
-        </Tecnologias> -->
         <ExpLaboral/>
         
     </div>

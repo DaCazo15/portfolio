@@ -3,43 +3,52 @@ import { ref, onMounted } from "vue";
 
 export default function useData() {
   const data = ref([]);
+  const loading = ref(true);
+  const error = ref(null);
+
+  const formatString = (str, type) => {
+    if (typeof str !== 'string') return str;
+
+    const cleanedStr = str.replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, "");
+
+    if (type === 'competencias') {
+      return cleanedStr.replace(/1/g, "1     ");
+    }
+    
+    return cleanedStr
+      .replace(/1/g, "2     ")
+      .replace(/2/g, "-     ");
+  };
 
   onMounted(async () => {
-    // Cargar el archivo desde public/data
-    const response = await fetch("/data/Data.xlsx"); // ojo: no pongas ../../public
-    const arrayBuffer = await response.arrayBuffer();
-
-    // Leer el workbook
-    const workbook = XLSX.read(arrayBuffer, { type: "array" });
-
-    // Seleccionar la primera hoja
-    const sheetName = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[sheetName];
-
-    // Convertir a JSON
-    let jsonData = XLSX.utils.sheet_to_json(sheet);
-
-    // 🔧 Filtrar y modificar la columna "Descripcion"
-    data.value = jsonData.map((row) => {
-      if (Object.keys(row).length > 0){
-        return {
-          ...row,
-          Cargo: row.Cargo
-          .replace(/1/g, "2     ") 
-          .replace(/2/g, "-     ") 
-          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
-          Descripcion: row.Descripcion
-          .replace(/1/g, "2     ") 
-          .replace(/2/g, "-     ") 
-          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
-          competencias: row.competencias
-          .replace(/1/g, "1     ") 
-          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, "")
-        };
+    try {
+      const response = await fetch("/data/Data.xlsx");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return row;
-    });
+      const arrayBuffer = await response.arrayBuffer();
+
+      const workbook = XLSX.read(arrayBuffer, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+      data.value = jsonData.map((row) => ({
+        ...row,
+        Cargo: formatString(row.Cargo),
+        Descripcion: formatString(row.Descripcion),
+        competencias: formatString(row.competencias, 'competencias'),
+        Tecnologias: row.Tecnologias && typeof row.Tecnologias === 'string'
+          ? row.Tecnologias.split(',').map(tech => tech.trim().toLowerCase())
+          : [],
+      }));
+    } catch (e) {
+      error.value = e.message;
+      console.error("Error loading or parsing data:", e);
+    } finally {
+      loading.value = false;
+    }
   });
 
-  return { data };
+  return { data, loading, error };
 }
