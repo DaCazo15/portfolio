@@ -8,8 +8,8 @@
 </script>
 
 <template>
-    <div class="contenedor-padre">
-        <div class="contenido">
+    <div class="flex-column-center">
+        <div class="panel contenido">
             <div class="contenido gif">
                 <img 
                 :src="listGif.circle" 
@@ -26,7 +26,7 @@
             </div>           
         </div>
         <!-- <Tecnologias>
-            <Boton class="btn" v-for="value in tecnologias">
+            <Boton class="btn-tecnologia" v-for="value in tecnologias">
                 <img :src="value.logo" :alt="value.nombre" width="30px">
             </Boton>
         </Tecnologias> -->
@@ -36,44 +36,5 @@
 </template>
 
 <style scoped>
-    html, body {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    .contenedor-padre {
-        /* background-image: url('../assets/gifs/robotAmarillo.gif');
-        background-size: cover;
-        background-position: center; */
-        
-        min-height: 100vh;
-        width: 100%;
-
-        padding-top: 6rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    .btn {
-        padding: 0.5rem;
-        margin: 0 0.5rem;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.365);
-        background-color: transparent;
-        transition: all 0.3s ease-in-out;
-    }
-    .btn:hover {
-        background-color: var(--gris-oscuro);
-        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
-    }
     
-    .btn img {
-        width: 30px;
-        height: auto;
-    }
-    .btn img[alt="javascript"] {
-        border-radius: .5rem;
-    }
 </style>

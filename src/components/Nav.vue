@@ -98,15 +98,6 @@
         margin: 0 auto;
         letter-spacing: .1rem;
     }
-    .btn-inferior img {
-        margin: .2rem;
-        padding: .4rem;
-        filter: invert(1) brightness(2);
-    }
-    .btn-inferior:hover {
-        background-color: var(--gris-oscuro);
-        box-shadow: none;
-    }
     @media (max-width: 790px) {
         .nombre {
             font-size: 1.2rem;
