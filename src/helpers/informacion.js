@@ -17,22 +17,18 @@ export const logoTecno = {
   cpp: {
     nombre: 'C++',
     logo: new URL('../assets/img/btn/cpp.png', import.meta.url).href
-  
   },
   javascript: {
     nombre: 'JavaScript',
     logo: new URL('../assets/img/btn/javascript.png', import.meta.url).href
-  
   },
   vue: {
     nombre: 'Vue.js',
     logo: ('https://i.postimg.cc/XqhhDJdk/Vue_js_Logo_2_svg.png')
-  
   },
   arduino: {
     nombre: 'Arduino',
     logo: new URL('../assets/img/btn/arduino.png', import.meta.url).href
-  
   },
   flet: {
     nombre: 'Flet',
