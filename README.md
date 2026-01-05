@@ -3,35 +3,36 @@
  <img width=200px height=200px src="https://i.postimg.cc/13gNR3nF/isotipo.png" alt="Logo del proyecto"></a>
 </p>
 
-<h3 align="center">Portafolio</h3>
-
-<div align="center">
-
-[![Estado](https://img.shields.io/badge/estado-activo-success.svg)]()
-[![Issues de GitHub](https://img.shields.io/github/issues/DaCazo15/portfolio/issues)](https://github.com/DaCazo15/portfolio/issues)
-[![Pull Requests de GitHub](https://img.shields.io/github/issues-pr/DaCazo15/portfolio/pulls)](https://github.com/DaCazo15/portfolio/pulls)
-[![Licencia](https://img.shields.io/badge/licencia-MIT-blue.svg)](/LICENSE)
-
-</div>
+<h3 align="center">Portafolio Personal</h3>
 
 ---
 
-<p align="center"> Un sitio web de portafolio personal construido con Vue.js para mostrar proyectos y habilidades.
-    <br>
+<p align="center"> Un portafolio personal dinámico construido con Vue.js y Vite. Muestra mis proyectos, experiencia laboral y habilidades de una manera moderna e interactiva.
+    <br> 
 </p>
 
 ## 📝 Tabla de Contenidos
 
 - [Acerca de](#acerca_de)
+- [Características](#caracteristicas)
 - [Primeros Pasos](#primeros_pasos)
 - [Uso](#uso)
 - [Construido Con](#construido_con)
 - [Autores](#autores)
-- [Agradecimientos](#agradecimientos)
 
 ## 🧐 Acerca de <a name = "acerca_de"></a>
 
-Este es un sitio web de portafolio personal desarrollado utilizando Vue.js y Vite. Incluye secciones para información sobre mí, navegación e componentes interactivos para mostrar proyectos e información de contacto.
+Este proyecto es mi portafolio personal, diseñado para ser un escaparate de mi trayectoria profesional y mis habilidades técnicas. Está desarrollado como una Single Page Application (SPA) utilizando Vue.js, lo que permite una navegación fluida y rápida sin recargar la página.
+
+Una de las características clave de este portafolio es que todo el contenido (experiencia laboral, proyectos, etc.) se gestiona a través de un archivo `Data.xlsx`. Esto permite actualizar la información de manera sencilla y rápida sin necesidad de modificar el código fuente, simplemente editando una hoja de cálculo.
+
+## ✨ Características <a name = "caracteristicas"></a>
+
+- **Single Page Application (SPA):** Experiencia de usuario fluida y rápida.
+- **Contenido Dinámico:** La información se carga desde un archivo Excel, facilitando las actualizaciones.
+- **Diseño Responsivo:** Adaptable a diferentes tamaños de pantalla, desde móviles a ordenadores de escritorio.
+- **Componentes Interactivos:** Secciones para "Sobre mí", "Experiencia" y "Tecnologías".
+- **Descarga de Archivos:** Funcionalidad para descargar archivos, como mi CV.
 
 ## 🏁 Primeros Pasos <a name = "primeros_pasos"></a>
 
@@ -46,38 +47,38 @@ Necesitas tener Node.js y npm instalados en tu máquina.
 
 ### Instalación
 
-1. Clona el repositorio:
-   ```
-   git clone https://github.com/DaCazo15/portfolio.git
-   ```
+1.  Clona el repositorio:
+    ```
+    git clone https://github.com/DaCazo15/portfolio.git
+    ```
 
-2. Navega al directorio del proyecto:
-   ```
-   cd portfolio
-   ```
+2.  Navega al directorio del proyecto:
+    ```
+    cd portfolio
+    ```
 
-3. Instala las dependencias:
-   ```
-   npm install
-   ```
+3.  Instala las dependencias:
+    ```
+    npm install
+    ```
 
-4. Inicia el servidor de desarrollo:
-   ```
-   npm run dev
-   ```
+4.  Inicia el servidor de desarrollo:
+    ```
+    npm run dev
+    ```
 
-La aplicación estará disponible en `http://localhost:5173` (o el puerto especificado por Vite).
+La aplicación estará disponible en `http://localhost:5173` (o el puerto que Vite especifique).
 
 ## 🎈 Uso <a name="uso"></a>
 
-Una vez que el servidor de desarrollo esté ejecutándose, abre tu navegador y navega a la URL local. Puedes explorar las diferentes secciones del portafolio, incluyendo la página de información, navegación y componentes interactivos.
+Una vez que el servidor de desarrollo esté en funcionamiento, abre tu navegador y navega a la URL proporcionada. Podrás explorar las diferentes secciones del portafolio. Para actualizar el contenido, modifica el archivo `public/data/Data.xlsx`.
 
 ## ⛏️ Construido Con <a name = "construido_con"></a>
 
-- [Vue.js](https://vuejs.org/) - Framework Web
+- [Vue.js](https://vuejs.org/) - Framework Frontend
 - [Vite](https://vitejs.dev/) - Herramienta de Construcción
-- [Marked](https://marked.js.org/) - Parser de Markdown
+- [xlsx](https://github.com/SheetJS/sheetjs) - Lectura y escritura de archivos Excel
 
 ## ✍️ Autores <a name = "autores"></a>
 
-- [@DaCazo15](https://github.com/DaCazo15) - Idea y Trabajo Inicial
+-   [@DaCazo15](https://github.com/DaCazo15) - Idea y Trabajo Inicial

@@ -31,6 +31,9 @@ export default function useData() {
           Descripcion: row.Descripcion
           .replace(/1/g, "2     ") 
           .replace(/2/g, "-     ") 
+          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
+          competencias: row.competencias
+          .replace(/1/g, "1     ") 
           .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, "")
         };
       }
