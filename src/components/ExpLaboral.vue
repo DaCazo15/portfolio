@@ -41,13 +41,18 @@
         width: 280px
     }
     @media (max-width: 791px){
-        .card img{
-            width: 150px;
-        }
         .contenedor-text p{
+            padding: 1rem;
             font-size: .5rem;
             font-weight: 400;
             color: var(--verde-cian);
+        }
+        .card img{
+            width: 150px;
+        }
+        .card p{
+            font-size: .8rem;
+            color: var(--gris-claro);
         }
     }
 </style>

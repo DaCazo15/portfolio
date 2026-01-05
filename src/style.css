@@ -248,5 +248,8 @@
     .card {
       width: auto;
     }
+    .card p{
+      font-size: 1rem;
+    }
   }
   
