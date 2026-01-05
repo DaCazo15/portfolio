@@ -12,7 +12,7 @@
             <div class="contenido-informacion">
                 <div class="contenedor-card">
                     <div class="card" >
-                        <img :src="logosTrabajos[item.Abreviatura]" :alt="item.Name" width="280px" :class="item.Abreviatura">
+                        <img :src="logosTrabajos[item.Abreviatura]" :alt="item.Name" :class="item.Abreviatura">
                         <h3>{{ item.Name }}</h3>
                         <p v-html="item.Cargo"></p>
                     </div>
@@ -36,5 +36,18 @@
     }
     h2.competencia, h2.descripcion {
         margin-bottom: 0;
+    }
+    .card img{
+        width: 280px
+    }
+    @media (max-width: 791px){
+        .card img{
+            width: 150px;
+        }
+        .contenedor-text p{
+            font-size: .5rem;
+            font-weight: 400;
+            color: var(--verde-cian);
+        }
     }
 </style>
