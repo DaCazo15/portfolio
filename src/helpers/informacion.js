@@ -20,7 +20,7 @@ export const logoTecno = {
   },
   javascript: {
     nombre: 'JavaScript',
-    logo: new URL('../assets/img/btn/javascript.png', import.meta.url).href
+    logo: 'https://i.postimg.cc/zGpQ90C8/Java_Script_logo.png'
   },
   vue: {
     nombre: 'Vue.js',
@@ -76,7 +76,7 @@ export const logoTecno = {
   },
   lua: {
     nombre: 'lua',
-    logo: new URL('../assets/img/btn/lua.png', import.meta.url).href
+    logo: 'https://i.postimg.cc/wBrYsmj0/Lua.png'
   },
   microbit: {
     nombre: 'microbit',
@@ -88,11 +88,11 @@ export const logoTecno = {
   },
   robloxstudio: {
     nombre: 'robloxstudio',
-    logo: new URL('../assets/img/btn/robloxstudio.png', import.meta.url).href
+    logo: 'https://i.postimg.cc/W4ycJk17/Roblox_Studio.png'
   },
   tailwindcss: {
     nombre: 'tailwindcss',
-    logo: new URL('../assets/img/btn/tailwind.png', import.meta.url).href
+    logo: 'https://i.postimg.cc/R0YxnHZG/Tailwind.png'
   },
   sasscss: {
     nombre: 'sasscss',
@@ -100,7 +100,7 @@ export const logoTecno = {
   },
   git: {
     nombre: 'git',
-    logo: new URL('../assets/img/btn/git.png', import.meta.url).href
+    logo: 'https://i.postimg.cc/s2LCZhg4/Git.png'
   },
   github: {
     nombre: 'github',

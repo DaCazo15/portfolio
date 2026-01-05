@@ -6,20 +6,6 @@ export default function useData() {
   const loading = ref(true);
   const error = ref(null);
 
-  const formatString = (str, type) => {
-    if (typeof str !== 'string') return str;
-
-    const cleanedStr = str.replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, "");
-
-    if (type === 'competencias') {
-      return cleanedStr.replace(/1/g, "1     ");
-    }
-    
-    return cleanedStr
-      .replace(/1/g, "2     ")
-      .replace(/2/g, "-     ");
-  };
-
   onMounted(async () => {
     try {
       const response = await fetch("/data/Data.xlsx");
@@ -35,9 +21,17 @@ export default function useData() {
 
       data.value = jsonData.map((row) => ({
         ...row,
-        Cargo: formatString(row.Cargo),
-        Descripcion: formatString(row.Descripcion),
-        competencias: formatString(row.competencias, 'competencias'),
+        Cargo: row.Cargo
+          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
+
+        Descripcion: row.Descripcion
+          .replace(/1/g, "-" + "&nbsp;".repeat(5))
+          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
+
+        competencias: row.competencias
+          .replace(/1/g, "&nbsp;".repeat(5))
+          .replace(/(\\r\\n|\\n|\\r|\\\\|\\|1)/g, ""),
+
         Tecnologias: row.Tecnologias && typeof row.Tecnologias === 'string'
           ? row.Tecnologias.split(',').map(tech => tech.trim().toLowerCase())
           : [],

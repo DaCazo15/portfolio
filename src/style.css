@@ -88,11 +88,12 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  background-color: rgba(var(--gris-oscuroRGB), 0.5);
   border: solid 5px rgba(var(--gris-oscuroRGB), 0.8);
   border-radius: 1rem;
   width: 100%;
   margin: 1rem 0;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 /* --- COMPONENTES ESPECIFICOS --- */
