@@ -1,8 +1,3 @@
-import javascript from '../assets/img/btn/JavaScript.png'
-import lua from '../assets/img/btn/lua.png'
-import git from '../assets/img/btn/git.png'
-import tailwindcss from '../assets/img/btn/tailwind.png'
-import robloxstudio from '../assets/img/btn/RobloxStudio.png'
 
 export const listGif = {
   cloud: new URL('../assets/gifs/Cloud-Transformation.gif', import.meta.url).href,
@@ -26,7 +21,7 @@ export const logoTecno = {
   },
   javascript: {
     nombre: 'JavaScript',
-    logo: javascript
+    logo: new URL('../assets/img/btn/javascript.png', import.meta.url).href
   
   },
   vue: {
@@ -85,7 +80,7 @@ export const logoTecno = {
   },
   lua: {
     nombre: 'lua',
-    logo: lua
+    logo: new URL('../assets/img/btn/lua.png', import.meta.url).href
   },
   microbit: {
     nombre: 'microbit',
@@ -97,11 +92,11 @@ export const logoTecno = {
   },
   robloxstudio: {
     nombre: 'robloxstudio',
-    logo: robloxstudio
+    logo: new URL('../assets/img/btn/robloxstudio.png', import.meta.url).href
   },
   tailwindcss: {
     nombre: 'tailwindcss',
-    logo: tailwindcss
+    logo: new URL('../assets/img/btn/tailwind.png', import.meta.url).href
   },
   sasscss: {
     nombre: 'sasscss',
@@ -109,7 +104,7 @@ export const logoTecno = {
   },
   git: {
     nombre: 'git',
-    logo: git
+    logo: new URL('../assets/img/btn/git.png', import.meta.url).href
   },
   github: {
     nombre: 'github',
