@@ -32,9 +32,7 @@
 
 <style scoped>
     h2.titulo-experiencia{
-            h2.titulo-experiencia{
         margin-top: 3rem;
-    }
     }
     h2.competencia, h2.descripcion {
         margin-bottom: 0;
