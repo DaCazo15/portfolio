@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
   <template v-if="data.length > 0">
     <div class="flex-column-center">
-      <h2>Experiencia</h2>
+      <h2>Contribuciones</h2>
       <div class="flex-column-center contenido-width">
         <div 
           class="panel contenido-informacion card" 

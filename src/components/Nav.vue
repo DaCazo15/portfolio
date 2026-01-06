@@ -36,9 +36,9 @@
                     class="btn-nav"
                 >Experiencia</Boton>
                 <Boton
-                    @click="emit('setPage', 'participacion')"
+                    @click="emit('setPage', 'contribuciones')"
                     class="btn-nav"
-                >Participaciones</Boton>
+                >Contribuciones</Boton>
                 <Boton
                     @click="emit('setPage', 'proyectos')"
                     class="btn-nav"
