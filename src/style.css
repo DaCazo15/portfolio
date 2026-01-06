@@ -374,6 +374,22 @@ h3 {
 }
 
 @media (max-width: 791px) {
+  html {
+    background: none;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/fondo/fondo.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
   h2 {
     margin: .5rem 0 .5rem 0;
     font-size: 1.5rem;
