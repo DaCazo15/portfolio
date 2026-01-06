@@ -63,9 +63,9 @@
             ><img src="https://i.postimg.cc/sDfRcXhY/clock_9882847.png" alt="experiencia" width="40">
             </Boton>
             <Boton
-                @click="[emit('setPage', 'participacion'), menuToggle('participacion')]"
+                @click="[emit('setPage', 'contribuciones'), menuToggle('contribuciones')]"
                 class="btn-inferior"
-            ><img src="https://i.postimg.cc/Y0bZV6WG/puzzle_17712024.png" alt="participaciones" width="40">
+            ><img src="https://i.postimg.cc/Y0bZV6WG/puzzle_17712024.png" alt="contribuciones" width="40">
             </Boton>
             <Boton
                 @click="[emit('setPage', 'proyectos'), menuToggle('proyectos')]"
