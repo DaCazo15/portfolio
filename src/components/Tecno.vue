@@ -28,6 +28,7 @@
             spike : logoTecno[tech].nombre === 'legospike',
             micro : logoTecno[tech].nombre === 'microbit',
             tinkercad : logoTecno[tech].nombre === 'tinkercad',
+            js : logoTecno[tech].nombre === 'JavaScript',
             }"
           width="30px" 
         />
@@ -44,7 +45,8 @@
         padding: 0.8rem;
         width: 100%;
     }
-    .spike, .micro, .tinkercad{
+    .spike, .micro, 
+    .tinkercad, .js{
         border-radius: .5rem;
     }
 </style>
