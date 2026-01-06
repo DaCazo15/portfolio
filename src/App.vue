@@ -3,6 +3,8 @@
   import Nav from './components/Nav.vue';
   import About from './components/About.vue';
   import Experiencia from './components/Experiencia.vue';
+  import Aportes from './components/Aportes.vue';
+
   import usePage from './composables/usePage';
   import useAnchoViewport from './composables/useAnchoViewport';
 
@@ -23,13 +25,17 @@
     <About :esMovil="esMovil"/>
  />
   </div>
-  <div class="inicio experiencia" v-if="page.experiencia">
+  <div class="inicio" v-if="page.experiencia">
     <Experiencia />
+  </div>
+  <div class="inicio" v-if="page.participacion">
+    <Aportes />
   </div>
 </template>
 
 <style scoped>
   .inicio {
+    position: relative;
     padding-top: 5rem;
     display: flex;
     flex-direction: column;

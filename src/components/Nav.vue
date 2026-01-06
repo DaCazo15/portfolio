@@ -29,15 +29,19 @@
             <div class="contenedor-btn" v-if="!props.esMovil">
                 <Boton
                     @click="emit('setPage', 'inicio')"
+                    class="btn-nav"
                 >Inicio</Boton>
                 <Boton
                     @click="emit('setPage', 'experiencia')"
+                    class="btn-nav"
                 >Experiencia</Boton>
                 <Boton
                     @click="emit('setPage', 'participacion')"
+                    class="btn-nav"
                 >Participaciones</Boton>
                 <Boton
                     @click="emit('setPage', 'proyectos')"
+                    class="btn-nav"
                 >Proyectos</Boton>
             </div>
             <Boton

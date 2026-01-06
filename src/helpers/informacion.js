@@ -147,3 +147,25 @@ export const logosTrabajos = {
   AguaViva: 'https://i.postimg.cc/x1DyBPzq/Diseño_sin_título_4_removebg_preview.png',
   STB: 'https://i.postimg.cc/JnnLHzXt/Diseno-sin-titulo-(6).png'
 };
+
+export const logosProyectos = {
+  "E-28":{
+    img: 'https://i.postimg.cc/8ChFFHT4/B-28.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Arduino'],
+  },
+  "B-28":{
+    img: 'https://i.postimg.cc/8ChFFHT4/B-28.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Selector-de-PET'],
+  },
+  "Oil-Bot": {
+    img: 'https://i.postimg.cc/tJqMx2WH/oil-bot.png',
+    page: ['Ver Pagina', 'https://monitoreo-acuatico-esp32.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Selector-de-PET'],
+  },
+}
+export const logosInstituciones = {
+  "Colegio Guayamuri": {
+    img : new URL('../assets/img/logos/guayamuri.png', import.meta.url).href,
+    url : 'https://www.guayamuri.com/' 
+  }
+}

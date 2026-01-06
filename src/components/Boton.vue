@@ -14,7 +14,7 @@
         color: var(--gris-claro);
         width: auto;
         height: 4rem;
-        padding: 1rem;
+        padding: .5rem 1rem;
         border-radius: 1rem;
         font-weight: 300;
         font-size: 1rem;

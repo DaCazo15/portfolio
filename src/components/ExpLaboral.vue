@@ -1,4 +1,5 @@
 <script setup>
+    import { onMounted } from 'vue';
     import Tecno from './Tecno.vue'
     import { logosTrabajos, logoTecno } from '../helpers/informacion';
 
@@ -6,16 +7,17 @@
     import useAnchoViewport from '../composables/useAnchoViewport'
 
     const { ancho } = useAnchoViewport();
-    const {data, loading, error} = useData();
+    const {data, loading, error, bajarData} = useData();
+
+    onMounted(() => {
+        bajarData("/data/Data.xlsx");
+    });
+
 </script>
 
 <template>
     <h2 class="titulo-experiencia">Experiencia</h2>
-
-    <div v-if="loading">Loading...</div>
-    <div v-else-if="error" class="error-message">Error: {{ error }}</div>
-    
-    <div v-else class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
+    <div class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
         <div class="contenedor-text">
             <div class="flex-column-center contenido-informacion">
                 <div class="flex-row-center" :class="{ancho : ancho <= 1231}">
@@ -55,9 +57,6 @@
     }
     .card img{
         width: 280px
-    }
-    .ancho{
-        flex-direction: column;
     }
 
     @media (max-width: 791px){
