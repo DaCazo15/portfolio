@@ -117,5 +117,8 @@
         .menu img:hover {
             filter: invert(0) brightness(0);
         }
+        .contenedor-nav{
+            padding: 0.5rem 1rem;
+        }
     }
 </style>
