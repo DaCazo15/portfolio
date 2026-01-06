@@ -167,10 +167,10 @@ h3 {
   border-left: solid 2px var(--gris-claro);
   border-radius: 0 1rem 1rem 0;
   background-color: var(--gris-oscuro);
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   text-wrap: balance;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 0;
 }
 
@@ -247,8 +247,8 @@ h3 {
   text-wrap: balance;
   line-height: 1.5;
   font-family: var(--font-titulo);
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 300;
   color: var(--gris-claro);
   width: 100%;
 }
