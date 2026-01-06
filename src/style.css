@@ -350,6 +350,12 @@ h3 {
 .contenido-width .card{
   background-color: rgba(var(--gris-oscuroRGB), 0.5)
 }
+
+.panel, .contenido-informacion {
+  min-height: auto; /* no fuerces height: 100% */
+}
+
+
 /* --- MEDIA QUERIES --- */
 @media (max-width: 1231px) {
   .contenido .gif img {
