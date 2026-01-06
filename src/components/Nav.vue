@@ -110,7 +110,8 @@
             padding: .5rem;
         }
         .menu img {
-            height: 2rem;
+            height: 1.7rem;
+            width: 1.7rem;
             filter: invert(1) brightness(2);
         }
         .menu img:hover {

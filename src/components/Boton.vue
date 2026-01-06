@@ -13,7 +13,7 @@
         font-family: var(--font-titulo);
         color: var(--gris-claro);
         width: auto;
-        height: 4rem;
+        height: 2.8rem;
         padding: .5rem 1rem;
         border-radius: 1rem;
         font-weight: 300;
