@@ -1,7 +1,6 @@
 <script setup>
-    import useDownloadPDF from '../composables/useDonwloadFile';
-    import Boton from './Boton.vue';    
-    const { initFileDownload, abrirPage } = useDownloadPDF();
+    import Boton from './Boton.vue'; 
+    import { abrirPage, initFileDownload } from '../helpers/downloadFile' 
 
     const props = defineProps({
         esMovil: {
@@ -101,6 +100,7 @@
         margin-top: .75rem;
         padding: .4rem;
         border-radius: .5rem;
+        height: auto;
     }
     .btn-red-social:hover {
         background-color: var(--gris-oscuro);

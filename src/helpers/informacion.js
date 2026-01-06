@@ -12,103 +12,132 @@ Ingeniero de Sistemas y desarrollador fullstack con experiencia en Python, C++ y
 export const logoTecno = {
   python: {
     nombre: 'Python',
-    logo: new URL('../assets/img/btn/python.webp', import.meta.url).href
+    logo: new URL('../assets/img/btn/python.webp', import.meta.url).href,
+    page: 'https://www.python.org/'
   },
   cpp: {
     nombre: 'C++',
-    logo: new URL('../assets/img/btn/cpp.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/cpp.png', import.meta.url).href,
+    page: 'https://www.cplusplus.com/'
   },
   javascript: {
     nombre: 'JavaScript',
-    logo: 'https://i.postimg.cc/zGpQ90C8/Java_Script_logo.png'
+    logo: 'https://i.postimg.cc/zGpQ90C8/Java_Script_logo.png',
+    page: 'https://lenguajejs.com/javascript/'
   },
   vue: {
     nombre: 'Vue.js',
-    logo: ('https://i.postimg.cc/XqhhDJdk/Vue_js_Logo_2_svg.png')
+    logo: ('https://i.postimg.cc/XqhhDJdk/Vue_js_Logo_2_svg.png'),
+    page: 'https://vuejs.org/'
   },
   arduino: {
     nombre: 'Arduino',
-    logo: new URL('../assets/img/btn/arduino.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/arduino.png', import.meta.url).href,
+    page: 'https://www.arduino.cc/'
+  
   },
   flet: {
     nombre: 'Flet',
-    logo: new URL('../assets/img/btn/flet.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/flet.png', import.meta.url).href,
+    page: 'https://flet.dev/'
+
   },
   meta: {
     nombre: 'Meta',
-    logo: 'https://pngimg.com/uploads/meta/meta_PNG5.png'
+    logo: 'https://pngimg.com/uploads/meta/meta_PNG5.png',
+    page: 'https://business.meta.com/'
+
   },
   namecheap :{
     nombre: 'Namecheap',
-    logo: new URL('../assets/img/btn/namecheap.svg', import.meta.url).href
+    logo: new URL('../assets/img/btn/namecheap.svg', import.meta.url).href,
+    page: 'https://www.namecheap.com/'
+
   },
   elementor: {
     nombre: 'Elementor',
-    logo: new URL('../assets/img/btn/elementor.webp', import.meta.url).href
+    logo: new URL('../assets/img/btn/elementor.webp', import.meta.url).href,
+    page: 'https://elementor.com/'
   },
   figma: {
     nombre: 'Figma',
-    logo: new URL('../assets/img/btn/figma.svg', import.meta.url).href
+    logo: new URL('../assets/img/btn/figma.svg', import.meta.url).href,
+    page: 'https://www.figma.com/'
   },
   framer: {
     nombre: 'Framer Motion',
-    logo: new URL('../assets/img/btn/framer.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/framer.png', import.meta.url).href,
+    page: 'https://www.framer.com/motion/'
   },
   wordpress: {
     nombre: 'wordpress',
-    logo: new URL('../assets/img/btn/wordpress.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/wordpress.png', import.meta.url).href,
+    page: 'https://wordpress.org/'
   },
   customtkinter: {
     nombre: 'CustomTkinter',
-    logo: new URL('../assets/img/btn/customtkinter.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/customtkinter.png', import.meta.url).href,
+    page: 'https://customtkinter.tomschimansky.com/'
   },
   scratch: {
     nombre: 'Scratch',
-    logo: new URL('../assets/img/btn/scratch.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/scratch.png', import.meta.url).href,
+    page: 'https://scratch.mit.edu/'
   },
   legospike: {
     nombre: 'legospike',
-    logo: new URL('../assets/img/btn/legospike.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/legospike.png', import.meta.url).href,
+    page: 'https://education.lego.com/en-us/products/lego-education-spike-prime-set/45678'
   },
   mblock: {
     nombre: 'mblock',
-    logo: new URL('../assets/img/btn/mblock.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/mblock.png', import.meta.url).href,
+    page: 'https://www.mblock.cc/'
   },
   lua: {
     nombre: 'lua',
-    logo: 'https://i.postimg.cc/wBrYsmj0/Lua.png'
+    logo: 'https://i.postimg.cc/wBrYsmj0/Lua.png',
+    page: 'https://www.lua.org/'
   },
   microbit: {
     nombre: 'microbit',
-    logo: new URL('../assets/img/btn/microbit.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/microbit.png', import.meta.url).href,
+    page: 'https://microbit.org/'
   },
   tinkercad : {
     nombre: 'tinkercad',
-    logo: new URL('../assets/img/btn/tinkercad.webp', import.meta.url).href
+    logo: new URL('../assets/img/btn/tinkercad.webp', import.meta.url).href,
+    page: 'https://www.tinkercad.com/'
   },
   robloxstudio: {
     nombre: 'robloxstudio',
-    logo: 'https://i.postimg.cc/W4ycJk17/Roblox_Studio.png'
+    logo: 'https://i.postimg.cc/W4ycJk17/Roblox_Studio.png',
+    page: 'https://www.roblox.com/create'
   },
   tailwindcss: {
     nombre: 'tailwindcss',
-    logo: 'https://i.postimg.cc/R0YxnHZG/Tailwind.png'
+    logo: 'https://i.postimg.cc/R0YxnHZG/Tailwind.png',
+    page: 'https://tailwindcss.com/'
   },
   sasscss: {
     nombre: 'sasscss',
-    logo: new URL('../assets/img/btn/sass.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/sass.png', import.meta.url).href,
+    page: 'https://sass-lang.com/'
   },
   git: {
     nombre: 'git',
-    logo: 'https://i.postimg.cc/s2LCZhg4/Git.png'
+    logo: 'https://i.postimg.cc/s2LCZhg4/Git.png',
+    page: 'https://git-scm.com/'
   },
   github: {
     nombre: 'github',
-    logo: new URL('../assets/img/btn/github.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/github.png', import.meta.url).href,
+    page: 'https://github.com/'
   },
   gitlab: {
     nombre: 'gitlab',
-    logo: new URL('../assets/img/btn/gitlab.png', import.meta.url).href
+    logo: new URL('../assets/img/btn/gitlab.png', import.meta.url).href,
+    page: 'https://about.gitlab.com/'
   },
 };
 
