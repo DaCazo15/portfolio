@@ -6,7 +6,7 @@ export const listGif = {
 }
 
 export const infAbout = `
-Ingeniero de Sistemas y desarrollador fullstack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.<br><br>Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías. Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.<br><br>Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.
+Ingeniero de Sistemas y desarrollador Full-Stack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.<br><br>Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías. Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.<br><br>Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.
 `;
 
 export const logoTecno = {
