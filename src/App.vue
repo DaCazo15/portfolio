@@ -28,7 +28,7 @@
   <div class="inicio" v-if="page.experiencia">
     <Experiencia />
   </div>
-  <div class="inicio" v-if="page.participacion">
+  <div class="inicio" v-if="page.contribuciones">
     <Aportes />
   </div>
 </template>
