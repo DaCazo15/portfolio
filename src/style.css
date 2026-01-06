@@ -19,7 +19,6 @@ html {
   min-height: 100%;     
 }
 
-/* Fondo fijo compatible con móviles */
 body {
   margin: 0;
   min-height: 100vh;
@@ -29,13 +28,9 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-
-  /* Fondo de respaldo para navegadores que sí respetan background-attachment */
-  background: url('./assets/fondo/fondo.png') no-repeat center center fixed;
-  background-size: cover;
 }
 
-/* Fondo fijo real para móviles (pseudo-elemento) */
+/* Fondo fijo real para móviles */
 body::before {
   content: "";
   position: fixed;
@@ -44,10 +39,8 @@ body::before {
   right: 0;
   bottom: 0;
 
-  background-image: url('./assets/fondo/fondo.png');
+  background: url('./assets/fondo/fondo.png') no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   z-index: -1;
 }
