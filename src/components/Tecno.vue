@@ -47,6 +47,14 @@
     }
     .spike, .micro, 
     .tinkercad, .js{
-        border-radius: .5rem;
+      border-radius: .5rem;
+    }
+    @media (max-width: 386px) {
+      .contenedor-tecnologias {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: .5rem;
+          width: 100%;
+      }
     }
 </style>
