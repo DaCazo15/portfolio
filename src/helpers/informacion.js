@@ -67,7 +67,7 @@ export const logoTecno = {
   framer: {
     nombre: 'Framer Motion',
     logo: new URL('../assets/img/btn/framer.png', import.meta.url).href,
-    page: 'https://www.framer.com/motion/'
+    page: 'https://www.framer.com/'
   },
   wordpress: {
     nombre: 'wordpress',
@@ -87,7 +87,7 @@ export const logoTecno = {
   legospike: {
     nombre: 'legospike',
     logo: new URL('../assets/img/btn/legospike.png', import.meta.url).href,
-    page: 'https://education.lego.com/en-us/products/lego-education-spike-prime-set/45678'
+    page: 'https://education.lego.com/'
   },
   mblock: {
     nombre: 'mblock',
@@ -112,7 +112,7 @@ export const logoTecno = {
   robloxstudio: {
     nombre: 'robloxstudio',
     logo: 'https://i.postimg.cc/W4ycJk17/Roblox_Studio.png',
-    page: 'https://www.roblox.com/create'
+    page: 'https://www.roblox.com/'
   },
   tailwindcss: {
     nombre: 'tailwindcss',
