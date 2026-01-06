@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.postimg.cc/13gNR3nF/isotipo.png" alt="Logo del proyecto"></a>
+ <img width=200px height=200px src="https://i.postimg.cc/FKL1JvqG/isotipo-page.png" alt="Logo del proyecto"></a>
 </p>
 
 <h3 align="center">Portafolio Personal</h3>
@@ -72,6 +72,22 @@ La aplicación estará disponible en `http://localhost:5173` (o el puerto que Vi
 ## 🎈 Uso <a name="uso"></a>
 
 Una vez que el servidor de desarrollo esté en funcionamiento, abre tu navegador y navega a la URL proporcionada. Podrás explorar las diferentes secciones del portafolio. Para actualizar el contenido, modifica el archivo `public/data/Data.xlsx`.
+
+## 🚀 Despliegue a Producción
+
+Para compilar la aplicación para producción, ejecuta el siguiente comando:
+
+```bash
+npm run build
+```
+
+Esto creará una carpeta `dist` con los archivos estáticos de la aplicación.
+
+Para previsualizar la compilación de producción localmente, puedes usar el comando `preview`:
+
+```bash
+npm run preview
+```
 
 ## ⛏️ Construido Con <a name = "construido_con"></a>
 
