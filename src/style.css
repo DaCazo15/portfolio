@@ -17,6 +17,11 @@
 html {
   overflow-x: hidden;   
   min-height: 100%;     
+  background: url('./assets/fondo/fondo.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
@@ -28,21 +33,6 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-}
-
-/* Fondo fijo real para móviles */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  background: url('./assets/fondo/fondo.png') no-repeat center center;
-  background-size: cover;
-
-  z-index: -1;
 }
 
 
