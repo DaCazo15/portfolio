@@ -52,7 +52,6 @@ export const logoTecno = {
     nombre: 'Namecheap',
     logo: new URL('../assets/img/btn/namecheap.svg', import.meta.url).href,
     page: 'https://www.namecheap.com/'
-
   },
   elementor: {
     nombre: 'Elementor',
@@ -139,6 +138,106 @@ export const logoTecno = {
     logo: new URL('../assets/img/btn/gitlab.png', import.meta.url).href,
     page: 'https://about.gitlab.com/'
   },
+  firebase: {
+    nombre: 'firebase',
+    logo: new URL('../assets/img/btn/firebase.svg', import.meta.url).href,
+    page: 'https://firebase.google.com/'
+  },
+  supabase: {
+    nombre: 'supabase',
+    logo: new URL('../assets/img/btn/supabase.webp', import.meta.url).href,
+    page: 'https://supabase.io/'
+  },
+  google: {
+    nombre: 'google',
+    logo: new URL('../assets/img/btn/google.png', import.meta.url).href,
+    page: 'https://www.google.com/'
+  },
+  office: {
+    nombre: 'office',
+    logo: new URL('../assets/img/btn/office.png', import.meta.url).href,
+    page: 'https://www.office.com/'
+  },
+  gemini: {
+    nombre: 'gemini',
+    logo: new URL('../assets/img/btn/gemini.png', import.meta.url).href,
+    page: 'https://gemini.google.com/app'
+  },
+  canva: {
+    nombre: 'canva',
+    logo: new URL('../assets/img/btn/canva.png', import.meta.url).href,
+    page: 'https://www.canva.com/'
+  },
+  note: {
+    nombre: 'note',
+    logo: new URL('../assets/img/btn/notebooklm.png', import.meta.url).href,
+    page: 'https://notebooklm.google.com/'
+  },
+  keras: {
+    nombre: 'keras',
+    logo: new URL('../assets/img/btn/keras.png', import.meta.url).href,
+    page: 'https://keras.io/'
+  },
+  tensorflow: {
+    nombre: 'tensorflow',
+    logo: new URL('../assets/img/btn/tensorflow.png', import.meta.url).href,
+    page: 'https://www.tensorflow.org/'
+  },
+  teachablemachine: {
+    nombre: 'tm',
+    logo: new URL('../assets/img/btn/tm.png', import.meta.url).href,
+    page: 'https://www.tm.com/'
+  },
+  html: {
+    nombre: 'html',
+    logo: new URL('../assets/img/btn/html.png', import.meta.url).href,
+    page: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+  },
+  css: {
+    nombre: 'css',
+    logo: new URL('../assets/img/btn/css.webp', import.meta.url).href,
+    page: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+  },
+  rich: {
+    nombre: 'rich',
+    logo: new URL('../assets/img/btn/Rich.png', import.meta.url).href,
+    page: 'https://github.com/Textualize/rich?tab=readme-ov-file'
+  },
+  requests: {
+    nombre: 'requests',
+    logo: new URL('../assets/img/btn/Requests.png', import.meta.url).href,
+    page: 'https://requests.readthedocs.io/en/latest/'
+  },
+  pyserial: {
+    nombre: 'pyserial',
+    logo: new URL('../assets/img/btn/pyserial.png', import.meta.url).href,
+    page: 'https://pyserial.readthedocs.io/en/latest/'
+  },
+  pillow: {
+    nombre: 'pillow',
+    logo: new URL('../assets/img/btn/pillow.png', import.meta.url).href,
+    page: 'https://pillow.readthedocs.io/en/stable/'
+  },
+  OpenWeatherMap: {
+    nombre: 'OpenWeatherMap',
+    logo: new URL('../assets/img/btn/OpenWeatherMap.png', import.meta.url).href,
+    page: 'https://openweathermap.org/'
+  },
+  esp32: {
+    nombre: 'esp32',
+    logo: new URL('../assets/img/btn/esp32.png', import.meta.url).href,
+    page: 'https://www.espressif.com/en/esp32'
+  },
+  Cryptocompare: {
+    nombre: 'Cryptocompare',
+    logo: new URL('../assets/img/btn/Cryptocompare.png', import.meta.url).href,
+    page: 'https://www.cryptocompare.com/'
+  },
+  comtypes: {
+    nombre: 'comtypes',
+    logo: new URL('../assets/img/btn/comtypes.png', import.meta.url).href,
+    page: 'https://comtypes.readthedocs.io/en/1.4.9/'
+  },
 };
 
 export const logosTrabajos = {
@@ -162,10 +261,18 @@ export const logosProyectos = {
     page: ['Ver Pagina', 'https://monitoreo-acuatico-esp32.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/Selector-de-PET'],
   },
+  "HUB": {
+    img: 'https://i.postimg.cc/CMNmL43V/bootcamp_tecnologico.png',
+    page: ['Ver Pagina', 'https://www.instagram.com/hubnetworkingmgta/'],
+  },
 }
 export const logosInstituciones = {
   "Colegio Guayamuri": {
     img : new URL('../assets/img/logos/guayamuri.png', import.meta.url).href,
     url : 'https://www.guayamuri.com/' 
+  },
+  "HUB Networking": {
+    img : new URL('../assets/img/logos/hub.jpg', import.meta.url).href,
+    url : 'https://www.instagram.com/hubnetworkingmgta/' 
   }
 }

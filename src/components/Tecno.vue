@@ -18,8 +18,8 @@
   <div class="panel flex-row-center contenedor-tecnologias"> 
     <template v-for="tech in tecnologias" :key="tech">
       <Boton 
-        v-if="logoTecno[tech]"
-        @click="abrirPage(logoTecno[tech].page)"
+      v-if="logoTecno[tech]"
+      @click="abrirPage(logoTecno[tech].page)"
       >
         <img 
           :src="logoTecno[tech].logo" 
@@ -29,6 +29,9 @@
             micro : logoTecno[tech].nombre === 'microbit',
             tinkercad : logoTecno[tech].nombre === 'tinkercad',
             js : logoTecno[tech].nombre === 'JavaScript',
+            gemini : logoTecno[tech].nombre === 'gemini',
+            tm: logoTecno[tech].nombre === 'tm',
+            
             }"
           width="30px" 
         />
@@ -46,7 +49,8 @@
         width: 100%;
     }
     .spike, .micro, 
-    .tinkercad, .js{
+    .tinkercad, .js, 
+    .tm, .gemini{
       border-radius: .5rem;
     }
     @media (max-width: 386px) {
@@ -55,6 +59,7 @@
           grid-template-columns: repeat(2, 1fr);
           gap: .5rem;
           width: 100%;
+          align-items: center;
       }
     }
 </style>

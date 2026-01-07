@@ -3,7 +3,7 @@
   import Nav from './components/Nav.vue';
   import About from './components/About.vue';
   import Experiencia from './components/Experiencia.vue';
-  import Aportes from './components/Aportes.vue';
+  import Contribuciones from './components/Contribuciones.vue';
 
   import usePage from './composables/usePage';
   import useAnchoViewport from './composables/useAnchoViewport';
@@ -29,7 +29,7 @@
     <Experiencia />
   </div>
   <div class="inicio" v-if="page.contribuciones">
-    <Aportes />
+    <Contribuciones />
   </div>
 </template>
 

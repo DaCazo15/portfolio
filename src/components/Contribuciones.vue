@@ -2,10 +2,11 @@
 import { onMounted } from 'vue';
 
 import Boton from './Boton.vue';
+import Tecno from './Tecno.vue';
 
 import useData from '../composables/useData';
 import useAnchoViewport from '../composables/useAnchoViewport';
-import { logosProyectos, logosInstituciones } from '../helpers/informacion';
+import { logosProyectos, logosInstituciones, logoTecno } from '../helpers/informacion';
 import { abrirPage } from '../helpers/downloadFile';
 
 
@@ -29,21 +30,35 @@ onMounted(() => {
         >
           <div class="cabecera-card">
             <img 
+              v-if="logosInstituciones[item.Institucion]"
               :src="logosInstituciones[item.Institucion].img" 
               alt="item.Institucion" 
               class="img-institucion"
+              :class="{
+                hub: item.Abreviatura === 'HUB'
+              }"
               @click="abrirPage(logosInstituciones[item.Institucion].url)"
-            >
-            <img 
+              >
+              <img 
+              v-if="logosProyectos[item.Abreviatura]"
               :src="logosProyectos[item.Abreviatura].img" 
               alt="item.Abreviatura"
             >
           </div>
           <h2 v-html="item.Name"></h2>
-          <h3 v-html="item.Institucion"></h3>
+
+          <div class="flex-column-center left">
+            <h3 v-html="'Institución: ' + item.Institucion" ></h3>
+            <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
+          </div>
           
           <p v-html="item.Descripcion" class="texto-card"></p>
 
+          <Tecno 
+            :logoTecno="logoTecno" 
+            :tecnologias="item.Tecnologias" 
+            v-if="item.Tecnologias && item.Tecnologias.length"
+          />
           <div
             class="flex-row-center"
             :class="{ ancho: ancho <= 1231 }"
@@ -75,6 +90,20 @@ onMounted(() => {
   .flex-column-center{
     padding-top: 1rem;
   }  
+  .flex-column-center .left{
+    align-items: flex-start;
+    width: 100%;
+  }  
+  .flex-column-center .rol{
+    margin-top: 1rem;
+  } 
+  .flex-column-center h3{
+    color: var(--gris-claro);
+    margin: 0;
+    margin-left: 2.5rem;
+    font-weight: 300;
+    font-size: 1.5rem
+  }
   .texto-card{
     margin: 1rem 2rem 0;
     padding: 2rem 3rem;
@@ -87,6 +116,9 @@ onMounted(() => {
     background-color: var(--gris-oscuro);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     border-radius: 0 1rem 1rem 0;
+  }
+  .hub{
+    border-radius: .5rem;
   }
   @media (max-width: 791px) {
     .texto-card{
