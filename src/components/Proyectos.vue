@@ -158,59 +158,43 @@
     border-radius: .5rem;
   }
   /* fondos cabecera */
-  .roz {
-    background-image: url('../assets/fondo/cabeceras/camino-de-ziko.webp');
+  .roz, .crawler {
     background-size: cover;
     background-position: 0px -170px;
     background-repeat: no-repeat;
   }
-  .ecc {
-    background-image: url('https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC/blob/main/assets/img/Captura-Desarrollo.png?raw=true');
+  .ecc, .neo, .plan, .clima, 
+  .block, .paralelo, .adv{
     background-size: cover;
     background-position: 0px -70px;
     background-repeat: no-repeat;
+  }
+  .roz {
+    background-image: url('../assets/fondo/cabeceras/camino-de-ziko.webp');
   }
   .crawler{
     background-image: url('../assets/fondo/cabeceras/Conversor-Desktop.png');
-    background-size: cover;
-    background-position: 0px -170px;
-    background-repeat: no-repeat;
+  }
+  .ecc {
+    background-image: url('https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC/blob/main/assets/img/Captura-Desarrollo.png?raw=true');
   }
   .neo{
     background-image: url('../assets/fondo/cabeceras/neosalud.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .plan{
     background-image: url('../assets/fondo/cabeceras/planb.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .clima{
     background-image: url('../assets/fondo/cabeceras/climadex.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .block{
     background-image: url('../assets/fondo/cabeceras/block.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .paralelo{
     background-image: url('../assets/fondo/cabeceras/image.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .adv{
     background-image: url('../assets/fondo/cabeceras/ayudante.png');
-    background-size: cover;
-    background-position: 0px -70px;
-    background-repeat: no-repeat;
   }
   .fondo-default .cabecera-card{
     background-color: var(--gris-claro);
@@ -226,6 +210,13 @@
       font-size: .8rem;
       margin: 1rem 1rem 0;
       padding: 1rem;
+    }
+    .roz, .crawler {
+      background-position: 0px 0px;
+    }
+    .ecc, .neo, .plan, .clima, 
+    .block, .paralelo, .adv{
+      background-position: 0px 10px;
     }
   }
 </style>
