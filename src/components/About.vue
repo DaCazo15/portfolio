@@ -166,6 +166,7 @@ const socialButtons = [
             height: 8rem;
         }
         .border {
+            margin-top: 0;
             width: 10rem;
             height: 10rem;
         }
