@@ -48,29 +48,29 @@
                 v-if="props.esMovil"
                 class="menu"
                 @click="menuToggle('menu')"
-            ><img src="https://i.postimg.cc/Twj9YL0m/MENU.png" alt="menu">
+            ><img src="https://i.postimg.cc/L5cgNPGZ/MENU_lit.png" alt="menu">
             </Boton>
         </div>
         <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
             <Boton
                 @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"
-            ><img src="https://i.postimg.cc/2y2MJQZq/home_10263239.png" alt="home" width="40">
+            ><img src="https://i.postimg.cc/L6WxF0F4/home.png" alt="home" width="40">
             </Boton>
             <Boton
                 @click="[emit('setPage', 'experiencia'), menuToggle('experiencia')]"
                 class="btn-inferior"
-            ><img src="https://i.postimg.cc/sDfRcXhY/clock_9882847.png" alt="experiencia" width="40">
+            ><img src="https://i.postimg.cc/TYstvHvP/clock.png" alt="experiencia" width="40">
             </Boton>
             <Boton
                 @click="[emit('setPage', 'contribuciones'), menuToggle('contribuciones')]"
                 class="btn-inferior"
-            ><img src="https://i.postimg.cc/Y0bZV6WG/puzzle_17712024.png" alt="contribuciones" width="40">
+            ><img src="https://i.postimg.cc/VLhKPHPv/puzzle.png" alt="contribuciones" width="40">
             </Boton>
             <Boton
                 @click="[emit('setPage', 'proyectos'), menuToggle('proyectos')]"
                 class="btn-inferior"
-            ><img src="https://i.postimg.cc/tJ2wf3xn/startup_6884318.png" alt="proyectos" width="40">
+            ><img src="https://i.postimg.cc/Wby5cfc1/startup.png" alt="proyectos" width="40">
             </Boton>
         </div>
     </nav>
