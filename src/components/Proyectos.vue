@@ -206,9 +206,14 @@
   .default{
     background-color: rgba(var(--gris-oscuroRGB), 0.6);
   }
-  @media (min-width: 3200px) {
+  @media (min-width: 2200px) {
     .grid{
       grid-template-columns: repeat(3, 3fr);
+    }
+  }
+  @media (min-width: 3200px) {
+    .grid{
+      grid-template-columns: repeat(4, 4fr);
     }
   }
   @media (max-width: 1231px) {
