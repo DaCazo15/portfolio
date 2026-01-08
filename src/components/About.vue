@@ -86,7 +86,7 @@
     .imagen {
         width: 10rem;
         height: 10rem;
-        background-image: url(https://i.postimg.cc/VNmCQPn8/Foto-Perfil.png);
+        background-image: url(https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif);
         background-position: center;
         background-size: cover;
         color: var(--gris-claro);
