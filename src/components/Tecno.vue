@@ -16,7 +16,6 @@
     },
     page: {
       type: Boolean,
-      required: true
     }
   })
 

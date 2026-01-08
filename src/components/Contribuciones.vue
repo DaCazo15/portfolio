@@ -28,8 +28,8 @@ defineProps({
 
 <template>
   <template v-if="data.length > 0">
+    <h2>Contribuciones</h2>
     <div class="flex-column-center">
-      <h2>Contribuciones</h2>
       <div class="flex-column-center contenido-width">
         <div 
           class="panel contenido-informacion card" 
@@ -95,6 +95,9 @@ defineProps({
 </template>
 
 <style scoped>
+  h2{
+    margin-bottom: -1.5rem;
+  }
   .flex-column-center{
     padding-top: 1rem;
   }  

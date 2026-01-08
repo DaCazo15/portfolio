@@ -94,6 +94,9 @@
 </template>
 
 <style scoped>
+  h2{
+    margin-bottom: -1.5rem;
+  }
   .img-institucion{
     width: 40px;
     height: auto;
