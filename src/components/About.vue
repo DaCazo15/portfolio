@@ -184,4 +184,9 @@ const socialButtons = [
             gap: 1.2rem;
         }
     }
+    @media (max-height: 640px) {
+        .about {
+            margin-top:2rem;
+        }
+    }
 </style>
