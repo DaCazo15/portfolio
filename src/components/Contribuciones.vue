@@ -93,11 +93,8 @@ defineProps({
 </template>
 
 <style scoped>
-  h2{
-    margin-bottom: -1.5rem;
-  }
   .flex-column-center{
-    padding-top: 1rem;
+    padding-top: 0;
   }  
   .grid{
     display: grid;

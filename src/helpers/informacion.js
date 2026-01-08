@@ -315,17 +315,17 @@ export const logosProyectos = {
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/CrawlerCash'],
   },
   "neo": {
-    img: 'https://i.postimg.cc/gJv5RB2H/neo-salud.png',
+    img: new URL('../assets/img/Diseño_sin_título__12_-removebg-preview.png', import.meta.url).href,
     page: ['Ver Pagina', 'https://mascota-feliz.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/Neosalud'],
   },
   "planb": {
-    img: 'https://i.postimg.cc/rFYhdL9w/planb-completo.png',
+    img: new URL('../assets/img/planb-completo-removebg-preview.png', import.meta.url).href,
     page: ['Ver Pagina', 'https://administra.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/PlanB-Control-de-Gastos'],
   },
   "paralelo": {
-    img: 'https://i.postimg.cc/SxhnfnV4/alparalelo-isologo.png',
+    img: new URL('../assets/img/alparalelo-isologo-removebg-preview (1).png', import.meta.url).href,
     page: ['Ver Pagina', 'https://al-cambio.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/alParalelo'],
   },

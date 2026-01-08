@@ -248,6 +248,15 @@ h3 {
   margin: -.2rem 0 0 0;
   text-align: center;
 }
+.fondo-cabecera-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  border-radius: .5rem .5rem 0 0;
+}
 .cabecera-card{
   display: flex;
   justify-content: center;
@@ -261,7 +270,7 @@ h3 {
   width: 100%;
   height: auto;
 
-  background-color: var(--gris-claro);
+  background-color: rgba(var(--gris-oscuroRGB), 0.6);
 }
 .cabecera-card img{
   height: 200px;

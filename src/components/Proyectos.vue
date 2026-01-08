@@ -25,6 +25,18 @@
     }
   })
 
+  const classMap = {
+    roz: "roz",
+    ecc: "ecc",
+    crawler: "crawler",
+    neo: "neo",
+    planb: "plan",
+    clima: "clima",
+    block: "block",
+    paralelo: "paralelo",
+    adv: "adv",
+  };
+
 
 </script>
 
@@ -36,25 +48,30 @@
         class="panel contenido-informacion card flex-column-center contenido-width" 
         v-for="(item, idex) in data" :key="idex"
       >
-        <div class="cabecera-card">
-          <img 
-            v-if="logoDespliegue[item.despliegue]"
-            :src="logoDespliegue[item.despliegue].img" 
-            alt="item.despliegue" 
-            class="img-institucion"
-            :class="{
-              cuadrado: item.despliegue !== 'Netlify'
-            }"
-            @click="abrirPage(logoDespliegue[item.despliegue].url)"
+        <div 
+          class="fondo-cabecera-card"
+          :class="classMap[item.Abreviatura] || 'fondo-default'", 
+        >
+          <div class="cabecera-card">
+            <img 
+              v-if="logoDespliegue[item.despliegue]"
+              :src="logoDespliegue[item.despliegue].img" 
+              alt="item.despliegue" 
+              class="img-institucion"
+              :class="{
+                cuadrado: item.despliegue !== 'Netlify'
+              }"
+              @click="abrirPage(logoDespliegue[item.despliegue].url)"
             >
             <img 
-            v-if="logosProyectos[item.Abreviatura]"
-            :src="logosProyectos[item.Abreviatura].img" 
-            :alt="item.Abreviatura"
-            :class="{
-            }"
-            alt="item.Abreviatura"
-          >
+              v-if="logosProyectos[item.Abreviatura]"
+              :src="logosProyectos[item.Abreviatura].img" 
+              :alt="item.Abreviatura"
+              :class="{
+              }"
+              alt="item.Abreviatura"
+            >
+          </div>
         </div>
         <h2 v-html="item.Name"></h2>
         
@@ -94,9 +111,6 @@
 </template>
 
 <style scoped>
-  h2{
-    margin-bottom: -1.5rem;
-  }
   .img-institucion{
     width: 40px;
     height: auto;
@@ -113,8 +127,6 @@
     justify-items: center;
     padding-top: 2rem;
   }
-
-
   .flex-column-center .left{
     align-items: flex-start;
     width: 100%;
@@ -145,6 +157,65 @@
   .cuadrado{
     border-radius: .5rem;
   }
+  /* fondos cabecera */
+  .roz {
+    background-image: url('../assets/fondo/cabeceras/camino-de-ziko.webp');
+    background-size: cover;
+    background-position: 0px -170px;
+    background-repeat: no-repeat;
+  }
+  .ecc {
+    background-image: url('https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC/blob/main/assets/img/Captura-Desarrollo.png?raw=true');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .crawler{
+    background-image: url('../assets/fondo/cabeceras/Conversor-Desktop.png');
+    background-size: cover;
+    background-position: 0px -170px;
+    background-repeat: no-repeat;
+  }
+  .neo{
+    background-image: url('../assets/fondo/cabeceras/neosalud.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .plan{
+    background-image: url('../assets/fondo/cabeceras/planb.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .clima{
+    background-image: url('../assets/fondo/cabeceras/climadex.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .block{
+    background-image: url('../assets/fondo/cabeceras/block.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .paralelo{
+    background-image: url('../assets/fondo/cabeceras/image.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .adv{
+    background-image: url('../assets/fondo/cabeceras/ayudante.png');
+    background-size: cover;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+  }
+  .fondo-default .cabecera-card{
+    background-color: var(--gris-claro);
+  }
+  
   @media (max-width: 1231px) {
     .grid{
       grid-template-columns: repeat(1, 1fr);
