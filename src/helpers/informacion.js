@@ -1,13 +1,15 @@
 
 export const listGif = {
-  cloud: new URL('../assets/gifs/Cloud-Transformation.gif', import.meta.url).href,
+  cloud: new URL('../assets-optimized/gifs/Cloud-Transformation.gif', import.meta.url).href,
   cacher: 'https://ems.andrew.cmu.edu/2018_60212f/wp-content/uploads/2018/09/Webp.net-gifmaker-7.gif',
   circle: new URL('../assets/gifs/circle.gif', import.meta.url).href,
 };
 
-export const infAbout = `
-Ingeniero de Sistemas y desarrollador Full-Stack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.<br><br>Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías. Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.<br><br>Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.
-`;
+export const infAbout = [
+`Ingeniero de Sistemas y desarrollador Full-Stack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.`,
+`Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías. Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.`,
+`Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.`
+];
 
 export const logoTecno = {
   csharp:{
@@ -17,7 +19,7 @@ export const logoTecno = {
   },
   unity: {
     nombre: 'unity',
-    logo: new URL('../assets/img/btn/unity.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/unity.png', import.meta.url).href,
     page: 'https://unity.com/'
   },
   python: {
@@ -27,7 +29,7 @@ export const logoTecno = {
   },
   cpp: {
     nombre: 'C++',
-    logo: new URL('../assets/img/btn/cpp.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/cpp.png', import.meta.url).href,
     page: 'https://www.cplusplus.com/'
   },
   javascript: {
@@ -42,13 +44,13 @@ export const logoTecno = {
   },
   arduino: {
     nombre: 'Arduino',
-    logo: new URL('../assets/img/btn/arduino.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/arduino.png', import.meta.url).href,
     page: 'https://www.arduino.cc/'
   
   },
   flet: {
     nombre: 'Flet',
-    logo: new URL('../assets/img/btn/flet.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/flet.png', import.meta.url).href,
     page: 'https://flet.dev/'
 
   },
@@ -60,7 +62,7 @@ export const logoTecno = {
   },
   namecheap :{
     nombre: 'Namecheap',
-    logo: new URL('../assets/img/btn/namecheap.svg', import.meta.url).href,
+    logo: new URL('../assets-optimized/namecheap.svg', import.meta.url).href,
     page: 'https://www.namecheap.com/'
   },
   elementor: {
@@ -70,37 +72,37 @@ export const logoTecno = {
   },
   figma: {
     nombre: 'Figma',
-    logo: new URL('../assets/img/btn/figma.svg', import.meta.url).href,
+    logo: new URL('../assets-optimized/figma.svg', import.meta.url).href,
     page: 'https://www.figma.com/'
   },
   framer: {
     nombre: 'Framer Motion',
-    logo: new URL('../assets/img/btn/framer.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/framer.png', import.meta.url).href,
     page: 'https://www.framer.com/'
   },
   wordpress: {
     nombre: 'wordpress',
-    logo: new URL('../assets/img/btn/wordpress.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/wordpress.png', import.meta.url).href,
     page: 'https://wordpress.org/'
   },
   customtkinter: {
     nombre: 'CustomTkinter',
-    logo: new URL('../assets/img/btn/customtkinter.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/customtkinter.png', import.meta.url).href,
     page: 'https://customtkinter.tomschimansky.com/'
   },
   scratch: {
     nombre: 'Scratch',
-    logo: new URL('../assets/img/btn/scratch.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/scratch.png', import.meta.url).href,
     page: 'https://scratch.mit.edu/'
   },
   legospike: {
     nombre: 'legospike',
-    logo: new URL('../assets/img/btn/legospike.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/legospike.png', import.meta.url).href,
     page: 'https://education.lego.com/'
   },
   mblock: {
     nombre: 'mblock',
-    logo: new URL('../assets/img/btn/mblock.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/mblock.png', import.meta.url).href,
     page: 'https://www.mblock.cc/'
   },
   lua: {
@@ -110,7 +112,7 @@ export const logoTecno = {
   },
   microbit: {
     nombre: 'microbit',
-    logo: new URL('../assets/img/btn/microbit.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/microbit.png', import.meta.url).href,
     page: 'https://microbit.org/'
   },
   tinkercad : {
@@ -130,7 +132,7 @@ export const logoTecno = {
   },
   sasscss: {
     nombre: 'sasscss',
-    logo: new URL('../assets/img/btn/sass.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/sass.png', import.meta.url).href,
     page: 'https://sass-lang.com/'
   },
   git: {
@@ -140,17 +142,17 @@ export const logoTecno = {
   },
   github: {
     nombre: 'github',
-    logo: new URL('../assets/img/btn/github.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/github.png', import.meta.url).href,
     page: 'https://github.com/'
   },
   gitlab: {
     nombre: 'gitlab',
-    logo: new URL('../assets/img/btn/gitlab.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/gitlab.png', import.meta.url).href,
     page: 'https://about.gitlab.com/'
   },
   firebase: {
     nombre: 'firebase',
-    logo: new URL('../assets/img/btn/firebase.svg', import.meta.url).href,
+    logo: new URL('../assets-optimized/firebase.svg', import.meta.url).href,
     page: 'https://firebase.google.com/'
   },
   supabase: {
@@ -160,7 +162,7 @@ export const logoTecno = {
   },
   google: {
     nombre: 'google',
-    logo: new URL('../assets/img/btn/google.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/google.png', import.meta.url).href,
     page: 'https://www.google.com/'
   },
   office: {
@@ -170,22 +172,22 @@ export const logoTecno = {
   },
   gemini: {
     nombre: 'gemini',
-    logo: new URL('../assets/img/btn/gemini.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/gemini.png', import.meta.url).href,
     page: 'https://gemini.google.com/app'
   },
   canva: {
     nombre: 'canva',
-    logo: new URL('../assets/img/btn/canva.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/canva.png', import.meta.url).href,
     page: 'https://www.canva.com/'
   },
   note: {
     nombre: 'note',
-    logo: new URL('../assets/img/btn/notebooklm.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/notebooklm.png', import.meta.url).href,
     page: 'https://notebooklm.google.com/'
   },
   keras: {
     nombre: 'keras',
-    logo: new URL('../assets/img/btn/keras.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/keras.png', import.meta.url).href,
     page: 'https://keras.io/'
   },
   tensorflow: {
@@ -195,12 +197,12 @@ export const logoTecno = {
   },
   teachablemachine: {
     nombre: 'tm',
-    logo: new URL('../assets/img/btn/tm.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/tm.png', import.meta.url).href,
     page: 'https://www.tm.com/'
   },
   html: {
     nombre: 'html',
-    logo: new URL('../assets/img/btn/html.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/html.png', import.meta.url).href,
     page: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
   },
   css: {
@@ -210,42 +212,42 @@ export const logoTecno = {
   },
   rich: {
     nombre: 'rich',
-    logo: new URL('../assets/img/btn/Rich.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/Rich.png', import.meta.url).href,
     page: 'https://github.com/Textualize/rich?tab=readme-ov-file'
   },
   requests: {
     nombre: 'requests',
-    logo: new URL('../assets/img/btn/Requests.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/Requests.webp', import.meta.url).href,
     page: 'https://requests.readthedocs.io/en/latest/'
   },
   pyserial: {
     nombre: 'pyserial',
-    logo: new URL('../assets/img/btn/pyserial.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/pyserial.png', import.meta.url).href,
     page: 'https://pyserial.readthedocs.io/en/latest/'
   },
   pillow: {
     nombre: 'pillow',
-    logo: new URL('../assets/img/btn/pillow.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/pillow.png', import.meta.url).href,
     page: 'https://pillow.readthedocs.io/en/stable/'
   },
   OpenWeatherMap: {
     nombre: 'OpenWeatherMap',
-    logo: new URL('../assets/img/btn/OpenWeatherMap.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/OpenWeatherMap.png', import.meta.url).href,
     page: 'https://openweathermap.org/'
   },
   esp32: {
     nombre: 'esp32',
-    logo: new URL('../assets/img/btn/esp32.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/esp32.png', import.meta.url).href,
     page: 'https://www.espressif.com/en/esp32'
   },
   Cryptocompare: {
     nombre: 'Cryptocompare',
-    logo: new URL('../assets/img/btn/Cryptocompare.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/Cryptocompare.png', import.meta.url).href,
     page: 'https://www.cryptocompare.com/'
   },
   comtypes: {
     nombre: 'comtypes',
-    logo: new URL('../assets/img/btn/comtypes.png', import.meta.url).href,
+    logo: new URL('../assets-optimized/comtypes.png', import.meta.url).href,
     page: 'https://comtypes.readthedocs.io/en/1.4.9/'
   },
   beautifulsoup: {
@@ -325,7 +327,7 @@ export const logosProyectos = {
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/PlanB-Control-de-Gastos'],
   },
   "paralelo": {
-    img: new URL('../assets/img/alparalelo-isologo-removebg-preview (1).png', import.meta.url).href,
+    img: '../assets/img/alparalelo-isologo.png',
     page: ['Ver Pagina', 'https://al-cambio.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/alParalelo'],
   },
@@ -343,26 +345,26 @@ export const logosProyectos = {
 
 export const logoDespliegue = {
   Vercel: {
-    img: new URL('../assets/img/despliegue/vercel.png', import.meta.url).href,
+    img: new URL('../assets-optimized/vercel.png', import.meta.url).href,
     page: 'https://vercel.com/'
   },
   Netlify: {
-    img: new URL('../assets/img/despliegue/netlify.png', import.meta.url).href,
+    img: new URL('../assets-optimized/netlify.png', import.meta.url).href,
     page: 'https://www.netlify.com/'
   },
   RobloxStudio: {
-    img: new URL('../assets/img/despliegue/Roblox.png', import.meta.url).href,
+    img: new URL('../assets-optimized/Roblox.png', import.meta.url).href,
     page: 'https://www.roblox.com/'
   },
 }
 
 export const logosInstituciones = {
   "Colegio Guayamuri": {
-    img : new URL('../assets/img/logos/guayamuri.png', import.meta.url).href,
+    img : new URL('../assets-optimized/guayamuri.png', import.meta.url).href,
     url : 'https://www.guayamuri.com/' 
   },
   "HUB Networking": {
-    img : new URL('../assets/img/logos/hub.jpg', import.meta.url).href,
+    img : new URL('../assets-optimized/hub.jpg', import.meta.url).href,
     url : 'https://www.instagram.com/hubnetworkingmgta/' 
   }
 };

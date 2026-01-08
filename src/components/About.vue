@@ -1,55 +1,65 @@
 <script setup>
-    import Boton from './Boton.vue'; 
-    import { abrirPage, initFileDownload } from '../helpers/downloadFile' 
+import Boton from './Boton.vue';
+import { abrirPage, initFileDownload } from '../helpers/downloadFile';
 
-    const props = defineProps({
-        esMovil: {
-            type: Boolean,
-            required: true
-        }
-    });   
+defineProps({
+    esMovil: {
+        type: Boolean,
+        required: true
+    }
+});
+
+const profileImage = 'https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif';
+const cvUrl = 'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing';
+const cvDownloadUrl = 'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U';
+const downloadIcon = 'https://i.postimg.cc/VsxSyjHN/download_avif.avif';
+
+const socialButtons = [
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/danielcp5150190/',
+        icon: 'https://i.postimg.cc/FRPKnSdB/linkedin_negro_avif.avif',
+        imgClass: 'linkedin'
+    },
+    {
+        name: 'GitHub',
+        url: 'https://github.com/DaCazo15',
+        icon: 'https://i.postimg.cc/HkSPnsMt/github.avif',
+        imgClass: 'github'
+    }
+];
 </script>
 
 <template>
     <div class="about">
         <div class="border">
             <img
-                src="https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif"
+                :src="profileImage"
                 alt="Foto de perfil"
                 class="imagen"
                 fetchpriority="high"
                 width="160"
                 height="160"
             />
-
         </div>
         <h1>Daniel Cazorla</h1>
         <span>Ingeniero de Sistemas con experiencia en desarrollo web y Python Full-Stack</span>
         <div class="contenedor-btn">
-            <Boton 
-                class="btn-red-social" 
+            <Boton
+                v-for="social in socialButtons"
+                :key="social.name"
+                class="btn-red-social"
                 target="_blank"
-                @click="abrirPage('https://www.linkedin.com/in/danielcp5150190/')"
+                @click="abrirPage(social.url)"
             >
-                <img class="linkedin" src="https://i.postimg.cc/FRPKnSdB/linkedin_negro_avif.avif" alt="LinkedIn">
-            </Boton>
-            <Boton 
-                class="btn-red-social" 
-                target="_blank"
-                @click="abrirPage('https://github.com/DaCazo15')"
-            >
-                <img class="github" src="https://i.postimg.cc/HkSPnsMt/github.avif" alt="GitHub">
+                <img :class="social.imgClass" :src="social.icon" :alt="social.name">
             </Boton>
         </div>
-        <Boton 
-            @click="initFileDownload(
-                'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing',
-                'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U',
-                props.esMovil
-            )"
+        <Boton
+            @click="initFileDownload(cvUrl, cvDownloadUrl, esMovil)"
             class="btn-cv"
         >
-            <img src="https://i.postimg.cc/VsxSyjHN/download_avif.avif" alt="Descargar CV">
+            <img :src="downloadIcon" alt="Descargar CV">
             <span>Descargar CV</span>
         </Boton>
     </div>
@@ -77,12 +87,12 @@
         font-weight: 400;
         margin: .5rem;
         padding: 0 .8rem;
-        text-wrap: balance;  
-
+        text-wrap: balance;
     }
     .border {
         width: 12rem;
         height: 12rem;
+        margin-top: 4rem;
         aspect-ratio: 1 / 1; /* Mantén el círculo siempre redondo */
         border: 4px solid var(--gris-claro);
         border-radius: 50%;
@@ -109,9 +119,10 @@
     }
     .btn-red-social:hover {
         background-color: var(--gris-oscuro);
-        .linkedin, .github {
-            filter: invert(1) brightness(2);
-        }
+    }
+    .btn-red-social:hover .linkedin,
+    .btn-red-social:hover .github {
+        filter: invert(1) brightness(2);
     }
     .linkedin, .github {
         width: 1.5rem;
@@ -128,13 +139,13 @@
         gap: .5rem;
         padding: 1rem;
         border-radius: 1rem;
-        img {
-            filter: invert(1) brightness(2);
-            width: 1.2rem;
-            height: 1.2rem;
-        }
         border: solid var(--gris-oscuro) 2px;
         margin-bottom: 2rem; /* añade espacio debajo */
+    }
+    .btn-cv img {
+        filter: invert(1) brightness(2);
+        width: 1.2rem;
+        height: 1.2rem;
     }
     .btn-cv span {
         font-size: 1rem;
@@ -159,10 +170,10 @@
             height: 10rem;
         }
         .about h1 {
-            font-size: 1.5rem;    
+            font-size: 1.5rem;
         }
         .about span {
-            font-size: 1rem;  
+            font-size: 1rem;
         }
         .linkedin, .github {
             width: 1.2rem;

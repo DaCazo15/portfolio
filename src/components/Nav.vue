@@ -76,7 +76,7 @@
     </nav>
 </template>
 
-<style>
+<style scoped>
     .contenedor-nav {
         display: flex;
         position: fixed;
