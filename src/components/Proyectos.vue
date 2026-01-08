@@ -216,7 +216,7 @@
     }
     .ecc, .neo, .plan, .clima, 
     .block, .paralelo, .adv{
-      background-position: 0px 0px;
+      background-position: -100px 0px;
     }
   }
 </style>
