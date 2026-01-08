@@ -268,7 +268,7 @@ h3 {
   width: 100%;
   height: auto;
 
-  background-color: rgba(var(--gris-oscuroRGB), 0.6);
+  background-color: var(--gris-claro);
 }
 .cabecera-card img{
   height: 200px;

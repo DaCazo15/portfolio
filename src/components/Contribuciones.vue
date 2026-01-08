@@ -94,7 +94,7 @@ defineProps({
 
 <style scoped>
   .flex-column-center{
-    padding-top: 0;
+    padding-top: 1rem;
   }  
   .grid{
     display: grid;

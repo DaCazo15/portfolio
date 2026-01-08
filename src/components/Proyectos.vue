@@ -50,9 +50,12 @@
       >
         <div 
           class="fondo-cabecera-card"
-          :class="classMap[item.Abreviatura] || 'fondo-default'", 
+          :class="classMap[item.Abreviatura]", 
         >
-          <div class="cabecera-card">
+          <div 
+            class="cabecera-card"
+            :class="{default : classMap[item.Abreviatura]}"
+          >
             <img 
               v-if="logoDespliegue[item.despliegue]"
               :src="logoDespliegue[item.despliegue].img" 
@@ -196,8 +199,8 @@
   .adv{
     background-image: url('../assets/fondo/cabeceras/ayudante.png');
   }
-  .fondo-default .cabecera-card{
-    background-color: var(--gris-claro);
+  .default{
+    background-color: rgba(var(--gris-oscuroRGB), 0.6);
   }
   
   @media (max-width: 1231px) {
