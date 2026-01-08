@@ -17,6 +17,13 @@ onMounted(() => {
   bajarData("/data/Data_2.xlsx");
 });
 
+defineProps({
+  page: {
+    type: true,
+    required: true
+  }
+})
+
 </script>
 
 <template>
@@ -56,6 +63,7 @@ onMounted(() => {
 
           <Tecno 
             :logoTecno="logoTecno" 
+            :page="page"
             :tecnologias="item.Tecnologias" 
             v-if="item.Tecnologias && item.Tecnologias.length"
           />

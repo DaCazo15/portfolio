@@ -371,6 +371,9 @@ h3 {
   .contenido-width .card{
     width: 100%;
   }
+  .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (max-width: 791px) {

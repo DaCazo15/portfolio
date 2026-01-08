@@ -3,13 +3,23 @@ export const listGif = {
   cloud: new URL('../assets/gifs/Cloud-Transformation.gif', import.meta.url).href,
   cacher: 'https://ems.andrew.cmu.edu/2018_60212f/wp-content/uploads/2018/09/Webp.net-gifmaker-7.gif',
   circle: new URL('../assets/gifs/circle.gif', import.meta.url).href,
-}
+};
 
 export const infAbout = `
 Ingeniero de Sistemas y desarrollador Full-Stack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.<br><br>Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías. Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.<br><br>Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.
 `;
 
 export const logoTecno = {
+  csharp:{
+    nombre: 'csharp',
+    logo: 'https://i.postimg.cc/B6vJzXC8/cshart.png',
+    page: 'https://www.cshart.com/'
+  },
+  unity: {
+    nombre: 'unity',
+    logo: new URL('../assets/img/btn/unity.png', import.meta.url).href,
+    page: 'https://unity.com/'
+  },
   python: {
     nombre: 'Python',
     logo: new URL('../assets/img/btn/python.webp', import.meta.url).href,
@@ -155,7 +165,7 @@ export const logoTecno = {
   },
   office: {
     nombre: 'office',
-    logo: new URL('../assets/img/btn/office.png', import.meta.url).href,
+    logo: 'https://i.postimg.cc/Y9K9LYmv/Office.png',
     page: 'https://www.office.com/'
   },
   gemini: {
@@ -180,7 +190,7 @@ export const logoTecno = {
   },
   tensorflow: {
     nombre: 'tensorflow',
-    logo: new URL('../assets/img/btn/tensorflow.png', import.meta.url).href,
+    logo: 'https://i.postimg.cc/xCS7z1jj/Tensorflow.png',
     page: 'https://www.tensorflow.org/'
   },
   teachablemachine: {
@@ -238,6 +248,11 @@ export const logoTecno = {
     logo: new URL('../assets/img/btn/comtypes.png', import.meta.url).href,
     page: 'https://comtypes.readthedocs.io/en/1.4.9/'
   },
+  beautifulsoup: {
+    nombre: 'beautifulsoup',
+    logo: 'https://i.postimg.cc/QCk7kjpJ/beutifulsoup.png',
+    page: 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/'
+  }
 };
 
 export const logosTrabajos = {
@@ -265,7 +280,82 @@ export const logosProyectos = {
     img: 'https://i.postimg.cc/CMNmL43V/bootcamp_tecnologico.png',
     page: ['Ver Pagina', 'https://www.instagram.com/hubnetworkingmgta/'],
   },
+  "roz": {
+    img: 'https://i.postimg.cc/4dfLZV7v/roz.png',
+    roblox: ['Ver Roblox', 'https://www.roblox.com/es/games/17568423475/El-camino-de-ziko'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/The-Road-of-Ziko'],
+  },
+  "ecc": {
+    img: 'https://i.postimg.cc/j5LtdhXZ/ECC.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC'],
+  },
+  "sql":{
+    img: 'https://i.postimg.cc/h4mhLS8c/PySQL_Console.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/PySQL-Manager'],
+  },
+  "adv": {
+    img: 'https://i.postimg.cc/kXhN2MqQ/Ayudante_Da_Vinci.png',
+    page: ['Ver Pagina', 'https://ayudante-da-viniv.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/JavaScript/tree/main/app_cam_js'],
+  },
+  "tca": {
+    img: 'https://i.postimg.cc/RFRK44gg/testing_car_arduino.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Testing-Car-Arduino'],
+  },
+  "wtp": {
+    img: 'https://i.postimg.cc/6QQr6XLF/converPDF.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/converPDF-py'],
+  },
+  "mctk": {
+    img: 'https://i.postimg.cc/FKthsSqv/MultasCTK.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/CustomTkinter/tree/main/Multas-CTK---Generador-de-Reportes'],
+  },
+  "crawler": {
+    img: 'https://i.postimg.cc/GmwvZf2F/CrawlerCash.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/CrawlerCash'],
+  },
+  "neo": {
+    img: 'https://i.postimg.cc/gJv5RB2H/neo-salud.png',
+    page: ['Ver Pagina', 'https://mascota-feliz.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Neosalud'],
+  },
+  "planb": {
+    img: 'https://i.postimg.cc/rFYhdL9w/planb-completo.png',
+    page: ['Ver Pagina', 'https://administra.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/PlanB-Control-de-Gastos'],
+  },
+  "paralelo": {
+    img: 'https://i.postimg.cc/SxhnfnV4/alparalelo-isologo.png',
+    page: ['Ver Pagina', 'https://al-cambio.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/alParalelo'],
+  },
+  "block": {
+    img: 'https://i.postimg.cc/50Fy34Vy/BlockCheck.png',
+    page: ['Ver Pagina', 'https://cotiza-lacrypto.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/BlockCheck'],
+  },
+  "clima": {
+    img: 'https://i.postimg.cc/nzYMB274/Climadex.png',
+    page: ['Ver Pagina', 'https://consulta-climatica-three.vercel.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Climadex'],
+  },
+};
+
+export const logoDespliegue = {
+  Vercel: {
+    img: new URL('../assets/img/despliegue/vercel.png', import.meta.url).href,
+    page: 'https://vercel.com/'
+  },
+  Netlify: {
+    img: new URL('../assets/img/despliegue/netlify.png', import.meta.url).href,
+    page: 'https://www.netlify.com/'
+  },
+  RobloxStudio: {
+    img: new URL('../assets/img/despliegue/Roblox.png', import.meta.url).href,
+    page: 'https://www.roblox.com/'
+  },
 }
+
 export const logosInstituciones = {
   "Colegio Guayamuri": {
     img : new URL('../assets/img/logos/guayamuri.png', import.meta.url).href,
@@ -275,4 +365,4 @@ export const logosInstituciones = {
     img : new URL('../assets/img/logos/hub.jpg', import.meta.url).href,
     url : 'https://www.instagram.com/hubnetworkingmgta/' 
   }
-}
+};

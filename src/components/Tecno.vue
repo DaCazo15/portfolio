@@ -1,8 +1,11 @@
 <script setup>
   import Boton from './Boton.vue'
-  import { abrirPage } from '../helpers/downloadFile' 
+  import { ref } from 'vue'
 
-  defineProps({
+  import { abrirPage } from '../helpers/downloadFile' 
+  import { logoTecno } from '../helpers/informacion'
+
+  const props = defineProps({
     logoTecno: {
       type: Object,
       required: true
@@ -10,29 +13,43 @@
     tecnologias: {
       type: Array,
       required: true
+    },
+    page: {
+      type: Boolean,
+      required: true
     }
   })
+
+  const tecnoName = ref([
+    'legospike','microbit','tinkercad',
+    'JavaScript','gemini','tm', 'beautifulsoup'
+  ])
+
+  const tecnoNameBlack = ref([
+    'unity','pyserial',
+  ])
+
 </script>
 
 <template>
-  <div class="panel flex-row-center contenedor-tecnologias"> 
-    <template v-for="tech in tecnologias" :key="tech">
+  <div 
+    class="panel flex-row-center contenedor-tecnologias"
+    :class="{
+      contribuciones: page === true
+    }"
+  > 
+    <template v-for="tech in props.tecnologias" :key="tech">
       <Boton 
-      v-if="logoTecno[tech]"
-      @click="abrirPage(logoTecno[tech].page)"
+        v-if="logoTecno[tech]"
+        @click="abrirPage(logoTecno[tech].page)"
       >
         <img 
           :src="logoTecno[tech].logo" 
           :alt="logoTecno[tech].nombre" 
           :class="{
-            spike : logoTecno[tech].nombre === 'legospike',
-            micro : logoTecno[tech].nombre === 'microbit',
-            tinkercad : logoTecno[tech].nombre === 'tinkercad',
-            js : logoTecno[tech].nombre === 'JavaScript',
-            gemini : logoTecno[tech].nombre === 'gemini',
-            tm: logoTecno[tech].nombre === 'tm',
-            
-            }"
+            cuadrado: tecnoName.includes(logoTecno[tech].nombre),
+            black: tecnoNameBlack.includes(logoTecno[tech].nombre)
+          }"
           width="30px" 
         />
       </Boton>
@@ -42,24 +59,28 @@
 
 
 <style scoped>
+  .contenedor-tecnologias {
+    gap: .5rem;
+    flex-wrap: wrap;
+    padding: 0.8rem;
+    width: 100%;
+  }
+  .contenedor-tecnologias.contribuciones{
+    width: 94%;
+  }
+  .cuadrado{
+    border-radius: .5rem;
+  }
+  .black{
+    filter: invert(1);
+  }
+  @media (max-width: 386px) {
     .contenedor-tecnologias {
-        gap: .5rem;
-        flex-wrap: wrap;
-        padding: 0.8rem;
-        width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .5rem;
+      width: 100%;
+      align-items: center;
     }
-    .spike, .micro, 
-    .tinkercad, .js, 
-    .tm, .gemini{
-      border-radius: .5rem;
-    }
-    @media (max-width: 386px) {
-      .contenedor-tecnologias {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: .5rem;
-          width: 100%;
-          align-items: center;
-      }
-    }
+  }
 </style>
