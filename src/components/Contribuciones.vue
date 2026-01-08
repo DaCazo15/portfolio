@@ -134,6 +134,11 @@ defineProps({
   .hub{
     border-radius: .5rem;
   }
+  @media (min-width: 3200px) {
+    .grid{
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
   @media (max-width: 1231px) {
     .grid{
       grid-template-columns: repeat(1, 1fr);
