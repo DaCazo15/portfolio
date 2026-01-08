@@ -161,16 +161,20 @@
     border-radius: .5rem;
   }
   /* fondos cabecera */
-  .roz {
-    background-size: cover;
-    background-position: 0px -170px;
-    background-repeat: no-repeat;
-  }
-  .ecc, .neo, .plan, .clima, 
+  .ecc, .neo, .plan, .clima, .roz
   .block, .paralelo, .adv, .crawler{
     background-size: cover;
-    background-position: 0px -30px;
     background-repeat: no-repeat;
+  }
+  .plan, .clima, .block, 
+  .paralelo, .adv, .crawler{
+    background-position: 50%;
+  }
+  .plan, .neo{
+    background-position: 50%;
+  }
+  .roz {
+    background-position: 0px -170px;
   }
   .roz {
     background-image: url('../assets/fondo/cabeceras/camino-de-ziko.webp');
@@ -215,11 +219,11 @@
       padding: 1rem;
     }
     .roz, .crawler {
-      background-position: 0px 0px;
+      background-position: 50%;
     }
     .ecc, .neo, .plan, .clima, 
     .block, .paralelo, .adv{
-      background-position: 0px 0px;
+      background-position: 50%;
     }
   }
 </style>

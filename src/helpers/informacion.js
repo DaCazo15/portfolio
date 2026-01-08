@@ -327,7 +327,7 @@ export const logosProyectos = {
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/PlanB-Control-de-Gastos'],
   },
   "paralelo": {
-    img: '../assets/img/alparalelo-isologo.png',
+    img: new URL('../assets/img/alparalelo-isologo.png', import.meta.url).href,
     page: ['Ver Pagina', 'https://al-cambio.netlify.app/'],
     github: ['Ver Repositorio', 'https://github.com/DaCazo15/alParalelo'],
   },
