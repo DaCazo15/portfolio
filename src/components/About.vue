@@ -23,14 +23,14 @@
                 target="_blank"
                 @click="abrirPage('https://www.linkedin.com/in/danielcp5150190/')"
             >
-                <img class="linkedin" src="https://i.postimg.cc/zXy9gppP/linkedin-negro.png" alt="LinkedIn">
+                <img class="linkedin" src="https://i.postimg.cc/FRPKnSdB/linkedin_negro_avif.avif" alt="LinkedIn">
             </Boton>
             <Boton 
                 class="btn-red-social" 
                 target="_blank"
                 @click="abrirPage('https://github.com/DaCazo15')"
             >
-                <img class="github" src="https://i.postimg.cc/xTjdVrfc/github.png" alt="GitHub">
+                <img class="github" src="https://i.postimg.cc/HkSPnsMt/github.avif" alt="GitHub">
             </Boton>
         </div>
         <Boton 
@@ -41,7 +41,7 @@
             )"
             class="btn-cv"
         >
-            <img src="https://i.postimg.cc/Njb5Ssqd/download.png" alt="Descargar CV">
+            <img src="https://i.postimg.cc/VsxSyjHN/download_avif.avif" alt="Descargar CV">
             <span>Descargar CV</span>
         </Boton>
     </div>
