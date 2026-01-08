@@ -18,6 +18,8 @@
                 alt="Foto de perfil"
                 class="imagen"
                 fetchpriority="high"
+                width="160"
+                height="160"
             />
 
         </div>
@@ -79,7 +81,6 @@
 
     }
     .border {
-        margin-top: 5rem;
         width: 12rem;
         height: 12rem;
         aspect-ratio: 1 / 1; /* Mantén el círculo siempre redondo */
