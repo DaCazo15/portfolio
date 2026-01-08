@@ -29,64 +29,62 @@ defineProps({
 <template>
   <template v-if="data.length > 0">
     <h2>Contribuciones</h2>
-    <div class="flex-column-center">
-      <div class="flex-column-center contenido-width">
-        <div 
-          class="panel contenido-informacion card" 
-          v-for="(item, idex) in data" :key="idex"
-        >
-          <div class="cabecera-card">
+    <div class="grid">
+      <div 
+        class="panel contenido-informacion card flex-column-center contenido-width" 
+        v-for="(item, idex) in data" :key="idex"
+      >
+        <div class="cabecera-card">
+          <img 
+            v-if="logosInstituciones[item.Institucion]"
+            :src="logosInstituciones[item.Institucion].img" 
+            alt="item.Institucion" 
+            class="img-institucion"
+            :class="{
+              hub: item.Abreviatura === 'HUB'
+            }"
+            @click="abrirPage(logosInstituciones[item.Institucion].url)"
+            >
             <img 
-              v-if="logosInstituciones[item.Institucion]"
-              :src="logosInstituciones[item.Institucion].img" 
-              alt="item.Institucion" 
-              class="img-institucion"
-              :class="{
-                hub: item.Abreviatura === 'HUB'
-              }"
-              @click="abrirPage(logosInstituciones[item.Institucion].url)"
-              >
-              <img 
-              v-if="logosProyectos[item.Abreviatura]"
-              :src="logosProyectos[item.Abreviatura].img" 
-              alt="item.Abreviatura"
-            >
-          </div>
-          <h2 v-html="item.Name"></h2>
-
-          <div class="flex-column-center left">
-            <h3 v-html="'Institución: ' + item.Institucion" ></h3>
-            <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
-          </div>
-          
-          <p v-html="item.Descripcion" class="texto-card"></p>
-
-          <Tecno 
-            :logoTecno="logoTecno" 
-            :page="page"
-            :tecnologias="item.Tecnologias" 
-            v-if="item.Tecnologias && item.Tecnologias.length"
-          />
-          <div
-            class="flex-row-center"
-            :class="{ ancho: ancho <= 1231 }"
+            v-if="logosProyectos[item.Abreviatura]"
+            :src="logosProyectos[item.Abreviatura].img" 
+            alt="item.Abreviatura"
           >
-            <div
-              v-for="(value, key) in logosProyectos[item.Abreviatura]"
-              :key="key"
+        </div>
+        <h2 v-html="item.Name"></h2>
+
+        <div class="flex-column-center left">
+          <h3 v-html="'Institución: ' + item.Institucion" ></h3>
+          <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
+        </div>
+        
+        <p v-html="item.Descripcion" class="texto-card"></p>
+
+        <Tecno 
+          :logoTecno="logoTecno" 
+          :page="page"
+          :tecnologias="item.Tecnologias" 
+          v-if="item.Tecnologias && item.Tecnologias.length"
+        />
+        <div
+          class="flex-row-center"
+          :class="{ ancho: ancho <= 1231 }"
+        >
+          <div
+            v-for="(value, key) in logosProyectos[item.Abreviatura]"
+            :key="key"
+          >
+            <Boton 
+              v-if="key !== 'img'"
+              @click="abrirPage(value[1])"
+              class="btn-card"
+              :class="{ 
+                pagina: value[0][4] === 'P', 
+                repositorio: value[0][4] === 'R' 
+              }"
             >
-              <Boton 
-                v-if="key !== 'img'"
-                @click="abrirPage(value[1])"
-                class="btn-card"
-                :class="{ 
-                  pagina: value[0][4] === 'P', 
-                  repositorio: value[0][4] === 'R' 
-                }"
-              >
-                {{ value[0] }}
-              </Boton>
-            </div>
+              {{ value[0] }}
+            </Boton>
           </div>
         </div>
       </div>
@@ -101,6 +99,14 @@ defineProps({
   .flex-column-center{
     padding-top: 1rem;
   }  
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+    align-items: start;
+    justify-items: center;
+    padding-top: 2rem;
+  }
   .flex-column-center .left{
     align-items: flex-start;
     width: 100%;
@@ -111,7 +117,7 @@ defineProps({
   .flex-column-center h3{
     color: var(--gris-claro);
     margin: 0;
-    margin-left: 2.5rem;
+    margin: .5rem 0 0 2.5rem;
     font-weight: 300;
     font-size: 1.5rem
   }
@@ -131,7 +137,19 @@ defineProps({
   .hub{
     border-radius: .5rem;
   }
+  @media (max-width: 1231px) {
+    .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   @media (max-width: 791px) {
+    .flex-column-center h3{
+      margin: 1rem 0 0 1.2rem;
+      font-size: 1rem;
+    }
+    .card{
+      width: 90%;
+    }
     .texto-card{
       font-size: .8rem;
       margin: 1rem 1rem 0;
