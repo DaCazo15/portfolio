@@ -13,7 +13,13 @@
 <template>
     <div class="about">
         <div class="border">
-            <div class="imagen"></div>
+            <img
+                src="https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif"
+                alt="Foto de perfil"
+                class="imagen"
+                fetchpriority="high"
+            />
+
         </div>
         <h1>Daniel Cazorla</h1>
         <span>Ingeniero de Sistemas con experiencia en desarrollo web y Python Full-Stack</span>
@@ -86,13 +92,11 @@
     .imagen {
         width: 10rem;
         height: 10rem;
-        background-image: url(https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif);
-        background-position: center;
-        background-size: cover;
-        color: var(--gris-claro);
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
-        display: flex;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+        display: block;
     }
     .btn-red-social {
         background-color: var(--gris-claro);
