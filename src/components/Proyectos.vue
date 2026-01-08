@@ -158,15 +158,15 @@
     border-radius: .5rem;
   }
   /* fondos cabecera */
-  .roz, .crawler {
+  .roz {
     background-size: cover;
     background-position: 0px -170px;
     background-repeat: no-repeat;
   }
   .ecc, .neo, .plan, .clima, 
-  .block, .paralelo, .adv{
+  .block, .paralelo, .adv, .crawler{
     background-size: cover;
-    background-position: 0px -70px;
+    background-position: 0px -30px;
     background-repeat: no-repeat;
   }
   .roz {
@@ -216,7 +216,7 @@
     }
     .ecc, .neo, .plan, .clima, 
     .block, .paralelo, .adv{
-      background-position: -100px 0px;
+      background-position: 0px 0px;
     }
   }
 </style>
