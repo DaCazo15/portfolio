@@ -61,9 +61,7 @@
 
     @media (max-width: 791px){
         .contenedor-text p{
-            font-size: .5rem;
-            font-weight: 400;
-            color: var(--verde-cian);
+            font-weight: 300;
         }
         .card img{
             width: 150px;
