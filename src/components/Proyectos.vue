@@ -161,12 +161,7 @@
     border-radius: .5rem;
   }
   /* fondos cabecera */
-  .ecc, .neo, .plan, .clima, .roz
-  .block, .paralelo, .adv, .crawler{
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .plan, .clima, .block, 
+.plan, .clima, .block, 
   .paralelo, .adv, .crawler{
     background-position: 50%;
   }
@@ -202,6 +197,12 @@
   }
   .adv{
     background-image: url('../assets/fondo/cabeceras/ayudante.png');
+  }
+  .ecc, .neo, .plan, .clima, .roz,
+  .block, .paralelo, .adv, .crawler{
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
   .default{
     background-color: rgba(var(--gris-oscuroRGB), 0.6);

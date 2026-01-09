@@ -215,7 +215,7 @@ h3 {
   color: var(--gris-claro);
   font-family: var(--font-titulo);
   padding: 0 1.2rem;
-  font-size: 1rem;
+  font-size: .9rem;
   text-align: left;
   white-space: pre-line;
   line-height: 1.4;
@@ -407,13 +407,12 @@ h3 {
   }
 
   .contenido .info p {
-    color: var(--verde-cian);
     background-color: var(--gris-oscuro);
     border-radius: 0 1rem 1rem 0;
     border-left: solid 2px var(--gris-claro);
     ;
     padding: 1rem;
-    font-size: .5rem;
+    font-size: .8rem;
     font-weight: 400;
   }
 

@@ -19,7 +19,7 @@
             <div class="contenido info">
                 <div class="about">
                     <h2>Acerca de mi</h2>
-                    <p v-for="(paragraph, index) in infAbout" :key="index">{{ paragraph }}</p>
+                    <p v-html="infAbout"></p>
                 </div>
             </div>           
         </div>
