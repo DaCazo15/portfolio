@@ -4,6 +4,7 @@ export default function usePage() {
     const page = reactive({
         inicio: true,
         experiencia: false,
+        stack: false,
         contribuciones: false,
         proyectos: false,
         admin: false,

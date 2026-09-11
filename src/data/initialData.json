@@ -3,8 +3,16 @@
     "seccionesActivas": {
       "about": true,
       "experiencia": true,
+      "stack": true,
       "contribuciones": true,
       "proyectos": true
+    },
+    "widgetsStack": {
+      "graficaBarras": true,
+      "graficaDona": true,
+      "dominiosHabilidad": true,
+      "mallaInteractiva": true,
+      "metricasKpi": true
     },
     "ultimaActualizacion": "2026-09-11T02:22:56.147Z"
   },

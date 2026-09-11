@@ -3,7 +3,6 @@
   import gsap from 'gsap';
   import Boton from './Boton.vue';
   import Tecno from './Tecno.vue';
-  import ProyectosCharts from './charts/ProyectosCharts.vue';
 
   import { useFirestoreCollection } from '../composables/useFirestoreCollection';
   import useAnchoViewport from '../composables/useAnchoViewport';
@@ -61,77 +60,83 @@
 
 <template>
   <template v-if="data.length > 0">
-    <h2>Proyectos</h2>
-    <div class="grid">
-      <div 
-        class="panel contenido-informacion card flex-column-center contenido-width card-proyecto-item" 
-        v-for="(item, idex) in data" :key="idex"
-      >
+    <div class="w-full max-w-6xl mx-auto px-4 py-6">
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--verde-cian)]/15 text-[var(--verde-cian)] border border-[var(--verde-cian)]/30 text-xs font-semibold mb-2">
+          <i class="bi bi-code-square"></i>
+          <span>Catálogo de Proyectos</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-['Rubik'] text-[var(--gris-claro)] m-0">
+          Proyectos
+        </h2>
+      </div>
+
+      <div class="grid">
         <div 
-          class="fondo-cabecera-card"
-          :class="classMap[item.Abreviatura]", 
+          class="panel contenido-informacion card flex-column-center contenido-width card-proyecto-item" 
+          v-for="(item, idex) in data" :key="idex"
         >
           <div 
-            class="cabecera-card"
-            :class="{default : classMap[item.Abreviatura]}"
+            class="fondo-cabecera-card"
+            :class="classMap[item.Abreviatura]" 
           >
-            <img 
-              v-if="logoDespliegue[item.despliegue]"
-              :src="logoDespliegue[item.despliegue].img" 
-              alt="item.despliegue" 
-              class="img-institucion"
-              :class="{
-                cuadrado: item.despliegue !== 'Netlify'
-              }"
-              @click="abrirPage(logoDespliegue[item.despliegue].url)"
+            <div 
+              class="cabecera-card"
+              :class="{default : classMap[item.Abreviatura]}"
             >
-            <img 
-              v-if="logosProyectos[item.Abreviatura]"
-              :src="logosProyectos[item.Abreviatura].img" 
-              :alt="item.Abreviatura"
-              :class="{
-              }"
-              alt="item.Abreviatura"
-            >
+              <img 
+                v-if="logoDespliegue[item.despliegue]"
+                :src="logoDespliegue[item.despliegue].img" 
+                alt="item.despliegue" 
+                class="img-institucion"
+                :class="{
+                  cuadrado: item.despliegue !== 'Netlify'
+                }"
+                @click="abrirPage(logoDespliegue[item.despliegue].url)"
+              >
+              <img 
+                v-if="logosProyectos[item.Abreviatura]"
+                :src="logosProyectos[item.Abreviatura].img" 
+                :alt="item.Abreviatura"
+                alt="item.Abreviatura"
+              >
+            </div>
           </div>
-        </div>
-        <h2 v-html="item.Name"></h2>
-        
-        <Tecno 
-          :logoTecno="logoTecno" 
-          :page="page"
-          :tecnologias="item.Tecnologias" 
-          v-if="item.Tecnologias && item.Tecnologias.length"
-        />
+          <h2 v-html="item.Name" class="titulo-card-item"></h2>
+          
+          <Tecno 
+            :logoTecno="logoTecno" 
+            :page="page"
+            :tecnologias="item.Tecnologias" 
+            v-if="item.Tecnologias && item.Tecnologias.length"
+          />
 
-        <p v-html="item.Descripcion" class="texto-card"></p>
-        
-        <div
-          class="flex-row-center"
-          :class="{ ancho: ancho <= 400 }"
-        >
+          <p v-html="item.Descripcion" class="texto-card"></p>
+          
           <div
-            v-for="(value, key) in logosProyectos[item.Abreviatura]"
-            :key="key"
+            class="flex-row-center botones-acciones-proyecto"
+            :class="{ ancho: ancho <= 400 }"
           >
-            <Boton 
-              v-if="key !== 'img'"
-              @click="abrirPage(value[1])"
-              class="btn-card"
-              :class="{ 
-                pagina: value[0][4] === 'P', 
-                repositorio: value[0][4] === 'R' 
-              }"
+            <div
+              v-for="(value, key) in logosProyectos[item.Abreviatura]"
+              :key="key"
             >
-              {{ value[0] }}
-            </Boton>
+              <Boton 
+                v-if="key !== 'img'"
+                @click="abrirPage(value[1])"
+                class="btn-card"
+                :class="{ 
+                  pagina: value[0][4] === 'P', 
+                  repositorio: value[0][4] === 'R' 
+                }"
+              >
+                {{ value[0] }}
+              </Boton>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Gráficas dinámicas de proyectos -->
-    <ProyectosCharts />
   </template>
 </template>
 

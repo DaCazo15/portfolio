@@ -12,7 +12,7 @@ import {
   query, 
   orderBy 
 } from 'firebase/firestore';
-import { db } from '../firebase';
+import { db, isFirebaseConfigured } from '../firebase';
 import initialData from '../data/initialData.json';
 
 /**
@@ -38,6 +38,17 @@ export function useFirestoreCollection(collectionName, options = {}) {
   const fetchData = async () => {
     loading.value = true;
     error.value = null;
+
+    // Si Firebase no está configurado o db es nulo, usamos directamente el fallback local
+    if (!db || !isFirebaseConfigured) {
+      if (collectionName === 'config') {
+        data.value = initialData.config || {};
+      } else {
+        data.value = initialData[collectionName] || [];
+      }
+      loading.value = false;
+      return data.value;
+    }
 
     try {
       // Si la colección es 'config', tratamos el documento 'site'
@@ -111,6 +122,9 @@ export function useFirestoreCollection(collectionName, options = {}) {
 
   // Operaciones de escritura para el panel de administración
   const addItem = async (itemData) => {
+    if (!db || !isFirebaseConfigured) {
+      throw new Error('Firebase no está configurado. Por favor define las variables VITE_FIREBASE_* en tu archivo .env');
+    }
     try {
       const colRef = collection(db, collectionName);
       const docRef = await addDoc(colRef, {
@@ -125,6 +139,9 @@ export function useFirestoreCollection(collectionName, options = {}) {
   };
 
   const updateItem = async (id, itemData) => {
+    if (!db || !isFirebaseConfigured) {
+      throw new Error('Firebase no está configurado. Por favor define las variables VITE_FIREBASE_* en tu archivo .env');
+    }
     try {
       const docRef = doc(db, collectionName, id);
       await updateDoc(docRef, itemData);
@@ -135,6 +152,9 @@ export function useFirestoreCollection(collectionName, options = {}) {
   };
 
   const deleteItem = async (id) => {
+    if (!db || !isFirebaseConfigured) {
+      throw new Error('Firebase no está configurado. Por favor define las variables VITE_FIREBASE_* en tu archivo .env');
+    }
     try {
       const docRef = doc(db, collectionName, id);
       await deleteDoc(docRef);
@@ -145,6 +165,11 @@ export function useFirestoreCollection(collectionName, options = {}) {
   };
 
   const updateConfigSite = async (newConfig) => {
+    if (!db || !isFirebaseConfigured) {
+      // Si estamos en modo local sin Firebase, actualizamos el estado reactivo en memoria
+      data.value = { ...data.value, ...newConfig };
+      return;
+    }
     try {
       const docRef = doc(db, 'config', 'site');
       await setDoc(docRef, {

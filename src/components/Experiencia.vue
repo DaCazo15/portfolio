@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class="flex-column-center">
+    <div class="mt-15 flex-column-center">
         <div class="panel contenido">
             <div class="contenido gif">
                 <img 

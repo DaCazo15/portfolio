@@ -4,7 +4,7 @@ import {
   signOut, 
   onAuthStateChanged 
 } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, isFirebaseConfigured } from '../firebase';
 
 const user = ref(null);
 const loading = ref(true);
@@ -14,6 +14,18 @@ export function useAuthAdmin() {
   const login = async (email, password) => {
     loading.value = true;
     error.value = null;
+
+    if (!auth || !isFirebaseConfigured) {
+      // Modo dev automático si no hay Firebase configurado
+      user.value = {
+        email: email || 'dcazorla.0190@gmail.com',
+        uid: 'dev-admin-uid',
+        displayName: 'Daniel Cazorla (Admin Local)'
+      };
+      loading.value = false;
+      return user.value;
+    }
+
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       user.value = userCredential.user;
@@ -33,9 +45,25 @@ export function useAuthAdmin() {
     }
   };
 
+  const loginDev = (email = 'dcazorla.0190@gmail.com') => {
+    user.value = {
+      email,
+      uid: 'dev-admin-uid',
+      displayName: 'Daniel Cazorla (Admin Local)'
+    };
+    return user.value;
+  };
+
   const logout = async () => {
     loading.value = true;
     error.value = null;
+
+    if (!auth || !isFirebaseConfigured) {
+      user.value = null;
+      loading.value = false;
+      return;
+    }
+
     try {
       await signOut(auth);
       user.value = null;
@@ -49,10 +77,14 @@ export function useAuthAdmin() {
   };
 
   onMounted(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      user.value = currentUser;
+    if (auth && isFirebaseConfigured) {
+      onAuthStateChanged(auth, (currentUser) => {
+        user.value = currentUser;
+        loading.value = false;
+      });
+    } else {
       loading.value = false;
-    });
+    }
   });
 
   return {
@@ -60,7 +92,9 @@ export function useAuthAdmin() {
     loading,
     error,
     login,
-    logout
+    loginDev,
+    logout,
+    isConfigured: isFirebaseConfigured
   };
 }
 

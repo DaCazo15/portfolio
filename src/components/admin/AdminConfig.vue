@@ -10,13 +10,27 @@ const mensajeExito = ref('');
 const secciones = ref({
   about: true,
   experiencia: true,
+  stack: true,
   contribuciones: true,
   proyectos: true
 });
 
+const widgets = ref({
+  graficaBarras: true,
+  graficaDona: true,
+  dominiosHabilidad: true,
+  mallaInteractiva: true,
+  metricasKpi: true
+});
+
 watch(config, (nuevaConfig) => {
-  if (nuevaConfig && nuevaConfig.seccionesActivas) {
-    secciones.value = { ...secciones.value, ...nuevaConfig.seccionesActivas };
+  if (nuevaConfig) {
+    if (nuevaConfig.seccionesActivas) {
+      secciones.value = { ...secciones.value, ...nuevaConfig.seccionesActivas };
+    }
+    if (nuevaConfig.widgetsStack) {
+      widgets.value = { ...widgets.value, ...nuevaConfig.widgetsStack };
+    }
   }
 }, { immediate: true });
 
@@ -25,7 +39,8 @@ const guardarCambios = async () => {
   mensajeExito.value = '';
   try {
     await updateConfigSite({
-      seccionesActivas: secciones.value
+      seccionesActivas: secciones.value,
+      widgetsStack: widgets.value
     });
     mensajeExito.value = 'Configuración guardada exitosamente.';
     setTimeout(() => {
@@ -101,6 +116,22 @@ const guardarCambios = async () => {
         />
       </label>
 
+      <!-- Stack -->
+      <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+        <div class="flex items-center gap-3">
+          <i class="bi bi-layers text-xl text-[var(--verde-cian)]"></i>
+          <div>
+            <span class="block text-sm font-semibold text-[var(--gris-claro)]">Stack & Datos</span>
+            <span class="text-xs text-gray-400">Gráficas interactivas y tecnologías</span>
+          </div>
+        </div>
+        <input 
+          type="checkbox" 
+          v-model="secciones.stack" 
+          class="w-5 h-5 accent-[var(--verde-cian)] cursor-pointer"
+        />
+      </label>
+
       <!-- Contribuciones -->
       <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
         <div class="flex items-center gap-3">
@@ -132,6 +163,99 @@ const guardarCambios = async () => {
           class="w-5 h-5 accent-[var(--verde-cian)] cursor-pointer"
         />
       </label>
+    </div>
+
+    <!-- Sección de Widgets de Stack -->
+    <div class="mt-10 pt-8 border-t border-gray-800">
+      <div class="mb-5">
+        <h3 class="text-lg font-bold font-['Rubik'] text-[var(--gris-claro)] flex items-center gap-2 m-0 text-left">
+          <i class="bi bi-grid-1x2-fill text-[var(--verde-cian)]"></i>
+          Widgets de la Sección "Stack"
+        </h3>
+        <p class="text-xs text-gray-400 mt-1">Habilita o deshabilita los diferentes componentes analíticos del Stack</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Widget 1: KPIs -->
+        <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <i class="bi bi-speedometer2 text-lg text-[var(--verde-cian)]"></i>
+            <div>
+              <span class="block text-xs font-semibold text-[var(--gris-claro)]">Tarjetas de KPIs</span>
+              <span class="text-[11px] text-gray-400">Métricas globales resumidas</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            v-model="widgets.metricasKpi" 
+            class="w-4 h-4 accent-[var(--verde-cian)] cursor-pointer"
+          />
+        </label>
+
+        <!-- Widget 2: Gráfica Barras -->
+        <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <i class="bi bi-bar-chart-fill text-lg text-[var(--verde-cian)]"></i>
+            <div>
+              <span class="block text-xs font-semibold text-[var(--gris-claro)]">Frecuencia de Tecnologías</span>
+              <span class="text-[11px] text-gray-400">Gráfica de barras Chart.js</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            v-model="widgets.graficaBarras" 
+            class="w-4 h-4 accent-[var(--verde-cian)] cursor-pointer"
+          />
+        </label>
+
+        <!-- Widget 3: Gráfica Dona -->
+        <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <i class="bi bi-pie-chart-fill text-lg text-[var(--verde-cian)]"></i>
+            <div>
+              <span class="block text-xs font-semibold text-[var(--gris-claro)]">Distribución Despliegues</span>
+              <span class="text-[11px] text-gray-400">Gráfica de dona Chart.js</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            v-model="widgets.graficaDona" 
+            class="w-4 h-4 accent-[var(--verde-cian)] cursor-pointer"
+          />
+        </label>
+
+        <!-- Widget 4: Dominios de Habilidad -->
+        <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <i class="bi bi-diagram-3-fill text-lg text-[var(--verde-cian)]"></i>
+            <div>
+              <span class="block text-xs font-semibold text-[var(--gris-claro)]">Dominios Técnicos</span>
+              <span class="text-[11px] text-gray-400">Frontend, Backend, IoT & AI</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            v-model="widgets.dominiosHabilidad" 
+            class="w-4 h-4 accent-[var(--verde-cian)] cursor-pointer"
+          />
+        </label>
+
+        <!-- Widget 5: Malla Interactiva -->
+        <label class="flex items-center justify-between p-4 rounded-xl bg-[var(--fondo-negro)] border border-gray-800 hover:border-[var(--verde-cian)]/40 transition cursor-pointer">
+          <div class="flex items-center gap-3">
+            <i class="bi bi-collection-fill text-lg text-[var(--verde-cian)]"></i>
+            <div>
+              <span class="block text-xs font-semibold text-[var(--gris-claro)]">Malla Interactiva de Stack</span>
+              <span class="text-[11px] text-gray-400">Explorador de tecnologías con filtros</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            v-model="widgets.mallaInteractiva" 
+            class="w-4 h-4 accent-[var(--verde-cian)] cursor-pointer"
+          />
+        </label>
+      </div>
     </div>
   </div>
 </template>

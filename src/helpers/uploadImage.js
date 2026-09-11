@@ -1,5 +1,5 @@
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { storage } from '../firebase';
+import { storage, isFirebaseConfigured } from '../firebase';
 
 /**
  * Sube una imagen a Firebase Storage en la ruta proyectos/{id}/{timestamp}_{filename}
@@ -9,6 +9,10 @@ import { storage } from '../firebase';
  * @returns {Promise<string>} URL pública de descarga de la imagen
  */
 export async function uploadProjectImage(file, proyectoId = 'general') {
+  if (!storage || !isFirebaseConfigured) {
+    throw new Error('Firebase Storage no está configurado. Por favor define las variables VITE_FIREBASE_* en tu archivo .env');
+  }
+
   if (!file) throw new Error('No se proporcionó ningún archivo de imagen');
 
   // Validaciones

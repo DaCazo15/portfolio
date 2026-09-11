@@ -49,63 +49,74 @@ onUnmounted(() => {
 
 <template>
   <template v-if="data.length > 0">
-    <h2>Contribuciones</h2>
-    <div class="grid">
-      <div 
-        class="panel contenido-informacion card flex-column-center contenido-width card-contribucion-item" 
-        v-for="(item, idex) in data" :key="idex"
-      >
-        <div class="cabecera-card">
-          <img 
-            v-if="logosInstituciones[item.Institucion]"
-            :src="logosInstituciones[item.Institucion].img" 
-            alt="item.Institucion" 
-            class="img-institucion"
-            :class="{
-              hub: item.Abreviatura === 'HUB'
-            }"
-            @click="abrirPage(logosInstituciones[item.Institucion].url)"
+    <div class="w-full max-w-6xl mx-auto px-4 py-6">
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--verde-cian)]/15 text-[var(--verde-cian)] border border-[var(--verde-cian)]/30 text-xs font-semibold mb-2">
+          <i class="bi bi-stars"></i>
+          <span>Impacto & Proyectos Colaborativos</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-['Rubik'] text-[var(--gris-claro)] m-0">
+          Contribuciones
+        </h2>
+      </div>
+
+      <div class="grid">
+        <div 
+          class="panel contenido-informacion card flex-column-center contenido-width card-contribucion-item" 
+          v-for="(item, idex) in data" :key="idex"
+        >
+          <div class="cabecera-card">
+            <img 
+              v-if="logosInstituciones[item.Institucion]"
+              :src="logosInstituciones[item.Institucion].img" 
+              alt="item.Institucion" 
+              class="img-institucion"
+              :class="{
+                hub: item.Abreviatura === 'HUB'
+              }"
+              @click="abrirPage(logosInstituciones[item.Institucion].url)"
             >
             <img 
-            v-if="logosProyectos[item.Abreviatura]"
-            :src="logosProyectos[item.Abreviatura].img" 
-            alt="item.Abreviatura"
-          >
-        </div>
-        <h2 v-html="item.Name"></h2>
-
-        <div class="flex-column-center left">
-          <h3 v-html="'Institución: ' + item.Institucion" ></h3>
-          <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
-        </div>
-        
-        <p v-html="item.Descripcion" class="texto-card"></p>
-
-        <Tecno 
-          :logoTecno="logoTecno" 
-          :page="page"
-          :tecnologias="item.Tecnologias" 
-          v-if="item.Tecnologias && item.Tecnologias.length"
-        />
-        <div
-          class="flex-row-center"
-          :class="{ ancho: ancho <= 1231 }"
-        >
-          <div
-            v-for="(value, key) in logosProyectos[item.Abreviatura]"
-            :key="key"
-          >
-            <Boton 
-              v-if="key !== 'img'"
-              @click="abrirPage(value[1])"
-              class="btn-card"
-              :class="{ 
-                pagina: value[0][4] === 'P', 
-                repositorio: value[0][4] === 'R' 
-              }"
+              v-if="logosProyectos[item.Abreviatura]"
+              :src="logosProyectos[item.Abreviatura].img" 
+              alt="item.Abreviatura"
             >
-              {{ value[0] }}
-            </Boton>
+          </div>
+          <h2 v-html="item.Name" class="titulo-contribucion"></h2>
+
+          <div class="flex-column-center left">
+            <h3 v-html="'Institución: ' + item.Institucion" ></h3>
+            <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
+          </div>
+          
+          <p v-html="item.Descripcion" class="texto-card"></p>
+
+          <Tecno 
+            :logoTecno="logoTecno" 
+            :page="page"
+            :tecnologias="item.Tecnologias" 
+            v-if="item.Tecnologias && item.Tecnologias.length"
+          />
+          <div
+            class="flex-row-center"
+            :class="{ ancho: ancho <= 1231 }"
+          >
+            <div
+              v-for="(value, key) in logosProyectos[item.Abreviatura]"
+              :key="key"
+            >
+              <Boton 
+                v-if="key !== 'img'"
+                @click="abrirPage(value[1])"
+                class="btn-card"
+                :class="{ 
+                  pagina: value[0][4] === 'P', 
+                  repositorio: value[0][4] === 'R' 
+                }"
+              >
+                {{ value[0] }}
+              </Boton>
+            </div>
           </div>
         </div>
       </div>
