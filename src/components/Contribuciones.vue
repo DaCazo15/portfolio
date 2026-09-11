@@ -1,28 +1,49 @@
 <script setup>
-import { onMounted } from 'vue';
-
+import { watch, nextTick, onUnmounted } from 'vue';
+import gsap from 'gsap';
 import Boton from './Boton.vue';
 import Tecno from './Tecno.vue';
 
-import useData from '../composables/useData';
+import { useFirestoreCollection } from '../composables/useFirestoreCollection';
 import useAnchoViewport from '../composables/useAnchoViewport';
 import { logosProyectos, logosInstituciones, logoTecno } from '../helpers/informacion';
 import { abrirPage } from '../helpers/downloadFile';
 
-
-const { data, bajarData } = useData();
+const { data } = useFirestoreCollection('contribuciones', { realtime: true });
 const { ancho } = useAnchoViewport();
-
-onMounted(() => {
-  bajarData("/data/Data_2.xlsx");
-});
 
 defineProps({
   page: {
     type: true,
     required: true
   }
-})
+});
+
+let animacionContext = null;
+
+watch(data, () => {
+  nextTick(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    if (animacionContext) animacionContext.revert();
+    animacionContext = gsap.context(() => {
+      gsap.from('.card-contribucion-item', {
+        opacity: 0,
+        y: 28,
+        scale: 0.97,
+        stagger: 0.08,
+        duration: 0.55,
+        ease: 'power2.out',
+        clearProps: 'all'
+      });
+    });
+  });
+}, { immediate: true });
+
+onUnmounted(() => {
+  if (animacionContext) animacionContext.revert();
+});
 
 </script>
 
@@ -31,7 +52,7 @@ defineProps({
     <h2>Contribuciones</h2>
     <div class="grid">
       <div 
-        class="panel contenido-informacion card flex-column-center contenido-width" 
+        class="panel contenido-informacion card flex-column-center contenido-width card-contribucion-item" 
         v-for="(item, idex) in data" :key="idex"
       >
         <div class="cabecera-card">

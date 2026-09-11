@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // Outfit
 import '@fontsource/outfit/400.css';

@@ -9,6 +9,10 @@
         esMovil: {
             type: Boolean,
             required: true
+        },
+        seccionesActivas: {
+            type: Object,
+            default: () => ({ about: true, experiencia: true, contribuciones: true, proyectos: true })
         }
     });
 
@@ -28,18 +32,22 @@
             <p class="nombre">Dacazo15</p>
             <div class="contenedor-btn" v-if="!props.esMovil">
                 <Boton
+                    v-if="props.seccionesActivas?.about !== false"
                     @click="emit('setPage', 'inicio')"
                     class="btn-nav"
                 >Inicio</Boton>
                 <Boton
+                    v-if="props.seccionesActivas?.experiencia !== false"
                     @click="emit('setPage', 'experiencia')"
                     class="btn-nav"
                 >Experiencia</Boton>
                 <Boton
+                    v-if="props.seccionesActivas?.contribuciones !== false"
                     @click="emit('setPage', 'contribuciones')"
                     class="btn-nav"
                 >Contribuciones</Boton>
                 <Boton
+                    v-if="props.seccionesActivas?.proyectos !== false"
                     @click="emit('setPage', 'proyectos')"
                     class="btn-nav"
                 >Proyectos</Boton>
@@ -53,21 +61,25 @@
         </div>
         <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
             <Boton
+                v-if="props.seccionesActivas?.about !== false"
                 @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/L6WxF0F4/home.png" alt="home" width="40">
             </Boton>
             <Boton
+                v-if="props.seccionesActivas?.experiencia !== false"
                 @click="[emit('setPage', 'experiencia'), menuToggle('experiencia')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/TYstvHvP/clock.png" alt="experiencia" width="40">
             </Boton>
             <Boton
+                v-if="props.seccionesActivas?.contribuciones !== false"
                 @click="[emit('setPage', 'contribuciones'), menuToggle('contribuciones')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/VLhKPHPv/puzzle.png" alt="contribuciones" width="40">
             </Boton>
             <Boton
+                v-if="props.seccionesActivas?.proyectos !== false"
                 @click="[emit('setPage', 'proyectos'), menuToggle('proyectos')]"
                 class="btn-inferior"
             ><img src="https://i.postimg.cc/Wby5cfc1/startup.png" alt="proyectos" width="40">

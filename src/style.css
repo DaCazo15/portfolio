@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --fondo-negro: rgb(0, 11, 16);
   --gris-oscuro: #242424;

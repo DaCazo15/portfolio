@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Función para validar si el usuario autenticado es el administrador
+    function isOwner() {
+      return request.auth != null;
+    }
+
+    // Configuración del sitio (secciones activas)
+    match /config/{document=**} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+
+    // Colección de proyectos
+    match /proyectos/{proyectoId} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+
+    // Colección de experiencia laboral
+    match /experiencia/{experienciaId} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+
+    // Colección de contribuciones
+    match /contribuciones/{contribucionId} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+  }
+}

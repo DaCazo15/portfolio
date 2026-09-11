@@ -1,23 +1,45 @@
 <script setup>
-    import { onMounted } from 'vue';
-    import Tecno from './Tecno.vue'
+    import { watch, nextTick, onUnmounted } from 'vue';
+    import gsap from 'gsap';
+    import Tecno from './Tecno.vue';
     import { logosTrabajos, logoTecno } from '../helpers/informacion';
 
-    import useData from '../composables/useData'
-    import useAnchoViewport from '../composables/useAnchoViewport'
+    import { useFirestoreCollection } from '../composables/useFirestoreCollection';
+    import useAnchoViewport from '../composables/useAnchoViewport';
 
     const { ancho } = useAnchoViewport();
-    const {data, loading, error, bajarData} = useData();
+    const { data, loading, error } = useFirestoreCollection('experiencia', { realtime: true });
 
-    onMounted(() => {
-        bajarData("/data/Data.xlsx");
+    let animacionContext = null;
+
+    watch(data, () => {
+        nextTick(() => {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduceMotion) return;
+
+            if (animacionContext) animacionContext.revert();
+            animacionContext = gsap.context(() => {
+                gsap.from('.card-experiencia-item', {
+                    opacity: 0,
+                    y: 30,
+                    stagger: 0.12,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    clearProps: 'all'
+                });
+            });
+        });
+    }, { immediate: true });
+
+    onUnmounted(() => {
+        if (animacionContext) animacionContext.revert();
     });
 
 </script>
 
 <template>
     <h2 class="titulo-experiencia">Experiencia</h2>
-    <div class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
+    <div class="contenedor-experiencia card-experiencia-item" v-for="(item, index) in data" :key="index">
         <div class="contenedor-text">
             <div class="flex-column-center contenido-informacion">
                 <div class="flex-row-center" :class="{ancho : ancho <= 1231}">

@@ -1,7 +1,22 @@
-# netlify.toml
+# Configuración de Despliegue en Netlify
 [build]
   command = "npm run build"
   publish = "dist"
 
 [build.environment]
-  NPM_FLAGS = "--force"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Redirecciones para SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Encabezados de seguridad y rendimiento
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

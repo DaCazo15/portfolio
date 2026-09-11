@@ -1,0 +1,480 @@
+{
+  "config": {
+    "seccionesActivas": {
+      "about": true,
+      "experiencia": true,
+      "contribuciones": true,
+      "proyectos": true
+    },
+    "ultimaActualizacion": "2026-09-11T02:22:56.147Z"
+  },
+  "experiencia": [
+    {
+      "id": "exp_1",
+      "Name": "Concepto",
+      "Abreviatura": "Concepto",
+      "Cargo": "Full-Stack<br>Meta Ads<br>Análisis de Datos",
+      "Descripcion": "Front‑End Developer<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrollo y optimización de interfaces de usuario.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementación de estilos y componentes visuales modernos.<br>Testing UX/UI<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evaluación de la experiencia de usuario.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pruebas de usabilidad y retroalimentación para mejorar la interfaz.<br>Migración de Servidores<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoyo en procesos de migración y configuración de servidores.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Garantía de continuidad operativa y seguridad en la infraestructura.<br>Analista de Datos en Meta Ads<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monitoreo y análisis de métricas de campañas publicitarias.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optimización de estrategias de marketing digital basadas en datos.",
+      "competencias": "•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrollo front‑end y optimización de interfaces.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testing de UX/UI y mejora de experiencia de usuario.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Migración y gestión de servidores.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Analytics aplicado a campañas digitales (Meta Ads).<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integración de tecnología y marketing para resultados medibles.",
+      "Tecnologias": [
+        "figma",
+        "framer",
+        "wordpress",
+        "elementor",
+        "namecheap",
+        "meta",
+        "vue",
+        "javascript",
+        "git",
+        "github"
+      ],
+      "orden": 1
+    },
+    {
+      "id": "exp_2",
+      "Name": "U.E Agua Viva",
+      "Abreviatura": "AguaViva",
+      "Cargo": "Profesor de Robótica",
+      "Descripcion": "Profesor de Programación, Computación y Robótica<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impartición de clases en todos los niveles educativos de la institución.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diseño de contenidos adaptados a la edad y nivel académico de los estudiantes.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Promoción del pensamiento lógico, la creatividad y la resolución de problemas mediante tecnología.<br>Encargado de la Selección de Robótica<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dirección y entrenamiento de estudiantes en el equipo de robótica institucional.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organización de actividades y preparación para competencias.<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrollo de proyectos prácticos que integran programación, electrónica y diseño.",
+      "competencias": "•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Educación tecnológica en múltiples niveles académicos.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adaptación pedagógica de contenidos STEM.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liderazgo en equipos de robótica.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Promoción de competencias y proyectos tecnológicos.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fomento de habilidades digitales desde edades tempranas.",
+      "Tecnologias": [
+        "arduino",
+        "python",
+        "scratch",
+        "legospike",
+        "git",
+        "github"
+      ],
+      "orden": 2
+    },
+    {
+      "id": "exp_3",
+      "Name": "BleeperBuy",
+      "Abreviatura": "BB",
+      "Cargo": "Front-End Developer",
+      "Descripcion": "Front‑End Developer<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementación y edición de interfaces de usuario.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uso de Figma para diseño y prototipado.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Control de versiones y colaboración en GitLab.​<br>Especialista en migración de estilos<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conversión de estilos de Sass CSS a Tailwind CSS.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optimización de la arquitectura visual y consistencia de diseño.​<br>Apoyo en Testing UX/UI<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evaluación de la experiencia de usuario.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pruebas de usabilidad y retroalimentación para mejorar la interfaz.​",
+      "competencias": "•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrollo Front‑End con Tailwind CSS.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Migración y optimización de estilos CSS/Sass.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Control de versiones con GitLab.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testing de UX/UI y mejora de experiencia de usuario.",
+      "Tecnologias": [
+        "vue",
+        "figma",
+        "gitlab",
+        "tailwindcss",
+        "sasscss",
+        "git"
+      ],
+      "orden": 3
+    },
+    {
+      "id": "exp_4",
+      "Name": "Soluciones Técnologicas Bello",
+      "Abreviatura": "STB",
+      "Cargo": "Lider de Departamento<br>Profesor de Robótica<br>Software Developer",
+      "Descripcion": "Profesor de Robótica<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impartición de clases en escuelas afiliadas a la academia.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diseño de contenidos educativos adaptados a diferentes edades.​<br>Coach de equipo de competencia<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entrenador del equipo MAETIM-BOT en la primera competencia de robótica organizada por la ONU \"AI for Good\".​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logro destacado: tercer lugar en estadales y clasificación a nacionales.​<br>Líder del Departamento de Escuelas<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gestión de inventario y recursos humanos.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coordinación de alrededor de doce escuelas afiliadas.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisión de actividades académicas y administrativas.​<br>Profesor de Programación en el programa “Creando Mi Futuro”​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Formación tecnológica en estudiantes de 8+ años.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enseñanza de programación dentro de un módulo educativo de 6 meses que incluía robótica, electrónica, diseño y animación.​<br>Desarrollador de aplicaciones de escritorio<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creación de herramientas para la automatización de procesos administrativos.​<br>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementación de soluciones tecnológicas para mejorar la eficiencia del departamento de escuelas.​",
+      "competencias": "•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Educación tecnológica y metodologías STEM.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liderazgo y gestión académica.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programación y desarrollo de software.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organización de competencias y proyectos educativos.<br>•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovación en procesos administrativos.",
+      "Tecnologias": [
+        "arduino",
+        "cpp",
+        "python",
+        "javascript",
+        "lua",
+        "customtkinter",
+        "flet",
+        "scratch",
+        "mblock",
+        "microbit",
+        "tinkercad",
+        "robloxstudio"
+      ],
+      "orden": 4
+    }
+  ],
+  "contribuciones": [
+    {
+      "id": "cont_1",
+      "Name": "E-28<br>Extrusora de Filamento",
+      "Abreviatura": "E-28",
+      "Institucion": "Colegio Guayamuri",
+      "Descripcion": "Sistema autónomo que convierte plástico PET reciclado en filamento para impresoras 3D mediante un sistema de control PID de temperatura y un motor de extrusión de precisión, ofreciendo una solución sostenible e innovadora para el reciclaje.",
+      "Rol": "Software Developer",
+      "Tecnologias": [
+        "arduino"
+      ],
+      "orden": 1
+    },
+    {
+      "id": "cont_2",
+      "Name": "B-28<br>Selector Inteligente de PET",
+      "Abreviatura": "B-28",
+      "Institucion": "Colegio Guayamuri",
+      "Descripcion": "Sistema autónomo que emplea visión por computadora e inteligencia artificial para identificar y clasificar botellas de plástico PET en tiempo real, optimizando el reciclaje y promoviendo soluciones sostenibles con robótica e IA.",
+      "Rol": "Software Developer",
+      "Tecnologias": [
+        "python",
+        "arduino",
+        "customtkinter",
+        "pillow",
+        "keras",
+        "tensorflow",
+        "teachablemachine"
+      ],
+      "orden": 2
+    },
+    {
+      "id": "cont_3",
+      "Name": "Oil-Bot<br>Robot de monitoreo acuático",
+      "Abreviatura": "Oil-Bot",
+      "Institucion": "Colegio Guayamuri",
+      "Descripcion": "Sistema autónomo que Integra sensores industriales, GPS e IoT para detectar contaminación en tiempo real y contribuir a la preservación de ecosistemas hídricos.\n​",
+      "Rol": "Software Developer",
+      "Tecnologias": [
+        "python",
+        "esp32",
+        "javascrip",
+        "html",
+        "css",
+        "supabase",
+        "firebase"
+      ],
+      "orden": 3
+    },
+    {
+      "id": "cont_4",
+      "Name": "Bootcamp de Herramientas<br>Digitales",
+      "Abreviatura": "HUB",
+      "Institucion": "HUB Networking",
+      "Descripcion": "Desarrollo de contenido programático, flexible y adaptable a cualquier público, para un bootcamp, donde se integró herramientas digitales e IA para potenciar la productividad. Con Canvas, Word, Excel y la suite de Google (Docs, Sheets, Slides, Drive) como herramientas principales para optimizar el flujo de trabajo, el diseño y la gestión de datos avanzada.",
+      "Rol": "Líder técnico",
+      "Tecnologias": [
+        "office",
+        "google",
+        "note",
+        "gemini",
+        "canva"
+      ],
+      "orden": 4
+    }
+  ],
+  "proyectos": [
+    {
+      "id": "roz",
+      "Name": "The Road of Ziko",
+      "titulo": "The Road of Ziko",
+      "Abreviatura": "roz",
+      "Descripcion": "Es un desafiante juego de parkour en Roblox desarrollado con Lua. La mecánica central castiga el contacto con el suelo y obliga al movimiento constante sobre plataformas aéreas que desaparecen, mientras evades enemigos y zombis.",
+      "descripcion": "Es un desafiante juego de parkour en Roblox desarrollado con Lua. La mecánica central castiga el contacto con el suelo y obliga al movimiento constante sobre plataformas aéreas que desaparecen, mientras evades enemigos y zombis.",
+      "Tecnologias": [
+        "robloxstudio",
+        "lua"
+      ],
+      "tecnologias": [
+        "robloxstudio",
+        "lua"
+      ],
+      "despliegue": "RobloxStudio",
+      "destacado": true,
+      "orden": 1,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-01-01T04:00:00.000Z"
+    },
+    {
+      "id": "ecc",
+      "Name": "Evaluación Cognitiva: ECC",
+      "titulo": "Evaluación Cognitiva: ECC",
+      "Abreviatura": "ecc",
+      "Descripcion": "Es una Aplicación Móvil Nativa (Kotlin/Java) que digitaliza el Test de MoCA para dar apoyo en la detección de Deterioro Cognitivo. Ofrece una interfaz intuitiva para que profesionales de la salud realicen diagnósticos precisos y gestionen resultados digitales.",
+      "descripcion": "Es una Aplicación Móvil Nativa (Kotlin/Java) que digitaliza el Test de MoCA para dar apoyo en la detección de Deterioro Cognitivo. Ofrece una interfaz intuitiva para que profesionales de la salud realicen diagnósticos precisos y gestionen resultados digitales.",
+      "Tecnologias": [
+        "unity",
+        "csharp"
+      ],
+      "tecnologias": [
+        "unity",
+        "csharp"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 2,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-02-01T04:00:00.000Z"
+    },
+    {
+      "id": "sql",
+      "Name": "PySQL Manager",
+      "titulo": "PySQL Manager",
+      "Abreviatura": "sql",
+      "Descripcion": "Es una herramienta de CLI en Python para gestionar bases de datos SQLite. Utiliza la librería rich para ofrecer una interfaz visual atractiva, permitiendo realizar operaciones CRUD completas y gestión de tablas de forma eficiente.",
+      "descripcion": "Es una herramienta de CLI en Python para gestionar bases de datos SQLite. Utiliza la librería rich para ofrecer una interfaz visual atractiva, permitiendo realizar operaciones CRUD completas y gestión de tablas de forma eficiente.",
+      "Tecnologias": [
+        "python",
+        "rich"
+      ],
+      "tecnologias": [
+        "python",
+        "rich"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 3,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-03-01T04:00:00.000Z"
+    },
+    {
+      "id": "adv",
+      "Name": "Ayudante Da Vinci",
+      "titulo": "Ayudante Da Vinci",
+      "Abreviatura": "adv",
+      "Descripcion": "Es una aplicación web que fusiona la captura de fotos con herramientas de dibujo. Utiliza JavaScript y Canvas API para permitir la edición táctil de imágenes en tiempo real, ofreciendo una experiencia creativa y responsive.",
+      "descripcion": "Es una aplicación web que fusiona la captura de fotos con herramientas de dibujo. Utiliza JavaScript y Canvas API para permitir la edición táctil de imágenes en tiempo real, ofreciendo una experiencia creativa y responsive.",
+      "Tecnologias": [
+        "html",
+        "css",
+        "javascript"
+      ],
+      "tecnologias": [
+        "html",
+        "css",
+        "javascript"
+      ],
+      "despliegue": "Netlify",
+      "destacado": false,
+      "orden": 4,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-04-01T04:00:00.000Z"
+    },
+    {
+      "id": "tca",
+      "Name": "Testing Car Arduino",
+      "titulo": "Testing Car Arduino",
+      "Abreviatura": "tca",
+      "Descripcion": "Es una aplicación en Python que permite el control remoto de un carrito mediante comunicación serial. Posee una interfaz moderna en customtkinter para enviar comandos de navegación y códigos de acceso al hardware Arduino.",
+      "descripcion": "Es una aplicación en Python que permite el control remoto de un carrito mediante comunicación serial. Posee una interfaz moderna en customtkinter para enviar comandos de navegación y códigos de acceso al hardware Arduino.",
+      "Tecnologias": [
+        "python",
+        "customtkinter",
+        "pyserial"
+      ],
+      "tecnologias": [
+        "python",
+        "customtkinter",
+        "pyserial"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 5,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-05-01T04:00:00.000Z"
+    },
+    {
+      "id": "wtp",
+      "Name": "Word-Conver to PDF",
+      "titulo": "Word-Conver to PDF",
+      "Abreviatura": "wtp",
+      "Descripcion": "Es un script de automatización en Python que realiza conversiones masivas de archivos .docx a .pdf. Utiliza la librería comtypes para interactuar con la API de Microsoft Word, permitiendo un procesamiento rápido y eficaz.",
+      "descripcion": "Es un script de automatización en Python que realiza conversiones masivas de archivos .docx a .pdf. Utiliza la librería comtypes para interactuar con la API de Microsoft Word, permitiendo un procesamiento rápido y eficaz.",
+      "Tecnologias": [
+        "python",
+        "comtypes"
+      ],
+      "tecnologias": [
+        "python",
+        "comtypes"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 6,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-06-01T04:00:00.000Z"
+    },
+    {
+      "id": "mctk",
+      "Name": "MultasCTK: Generador de Reportes",
+      "titulo": "MultasCTK: Generador de Reportes",
+      "Abreviatura": "mctk",
+      "Descripcion": "Es una aplicación de escritorio en Python que automatiza la generación de reportes de materiales y planificación mediante una interfaz moderna y eficiente, permitiendo procesar datos complejos y exportarlos a PDF de forma intuitiva.",
+      "descripcion": "Es una aplicación de escritorio en Python que automatiza la generación de reportes de materiales y planificación mediante una interfaz moderna y eficiente, permitiendo procesar datos complejos y exportarlos a PDF de forma intuitiva.",
+      "Tecnologias": [
+        "python",
+        "customtkinter"
+      ],
+      "tecnologias": [
+        "python",
+        "customtkinter"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 7,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-07-01T04:00:00.000Z"
+    },
+    {
+      "id": "crawler",
+      "Name": "CrawlerCash",
+      "titulo": "CrawlerCash",
+      "Abreviatura": "crawler",
+      "Descripcion": "Es una aplicación de escritorio en Python para convertir bolívares a divisas extranjeras. Utiliza web scraping para obtener tasas oficiales del BCV en tiempo real y ofrece una interfaz en Tkinter con gestión de historial de consultas.",
+      "descripcion": "Es una aplicación de escritorio en Python para convertir bolívares a divisas extranjeras. Utiliza web scraping para obtener tasas oficiales del BCV en tiempo real y ofrece una interfaz en Tkinter con gestión de historial de consultas.",
+      "Tecnologias": [
+        "python",
+        "requests",
+        "beautifulsoup"
+      ],
+      "tecnologias": [
+        "python",
+        "requests",
+        "beautifulsoup"
+      ],
+      "despliegue": "null",
+      "destacado": false,
+      "orden": 8,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-08-01T04:00:00.000Z"
+    },
+    {
+      "id": "neo",
+      "Name": "Gestión Médica: Neosalud",
+      "titulo": "Gestión Médica: Neosalud",
+      "Abreviatura": "neo",
+      "Descripcion": "Es una plataforma web en Vue.js y Tailwind CSS diseñada para la gestión clínica. Permite registrar, actualizar y administrar pacientes mediante una interfaz moderna, utilizando localStorage para la persistencia de datos local.",
+      "descripcion": "Es una plataforma web en Vue.js y Tailwind CSS diseñada para la gestión clínica. Permite registrar, actualizar y administrar pacientes mediante una interfaz moderna, utilizando localStorage para la persistencia de datos local.",
+      "Tecnologias": [
+        "vue",
+        "javascript",
+        "tailwindcss"
+      ],
+      "tecnologias": [
+        "vue",
+        "javascript",
+        "tailwindcss"
+      ],
+      "despliegue": "Netlify",
+      "destacado": true,
+      "orden": 9,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-09-01T04:00:00.000Z"
+    },
+    {
+      "id": "planb",
+      "Name": "PlanB: Control de Gastos",
+      "titulo": "PlanB: Control de Gastos",
+      "Abreviatura": "planb",
+      "Descripcion": "Es una aplicación en Vue.js y Vite para la gestión de finanzas personales. Permite definir presupuestos, categorizar gastos y visualizar el consumo mediante gráficos interactivos, asegurando la persistencia de datos a través de LocalStorage",
+      "descripcion": "Es una aplicación en Vue.js y Vite para la gestión de finanzas personales. Permite definir presupuestos, categorizar gastos y visualizar el consumo mediante gráficos interactivos, asegurando la persistencia de datos a través de LocalStorage",
+      "Tecnologias": [
+        "vue",
+        "javascript",
+        "css"
+      ],
+      "tecnologias": [
+        "vue",
+        "javascript",
+        "css"
+      ],
+      "despliegue": "Netlify",
+      "destacado": true,
+      "orden": 10,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-10-01T04:00:00.000Z"
+    },
+    {
+      "id": "paralelo",
+      "Name": "alParalelo",
+      "titulo": "alParalelo",
+      "Abreviatura": "paralelo",
+      "Descripcion": "Es una web en Vue.js y Vite para convertir divisas entre bolívares y dólares en tiempo real. Utiliza tasas oficiales y paralelas mediante una API externa, facilitando cálculos precisos con una interfaz moderna, limpia y funcional para el usuario.",
+      "descripcion": "Es una web en Vue.js y Vite para convertir divisas entre bolívares y dólares en tiempo real. Utiliza tasas oficiales y paralelas mediante una API externa, facilitando cálculos precisos con una interfaz moderna, limpia y funcional para el usuario.",
+      "Tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "dolarapi"
+      ],
+      "tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "dolarapi"
+      ],
+      "despliegue": "Netlify",
+      "destacado": true,
+      "orden": 11,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-11-01T04:00:00.000Z"
+    },
+    {
+      "id": "block",
+      "Name": "BlockCheck",
+      "titulo": "BlockCheck",
+      "Abreviatura": "block",
+      "Descripcion": "Es una SPA desarrollada con Vue.js y Vite que consume datos en tiempo real mediante Fetch API. Su arquitectura ligera permite cotizar activos digitales frente a monedas fiat con una interfaz responsiva y manejo de errores.",
+      "descripcion": "Es una SPA desarrollada con Vue.js y Vite que consume datos en tiempo real mediante Fetch API. Su arquitectura ligera permite cotizar activos digitales frente a monedas fiat con una interfaz responsiva y manejo de errores.",
+      "Tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "cryptocompare"
+      ],
+      "tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "cryptocompare"
+      ],
+      "despliegue": "Netlify",
+      "destacado": false,
+      "orden": 12,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2024-12-01T04:00:00.000Z"
+    },
+    {
+      "id": "clima",
+      "Name": "Climadex",
+      "titulo": "Climadex",
+      "Abreviatura": "clima",
+      "Descripcion": "Es una aplicación web desarrollada con Vue.js y Vite, permite consultar el clima global en tiempo real mediante la API de OpenWeatherMap. Ofrece una interfaz intuitiva y responsiva para visualizar datos como temperatura y condiciones meteorológicas.",
+      "descripcion": "Es una aplicación web desarrollada con Vue.js y Vite, permite consultar el clima global en tiempo real mediante la API de OpenWeatherMap. Ofrece una interfaz intuitiva y responsiva para visualizar datos como temperatura y condiciones meteorológicas.",
+      "Tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "openweathermap"
+      ],
+      "tecnologias": [
+        "vue",
+        "javascript",
+        "css",
+        "openweathermap"
+      ],
+      "despliegue": "Vercel",
+      "destacado": false,
+      "orden": 13,
+      "imagenes": [],
+      "repoUrl": "",
+      "demoUrl": "",
+      "fechaCreacion": "2025-01-01T04:00:00.000Z"
+    }
+  ]
+}

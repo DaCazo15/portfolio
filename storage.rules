@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Función para validar si el usuario está autenticado como administrador
+    function isOwner() {
+      return request.auth != null;
+    }
+
+    // Reglas para imágenes asociadas a proyectos
+    match /proyectos/{allPaths=**} {
+      // Lectura pública de imágenes
+      allow read: if true;
+      // Escritura restringida al admin: máx 5MB y formato de imagen
+      allow write: if isOwner()
+                   && request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

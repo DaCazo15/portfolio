@@ -1,0 +1,2417 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+public/
+  data/
+    Data_2.xlsx
+    Data_3.xlsx
+    Data.xlsx
+scripts/
+  compress-images.js
+src/
+  assets/
+    fondo/
+      cabeceras/
+        ayudante.png
+        block.png
+        camino-de-ziko.webp
+        Captura-Desarrollo.png
+        climadex.png
+        Conversor-Desktop.png
+        image.png
+        neosalud.png
+        planb.png
+      fondo.png
+    gifs/
+      casher.gif
+      circle.gif
+      Cloud-Transformation.gif
+      robotAmarillo.gif
+    img/
+      btn/
+        cshart.svg
+        css.webp
+        elementor.webp
+        Meta.png
+        Office.png
+        python.webp
+        supabase.webp
+        Tensorflow.png
+        tinkercad.webp
+        Vue.js.png
+      alparalelo-isologo.png
+      Diseño_sin_título__12_-removebg-preview.png
+      planb-completo-removebg-preview.png
+    vue.svg
+  assets-optimized/
+    arduino.png
+    ayudante.png
+    block.png
+    canva.png
+    Captura-Desarrollo.png
+    climadex.png
+    comtypes.png
+    Conversor-Desktop.png
+    cpp.png
+    Cryptocompare.png
+    cshart.svg
+    customtkinter.png
+    Diseño_sin_título__12_-removebg-preview.png
+    esp32.png
+    figma.svg
+    firebase.svg
+    flet.png
+    fondo.png
+    framer.png
+    gemini.png
+    github.png
+    gitlab.png
+    google.png
+    guayamuri.png
+    html.png
+    hub.jpg
+    image.png
+    keras.png
+    legospike.png
+    mblock.png
+    Meta.png
+    microbit.png
+    namecheap.svg
+    neosalud.png
+    netlify.png
+    notebooklm.png
+    Office.png
+    OpenWeatherMap.png
+    pillow.png
+    planb-completo-removebg-preview.png
+    planb.png
+    pyserial.png
+    Requests.webp
+    Rich.png
+    Roblox.png
+    sass.png
+    scratch.png
+    Tensorflow.png
+    tm.png
+    unity.png
+    vercel.png
+    Vue.js.png
+    vue.svg
+    wordpress.png
+  components/
+    About.vue
+    Boton.vue
+    Contribuciones.vue
+    Experiencia.vue
+    ExpLaboral.vue
+    Nav.vue
+    Proyectos.vue
+    Tecno.vue
+  composables/
+    useAnchoViewport.js
+    useData.js
+    usePage.js
+  helpers/
+    downloadFile.js
+    informacion.js
+  App.vue
+  main.js
+  style.css
+.gitignore
+index.html
+netlify.toml
+package.json
+README.md
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="scripts/compress-images.js">
+import imagemin from 'imagemin';
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminPngquant from 'imagemin-pngquant';
+import imageminSvgo from 'imagemin-svgo';
+
+(async () => {
+  await imagemin(['src/assets/**/*.{jpg,jpeg,png,svg}'], {
+    destination: 'src/assets-optimized',
+    plugins: [
+      imageminMozjpeg({ quality: 60 }),
+      imageminPngquant({ quality: [0.6, 0.8] }),
+      imageminSvgo()
+    ]
+  });
+  console.log('✅ Imágenes comprimidas en src/assets-optimized');
+})();
+</file>
+
+<file path="src/assets/vue.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="37.07" height="36" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 198"><path fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0h47.36Z"></path><path fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0H0Z"></path><path fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0H50.56Z"></path></svg>
+</file>
+
+<file path="src/assets-optimized/figma.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="none"><rect width="500" height="500" fill="#1E1E1E" rx="250"/><g clip-path="url(#a)"><path fill="#1ABCFE" d="M249.555 250.333a52.777 52.777 0 1 1 105.553 0 52.777 52.777 0 0 1-105.553 0"/><path fill="#0ACF83" d="M144 355.889a52.777 52.777 0 0 1 52.778-52.778h52.778v52.778a52.78 52.78 0 0 1-15.459 37.319A52.776 52.776 0 0 1 144 355.889"/><path fill="#FF7262" d="M249.555 92v105.556h52.777a52.778 52.778 0 0 0 0-105.556z"/><path fill="#F24E1E" d="M144 144.778a52.775 52.775 0 0 0 52.778 52.778h52.778V92h-52.778A52.78 52.78 0 0 0 144 144.778"/><path fill="#A259FF" d="M144 250.333a52.777 52.777 0 0 0 52.778 52.778h52.778V197.556h-52.778A52.777 52.777 0 0 0 144 250.333"/></g><defs><clipPath id="a"><path fill="#fff" d="M144 92h211.111v316.667H144z"/></clipPath></defs></svg>
+</file>
+
+<file path="src/assets-optimized/firebase.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" preserveAspectRatio="xMidYMid" viewBox="-47.5 0 351 351"><defs><filter id="b" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"><feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="17.5"/><feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/><feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/><feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/></filter><filter id="d" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"><feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="3.5"/><feOffset dx="1" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"/><feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/><feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"/></filter><path id="a" d="m1.253 280.732 1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188z"/><path id="c" d="m134.417 148.974 32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744z"/></defs><path fill="#FFC24A" d="m0 282.998 2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951z"/><use xlink:href="#a" fill="#FFA712" fill-rule="evenodd"/><use xlink:href="#a" filter="url(#b)"/><path fill="#F4BD62" d="m135.005 150.38 32.955-33.75-32.965-62.93c-3.129-5.957-11.866-5.975-14.962 0L102.42 87.287v2.86z"/><use xlink:href="#c" fill="#FFA50E" fill-rule="evenodd"/><use xlink:href="#c" filter="url(#d)"/><path fill="#F6820C" d="m0 282.998.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z"/><path fill="#FDE068" d="m139.121 347.551 116.275-64.847-33.204-204.495c-1.039-6.398-8.888-8.927-13.468-4.34L0 282.998l115.608 64.548a24.13 24.13 0 0 0 23.513.005"/><path fill="#FCCA3F" d="M254.354 282.16 221.402 79.218c-1.03-6.35-7.558-8.977-12.103-4.424L1.29 282.6l114.339 63.908a23.94 23.94 0 0 0 23.334.006l115.392-64.355z"/><path fill="#EEAB37" d="M139.12 345.64a24.13 24.13 0 0 1-23.512-.005L.931 282.015l-.93.983 115.607 64.548a24.13 24.13 0 0 0 23.513.005l116.275-64.847-.285-1.752z"/></svg>
+</file>
+
+<file path="src/assets-optimized/namecheap.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" preserveAspectRatio="xMidYMid" viewBox="0 -57 256 256"><defs><linearGradient id="a" x1="13.322%" x2="82.62%" y1="94.945%" y2="1.132%"><stop offset="0%" stop-color="#D4202C"/><stop offset="4.166%" stop-color="#D82D2B" stop-opacity=".958"/><stop offset="17.6%" stop-color="#E25226" stop-opacity=".824"/><stop offset="31.67%" stop-color="#EB7123" stop-opacity=".683"/><stop offset="46.35%" stop-color="#F28920" stop-opacity=".536"/><stop offset="61.88%" stop-color="#F69A1E" stop-opacity=".381"/><stop offset="78.86%" stop-color="#F9A41D" stop-opacity=".211"/><stop offset="100%" stop-color="#FAA71D" stop-opacity="0"/></linearGradient><linearGradient id="b" x1="86.624%" x2="17.326%" y1="5.04%" y2="98.855%"><stop offset="0%" stop-color="#D4202C"/><stop offset="4.166%" stop-color="#D82D2B" stop-opacity=".958"/><stop offset="17.6%" stop-color="#E25226" stop-opacity=".824"/><stop offset="31.67%" stop-color="#EB7123" stop-opacity=".683"/><stop offset="46.35%" stop-color="#F28920" stop-opacity=".536"/><stop offset="61.88%" stop-color="#F69A1E" stop-opacity=".381"/><stop offset="78.86%" stop-color="#F9A41D" stop-opacity=".211"/><stop offset="100%" stop-color="#FAA71D" stop-opacity="0"/></linearGradient></defs><path fill="#FF5000" d="M232 0c-9 0-16.8 5-20.9 12.3l-.5 1-18.8 37L168 97.2l15.6 30.7.9 1.7c2.4 4.2 6 7.7 10.4 9.8 4.4-2.2 8-5.6 10.4-9.8l.9-1.7 46.7-92 1.1-2.2c1.3-3 2-6.2 2-9.7 0-13.3-10.7-24-24-24M87.9 44.6 72.4 14l-.9-1.7c-2.4-4.2-6-7.7-10.4-9.8-4.4 2.2-8 5.6-10.4 9.8l-.8 1.7-46.7 92-1.1 2.2c-1.3 3-2 6.2-2 9.7 0 13.2 10.7 24 24 24 9 0 16.8-5 20.9-12.3l.5-1 18.8-37L88 44.7z"/><path fill="url(#a)" d="M232 0c-9 0-16.9 5-20.9 12.3l-.5 1-18.8 37L168 97.2l15.6 30.7.9 1.7c2.4 4.2 6 7.7 10.4 9.8 4.4-2.2 8-5.6 10.4-9.8l.9-1.7 46.7-92 1.1-2.2c1.3-3 2-6.2 2-9.7 0-13.3-10.8-24-24-24"/><path fill="url(#b)" d="M24 141.9c9 0 16.9-5 20.9-12.3l.5-1 18.8-37L88 44.7 72.4 14l-.9-1.7c-2.4-4.2-6-7.7-10.4-9.8-4.4 2.2-8 5.6-10.4 9.8l-.8 1.7-46.7 92-1.2 2.3c-1.3 3-2 6.2-2 9.7 0 13.2 10.7 23.9 24 23.9"/><path fill="#FF8C44" d="M87.9 44.6 72.4 14l-.9-1.7c-2.4-4.2-6-7.7-10.4-9.8 1.4-.7 3-1.3 4.5-1.7 1.9-.5 4-.8 6-.8h32.8c9 .1 16.8 5 20.9 12.3l.7 1.7 42.1 83.3 15.5 30.6.9 1.7c2.4 4.2 6 7.7 10.4 9.8-1.4.7-3 1.3-4.5 1.7-1.9.5-4 .8-6.1.8h-32.6c-9-.1-16.8-5-20.9-12.3l-.9-1.7z"/></svg>
+</file>
+
+<file path="src/assets-optimized/vue.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="37.07" height="36" aria-hidden="true" class="iconify iconify--logos" viewBox="0 0 256 198"><path fill="#41B883" d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0z"/><path fill="#41B883" d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0z"/><path fill="#35495E" d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0z"/></svg>
+</file>
+
+<file path="src/composables/useAnchoViewport.js">
+import { ref, onMounted, onUnmounted } from 'vue';
+
+export default function useAnchoViewport() {
+    const ancho = ref(window.innerWidth);
+
+    const actualizarAncho = () => {
+        ancho.value = window.innerWidth;
+    };
+    onMounted(() => { 
+        window.addEventListener("resize", actualizarAncho);
+    });
+    onUnmounted(() => {  
+        window.removeEventListener("resize", actualizarAncho);
+    });
+
+    return {
+        ancho
+    }
+}
+</file>
+
+<file path="src/helpers/downloadFile.js">
+export const abrirPage = (url) => {
+    window.open(url, '_blank'); // abre en nueva pestaña
+};
+
+export const descargarFile = (url) => {
+    const link = document.createElement('a');
+    link.href = url;   
+    document.body.appendChild(link); 
+    link.click();
+    document.body.removeChild(link);
+};
+
+export const initFileDownload = (url, urlDownload, tlf = false) => {
+    abrirPage(url);
+    if (tlf) return;
+    setTimeout(() => {
+        descargarFile(urlDownload);
+    }, 1000);
+}
+</file>
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="netlify.toml">
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NPM_FLAGS = "--force"
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+})
+</file>
+
+<file path="src/main.js">
+import { createApp } from 'vue'
+import './style.css'
+
+// Outfit
+import '@fontsource/outfit/400.css';
+import '@fontsource/outfit/700.css';
+
+// Rubik
+import '@fontsource/rubik/300.css';
+import '@fontsource/rubik/400.css';
+import '@fontsource/rubik/700.css';
+
+import App from './App.vue'
+
+createApp(App).mount('#app')
+</file>
+
+<file path="README.md">
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.postimg.cc/FKL1JvqG/isotipo-page.png" alt="Logo del proyecto"></a>
+</p>
+
+<h3 align="center">Portafolio Personal</h3>
+
+---
+
+<p align="center"> Un portafolio personal dinámico construido con Vue.js y Vite. Muestra mis proyectos, experiencia laboral y habilidades de una manera moderna e interactiva.
+    <br> 
+</p>
+
+## 📝 Tabla de Contenidos
+
+- [Acerca de](#acerca_de)
+- [Características](#caracteristicas)
+- [Primeros Pasos](#primeros_pasos)
+- [Uso](#uso)
+- [Construido Con](#construido_con)
+- [Autores](#autores)
+
+## 🧐 Acerca de <a name = "acerca_de"></a>
+
+Este proyecto es mi portafolio personal, diseñado para ser un escaparate de mi trayectoria profesional y mis habilidades técnicas. Está desarrollado como una Single Page Application (SPA) utilizando Vue.js, lo que permite una navegación fluida y rápida sin recargar la página.
+
+Una de las características clave de este portafolio es que todo el contenido (experiencia laboral, proyectos, etc.) se gestiona a través de un archivo `Data.xlsx`. Esto permite actualizar la información de manera sencilla y rápida sin necesidad de modificar el código fuente, simplemente editando una hoja de cálculo.
+
+## ✨ Características <a name = "caracteristicas"></a>
+
+- **Single Page Application (SPA):** Experiencia de usuario fluida y rápida.
+- **Contenido Dinámico:** La información se carga desde un archivo Excel, facilitando las actualizaciones.
+- **Diseño Responsivo:** Adaptable a diferentes tamaños de pantalla, desde móviles a ordenadores de escritorio.
+- **Componentes Interactivos:** Secciones para "Sobre mí", "Experiencia" y "Tecnologías".
+- **Descarga de Archivos:** Funcionalidad para descargar archivos, como mi CV.
+
+## 🏁 Primeros Pasos <a name = "primeros_pasos"></a>
+
+Estas instrucciones te permitirán obtener una copia del proyecto y ejecutarlo en tu máquina local para desarrollo y pruebas.
+
+### Prerrequisitos
+
+Necesitas tener Node.js y npm instalados en tu máquina.
+
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [npm](https://www.npmjs.com/) (viene con Node.js)
+
+### Instalación
+
+1.  Clona el repositorio:
+    ```
+    git clone https://github.com/DaCazo15/portfolio.git
+    ```
+
+2.  Navega al directorio del proyecto:
+    ```
+    cd portfolio
+    ```
+
+3.  Instala las dependencias:
+    ```
+    npm install
+    ```
+
+4.  Inicia el servidor de desarrollo:
+    ```
+    npm run dev
+    ```
+
+La aplicación estará disponible en `http://localhost:5173` (o el puerto que Vite especifique).
+
+## 🎈 Uso <a name="uso"></a>
+
+Una vez que el servidor de desarrollo esté en funcionamiento, abre tu navegador y navega a la URL proporcionada. Podrás explorar las diferentes secciones del portafolio. Para actualizar el contenido, modifica el archivo `public/data/Data.xlsx`.
+
+## 🚀 Despliegue a Producción
+
+Para compilar la aplicación para producción, ejecuta el siguiente comando:
+
+```bash
+npm run build
+```
+
+Esto creará una carpeta `dist` con los archivos estáticos de la aplicación.
+
+Para previsualizar la compilación de producción localmente, puedes usar el comando `preview`:
+
+```bash
+npm run preview
+```
+
+## ⛏️ Construido Con <a name = "construido_con"></a>
+
+- [Vue.js](https://vuejs.org/) - Framework Frontend
+- [Vite](https://vitejs.dev/) - Herramienta de Construcción
+- [xlsx](https://github.com/SheetJS/sheetjs) - Lectura y escritura de archivos Excel
+
+## ✍️ Autores <a name = "autores"></a>
+
+-   [@DaCazo15](https://github.com/DaCazo15) - Idea y Trabajo Inicial
+</file>
+
+<file path="src/components/Boton.vue">
+<template>
+    <div class="btn">
+        <slot></slot>
+    </div>
+</template>
+
+<style>
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--gris-oscuro);
+        font-family: var(--font-titulo);
+        color: var(--gris-claro);
+        width: auto;
+        height: 2.8rem;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        font-weight: 300;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn img{
+        height: auto;
+        width: 40px;
+    }
+    .btn:hover{
+        font-weight: 400;
+        background-color: var(--gris-claro);
+        color: var(--gris-oscuro);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border: 4px solid var(--blanco);
+    }
+</style>
+</file>
+
+<file path="src/composables/useData.js">
+import * as XLSX from "xlsx";
+import { ref } from "vue";
+
+export default function useData() {
+  const data = ref([]);
+  const loading = ref(false);
+  const error = ref(null);
+
+  const bajarData = async (url) => {
+    loading.value = true;
+    error.value = null;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+      const arrayBuffer = await response.arrayBuffer();
+      const workbook = XLSX.read(arrayBuffer, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+      data.value = jsonData.map((row) => ({
+        ...row,
+        Cargo: row.Cargo?.replace(/(\r\n|\n|\r|\\|\|1)/g, "") || "",
+        Descripcion: row.Descripcion
+          ? row.Descripcion.replace(/1/g, "-" + "&nbsp;".repeat(5))
+            .replace(/(\r\n|\n|\r|\\|\|1)/g, "")
+          : "",
+        competencias: row.competencias
+          ? row.competencias.replace(/1/g, "&nbsp;".repeat(5))
+            .replace(/(\r\n|\n|\r|\\|\|1)/g, "")
+          : "",
+        Tecnologias: typeof row.Tecnologias === "string"
+          ? row.Tecnologias.split(",").map((tech) => tech.trim().toLowerCase())
+          : [],
+      }));
+    } catch (e) {
+      error.value = e.message; // Capture the error message
+      console.error("Error loading or parsing data:", e);
+    } finally {
+      loading.value = false;
+    }
+  };
+
+  return { data, loading, error, bajarData };
+}
+</file>
+
+<file path="src/components/Experiencia.vue">
+<script setup>
+    import ExpLaboral from './ExpLaboral.vue';
+
+    import { listGif, infAbout } from '../helpers/informacion';
+
+</script>
+
+<template>
+    <div class="flex-column-center">
+        <div class="panel contenido">
+            <div class="contenido gif">
+                <img 
+                :src="listGif.circle" 
+                alt="gif about me" 
+                width="100%" 
+                height="100%" 
+                />
+            </div>
+            <div class="contenido info">
+                <div class="about">
+                    <h2>Acerca de mi</h2>
+                    <p v-html="infAbout"></p>
+                </div>
+            </div>           
+        </div>
+        <ExpLaboral/>
+        
+    </div>
+</template>
+
+<style scoped>
+    
+</style>
+</file>
+
+<file path="src/composables/usePage.js">
+import { reactive, onMounted, watch } from "vue";
+
+export default function usePage() {
+    const page = reactive({
+        inicio: true,
+        experiencia: false,
+        contribuciones: false,
+        proyectos: false,
+        // Agrega más páginas si es necesario
+    });
+
+    watch(page, (newPage) => {
+        const active = Object.keys(newPage).find(key => newPage[key])
+        localStorage.setItem('page', active)
+    }, { deep: true })
+
+    onMounted(() => {
+        const savedPage = localStorage.getItem('page')
+        if (savedPage && savedPage in page) {
+            setPage(savedPage)
+        }
+    })
+
+    const setPage = (pageName) => {
+        Object.keys(page).forEach(key => {page[key] = false;});
+        page[pageName] = true;
+    };
+
+    return { page, setPage };
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compress": "node scripts/compress-images.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/outfit": "^5.2.8",
+    "@fontsource/rubik": "^5.2.8",
+    "@ilovepdf/ilovepdf-nodejs": "^0.3.1",
+    "exceljs": "^4.4.0",
+    "marked": "^17.0.1",
+    "read-excel-file": "^6.0.1",
+    "vue": "^3.5.24",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "vite": "^7.2.4"
+  }
+}
+</file>
+
+<file path="src/components/Tecno.vue">
+<script setup>
+  import Boton from './Boton.vue'
+  import { ref } from 'vue'
+
+  import { abrirPage } from '../helpers/downloadFile' 
+  import { logoTecno } from '../helpers/informacion'
+
+  const props = defineProps({
+    logoTecno: {
+      type: Object,
+      required: true
+    },
+    tecnologias: {
+      type: Array,
+      required: true
+    },
+    page: {
+      type: Boolean,
+    }
+  })
+
+  const tecnoName = ref([
+    'legospike','microbit','tinkercad',
+    'JavaScript','gemini','tm', 'beautifulsoup'
+  ])
+
+  const tecnoNameBlack = ref([
+    'unity','pyserial',
+  ])
+
+</script>
+
+<template>
+  <div 
+    class="panel flex-row-center contenedor-tecnologias"
+    :class="{
+      contribuciones: page === true
+    }"
+  > 
+    <template v-for="tech in props.tecnologias" :key="tech">
+      <Boton 
+        v-if="logoTecno[tech]"
+        @click="abrirPage(logoTecno[tech].page)"
+      >
+        <img 
+          :src="logoTecno[tech].logo" 
+          :alt="logoTecno[tech].nombre" 
+          :class="{
+            cuadrado: tecnoName.includes(logoTecno[tech].nombre),
+            black: tecnoNameBlack.includes(logoTecno[tech].nombre)
+          }"
+          width="30px" 
+        />
+      </Boton>
+    </template>
+  </div>
+</template>
+
+
+<style scoped>
+  .contenedor-tecnologias {
+    gap: .5rem;
+    flex-wrap: wrap;
+    padding: 0.8rem;
+    width: 100%;
+  }
+  .contenedor-tecnologias.contribuciones{
+    width: 94%;
+  }
+  .cuadrado{
+    border-radius: .5rem;
+  }
+  .black{
+    filter: invert(1);
+  }
+  @media (max-width: 386px) {
+    .contenedor-tecnologias {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .5rem;
+      width: 100%;
+      align-items: center;
+    }
+  }
+</style>
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i.postimg.cc/FKL1JvqG/isotipo-page.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ingeniero de Sistemas especializado en desarrollo web y Python Full-Stack. Conoce su experiencia, proyectos y contribuciones profesionales.">
+    <title>Dacazo15</title>
+  </head>
+  <body>
+    <main>
+      <div id="app"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+</file>
+
+<file path="src/components/Contribuciones.vue">
+<script setup>
+import { onMounted } from 'vue';
+
+import Boton from './Boton.vue';
+import Tecno from './Tecno.vue';
+
+import useData from '../composables/useData';
+import useAnchoViewport from '../composables/useAnchoViewport';
+import { logosProyectos, logosInstituciones, logoTecno } from '../helpers/informacion';
+import { abrirPage } from '../helpers/downloadFile';
+
+
+const { data, bajarData } = useData();
+const { ancho } = useAnchoViewport();
+
+onMounted(() => {
+  bajarData("/data/Data_2.xlsx");
+});
+
+defineProps({
+  page: {
+    type: true,
+    required: true
+  }
+})
+
+</script>
+
+<template>
+  <template v-if="data.length > 0">
+    <h2>Contribuciones</h2>
+    <div class="grid">
+      <div 
+        class="panel contenido-informacion card flex-column-center contenido-width" 
+        v-for="(item, idex) in data" :key="idex"
+      >
+        <div class="cabecera-card">
+          <img 
+            v-if="logosInstituciones[item.Institucion]"
+            :src="logosInstituciones[item.Institucion].img" 
+            alt="item.Institucion" 
+            class="img-institucion"
+            :class="{
+              hub: item.Abreviatura === 'HUB'
+            }"
+            @click="abrirPage(logosInstituciones[item.Institucion].url)"
+            >
+            <img 
+            v-if="logosProyectos[item.Abreviatura]"
+            :src="logosProyectos[item.Abreviatura].img" 
+            alt="item.Abreviatura"
+          >
+        </div>
+        <h2 v-html="item.Name"></h2>
+
+        <div class="flex-column-center left">
+          <h3 v-html="'Institución: ' + item.Institucion" ></h3>
+          <h3 v-html="'Rol: ' + item.Rol" class="rol"></h3>
+        </div>
+        
+        <p v-html="item.Descripcion" class="texto-card"></p>
+
+        <Tecno 
+          :logoTecno="logoTecno" 
+          :page="page"
+          :tecnologias="item.Tecnologias" 
+          v-if="item.Tecnologias && item.Tecnologias.length"
+        />
+        <div
+          class="flex-row-center"
+          :class="{ ancho: ancho <= 1231 }"
+        >
+          <div
+            v-for="(value, key) in logosProyectos[item.Abreviatura]"
+            :key="key"
+          >
+            <Boton 
+              v-if="key !== 'img'"
+              @click="abrirPage(value[1])"
+              class="btn-card"
+              :class="{ 
+                pagina: value[0][4] === 'P', 
+                repositorio: value[0][4] === 'R' 
+              }"
+            >
+              {{ value[0] }}
+            </Boton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</template>
+
+<style scoped>
+  .flex-column-center{
+    padding-top: 1rem;
+  }  
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+    align-items: start;
+    justify-items: center;
+    padding-top: 2rem;
+  }
+  .flex-column-center .left{
+    align-items: flex-start;
+    width: 100%;
+  }  
+  .flex-column-center .rol{
+    margin-top: 1rem;
+  } 
+  .flex-column-center h3{
+    color: var(--gris-claro);
+    margin: 0;
+    margin: .5rem 0 0 2.5rem;
+    font-weight: 300;
+    font-size: 1.5rem
+  }
+  .texto-card{
+    margin: 1rem 2rem 0;
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--gris-claro);
+    border-left: solid 2px var(--gris-claro);
+    background-color: var(--gris-oscuro);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 0 1rem 1rem 0;
+  }
+  .hub{
+    border-radius: .5rem;
+  }
+  @media (min-width: 2200px) {
+    .grid{
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
+  @media (min-width: 3200px) {
+    .grid{
+      grid-template-columns: repeat(4, 4fr);
+    }
+  }
+  @media (max-width: 1231px) {
+    .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 791px) {
+    .flex-column-center h3{
+      margin: 1rem 0 0 1.2rem;
+      font-size: 1rem;
+    }
+    .card{
+      width: 90%;
+    }
+    .texto-card{
+      font-size: .8rem;
+      margin: 1rem 1rem 0;
+      padding: 1rem;
+    }
+  }
+</style>
+</file>
+
+<file path="src/components/ExpLaboral.vue">
+<script setup>
+    import { onMounted } from 'vue';
+    import Tecno from './Tecno.vue'
+    import { logosTrabajos, logoTecno } from '../helpers/informacion';
+
+    import useData from '../composables/useData'
+    import useAnchoViewport from '../composables/useAnchoViewport'
+
+    const { ancho } = useAnchoViewport();
+    const {data, loading, error, bajarData} = useData();
+
+    onMounted(() => {
+        bajarData("/data/Data.xlsx");
+    });
+
+</script>
+
+<template>
+    <h2 class="titulo-experiencia">Experiencia</h2>
+    <div class="contenedor-experiencia" v-for="(item, index) in data" :key="index">
+        <div class="contenedor-text">
+            <div class="flex-column-center contenido-informacion">
+                <div class="flex-row-center" :class="{ancho : ancho <= 1231}">
+                    <div class="contenedor-card">
+                        <div class="card" >
+                            <img :src="logosTrabajos[item.Abreviatura]" :alt="item.Name" :class="item.Abreviatura">
+                            <h3>{{ item.Name }}</h3>
+                            <p v-html="item.Cargo"></p>
+                        </div>
+                    </div>
+                    <div class="cont-descripcion">
+                        <h2 class="descripcion">Descripcion</h2>
+                        <p v-html="item.Descripcion"></p>
+                    </div>
+                </div>
+                <Tecno 
+                    :logoTecno="logoTecno" 
+                    :tecnologias="item.Tecnologias" 
+                    v-if="item.Tecnologias && item.Tecnologias.length"
+                />
+            </div>
+            <div class="contenido-informacion">
+                <h2 class="competencia">Competencias</h2>
+                <p class="competencias" v-html="item.competencias"></p>
+            </div>
+            
+        </div>
+    </div>
+</template>
+
+<style scoped>
+    h2.titulo-experiencia{
+        margin-top: 3rem;
+    }
+    h2.competencia, h2.descripcion, h2.Tecnologias-titulo {
+        margin-bottom: 0;
+    }
+    .card img{
+        width: 280px
+    }
+
+    @media (max-width: 791px){
+        .contenedor-text p{
+            font-weight: 300;
+            font-size: 0.8rem;
+        }
+        .card img{
+            width: 150px;
+        }
+        .card p{
+            font-size: 1rem;
+            color: var(--gris-claro);
+        }
+    }
+</style>
+</file>
+
+<file path="src/App.vue">
+<script setup>
+  import { computed } from 'vue';
+  import Nav from './components/Nav.vue';
+  import About from './components/About.vue';
+  import Experiencia from './components/Experiencia.vue';
+  import Contribuciones from './components/Contribuciones.vue';
+  import Proyectos from './components/Proyectos.vue';
+
+
+  import usePage from './composables/usePage';
+  import useAnchoViewport from './composables/useAnchoViewport';
+
+  const { page, setPage } = usePage();
+  const { ancho } = useAnchoViewport();
+
+  const esMovil = computed(() => ancho.value <= 790);
+
+</script>
+
+<template>
+  <Nav @setPage="setPage" :esMovil="esMovil"/>
+  <div 
+    v-if="page.inicio" 
+    class="inicio" 
+    :class="{ mobile : esMovil.value }"
+  >
+    <About :esMovil="esMovil"/>
+ />
+  </div>
+  <div class="inicio" v-if="page.experiencia">
+    <Experiencia />
+  </div>
+  <div class="inicio" v-if="page.contribuciones">
+    <Contribuciones 
+      :page="page.contribuciones"
+      />
+    </div>
+    <div class="inicio" v-if="page.proyectos">
+      <Proyectos 
+        :page="page.proyectos"
+      />
+  </div>
+</template>
+
+<style scoped>
+  .inicio {
+    position: relative;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gris-medio);
+    box-sizing: border-box; /* incluye el padding en el cálculo de altura */
+    overflow: hidden; /* evita que se muestre el scrollbar si algo se sale */
+  }
+  .inicio.experiencia {
+    padding-top: 0;
+  }
+  .inicio.mobile {
+    padding-top: 0;
+  }
+</style>
+</file>
+
+<file path="src/components/Proyectos.vue">
+<script setup>
+  import { onMounted } from 'vue';
+
+  import Boton from './Boton.vue';
+  import Tecno from './Tecno.vue';
+
+  import useData from '../composables/useData';
+  import useAnchoViewport from '../composables/useAnchoViewport';
+  import { logosProyectos, logoTecno, logoDespliegue } from '../helpers/informacion';
+  import { abrirPage } from '../helpers/downloadFile';
+
+
+  const { data, bajarData } = useData();
+  const { ancho } = useAnchoViewport();
+
+
+  onMounted(() => {
+    bajarData("/data/Data_3.xlsx");
+  });
+
+  defineProps({
+    page: {
+      type: true,
+      required: true
+    }
+  })
+
+  const classMap = {
+    roz: "roz",
+    ecc: "ecc",
+    crawler: "crawler",
+    neo: "neo",
+    planb: "plan",
+    clima: "clima",
+    block: "block",
+    paralelo: "paralelo",
+    adv: "adv",
+  };
+
+
+</script>
+
+<template>
+  <template v-if="data.length > 0">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div 
+        class="panel contenido-informacion card flex-column-center contenido-width" 
+        v-for="(item, idex) in data" :key="idex"
+      >
+        <div 
+          class="fondo-cabecera-card"
+          :class="classMap[item.Abreviatura]", 
+        >
+          <div 
+            class="cabecera-card"
+            :class="{default : classMap[item.Abreviatura]}"
+          >
+            <img 
+              v-if="logoDespliegue[item.despliegue]"
+              :src="logoDespliegue[item.despliegue].img" 
+              alt="item.despliegue" 
+              class="img-institucion"
+              :class="{
+                cuadrado: item.despliegue !== 'Netlify'
+              }"
+              @click="abrirPage(logoDespliegue[item.despliegue].url)"
+            >
+            <img 
+              v-if="logosProyectos[item.Abreviatura]"
+              :src="logosProyectos[item.Abreviatura].img" 
+              :alt="item.Abreviatura"
+              :class="{
+              }"
+              alt="item.Abreviatura"
+            >
+          </div>
+        </div>
+        <h2 v-html="item.Name"></h2>
+        
+        <Tecno 
+          :logoTecno="logoTecno" 
+          :page="page"
+          :tecnologias="item.Tecnologias" 
+          v-if="item.Tecnologias && item.Tecnologias.length"
+        />
+
+        <p v-html="item.Descripcion" class="texto-card"></p>
+        
+        <div
+          class="flex-row-center"
+          :class="{ ancho: ancho <= 400 }"
+        >
+          <div
+            v-for="(value, key) in logosProyectos[item.Abreviatura]"
+            :key="key"
+          >
+            <Boton 
+              v-if="key !== 'img'"
+              @click="abrirPage(value[1])"
+              class="btn-card"
+              :class="{ 
+                pagina: value[0][4] === 'P', 
+                repositorio: value[0][4] === 'R' 
+              }"
+            >
+              {{ value[0] }}
+            </Boton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</template>
+
+<style scoped>
+  .img-institucion{
+    width: 40px;
+    height: auto;
+  }
+  .flex-column-center {
+    padding-top: 1rem;
+    width: 90%;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+    align-items: start;
+    justify-items: center;
+    padding-top: 2rem;
+  }
+  .flex-column-center .left{
+    align-items: flex-start;
+    width: 100%;
+  }  
+  .flex-column-center .rol{
+    margin-top: 1rem;
+  } 
+  .flex-column-center h3{
+    color: var(--gris-claro);
+    margin: 0;
+    margin-left: 2.5rem;
+    font-weight: 300;
+    font-size: 1.5rem
+  }
+  .texto-card{
+    margin: 1rem 2rem 0;
+    padding: 2rem 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--gris-claro);
+    border-left: solid 2px var(--gris-claro);
+    background-color: var(--gris-oscuro);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    border-radius: 0 1rem 1rem 0;
+  }
+  .cuadrado{
+    border-radius: .5rem;
+  }
+  /* fondos cabecera */
+.plan, .clima, .block, 
+  .paralelo, .adv, .crawler{
+    background-position: 50%;
+  }
+  .plan, .neo{
+    background-position: 50%;
+  }
+  .roz {
+    background-position: 0px -170px;
+  }
+  .roz {
+    background-image: url('../assets/fondo/cabeceras/camino-de-ziko.webp');
+  }
+  .crawler{
+    background-image: url('../assets/fondo/cabeceras/Conversor-Desktop.png');
+  }
+  .ecc {
+    background-image: url('https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC/blob/main/assets/img/Captura-Desarrollo.png?raw=true');
+  }
+  .neo{
+    background-image: url('../assets/fondo/cabeceras/neosalud.png');
+  }
+  .plan{
+    background-image: url('../assets/fondo/cabeceras/planb.png');
+  }
+  .clima{
+    background-image: url('../assets/fondo/cabeceras/climadex.png');
+  }
+  .block{
+    background-image: url('../assets/fondo/cabeceras/block.png');
+  }
+  .paralelo{
+    background-image: url('../assets/fondo/cabeceras/image.png');
+  }
+  .adv{
+    background-image: url('../assets/fondo/cabeceras/ayudante.png');
+  }
+  .ecc, .neo, .plan, .clima, .roz,
+  .block, .paralelo, .adv, .crawler{
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .default{
+    background-color: rgba(var(--gris-oscuroRGB), 0.6);
+  }
+  @media (min-width: 2200px) {
+    .grid{
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
+  @media (min-width: 3200px) {
+    .grid{
+      grid-template-columns: repeat(4, 4fr);
+    }
+  }
+  @media (max-width: 1231px) {
+    .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (max-width: 791px) {
+    .texto-card{
+      font-size: .8rem;
+      margin: 1rem 1rem 0;
+      padding: 1rem;
+    }
+    .roz, .crawler {
+      background-position: 50%;
+    }
+    .ecc, .neo, .plan, .clima, 
+    .block, .paralelo, .adv{
+      background-position: 50%;
+    }
+  }
+</style>
+</file>
+
+<file path="src/helpers/informacion.js">
+export const listGif = {
+  cloud: new URL('../assets-optimized/gifs/Cloud-Transformation.gif', import.meta.url).href,
+  cacher: 'https://ems.andrew.cmu.edu/2018_60212f/wp-content/uploads/2018/09/Webp.net-gifmaker-7.gif',
+  circle: new URL('../assets/gifs/circle.gif', import.meta.url).href,
+};
+
+export const infAbout = "Ingeniero de Sistemas y desarrollador Full-Stack con experiencia en Python, C++ y JavaScript. He trabajado en proyectos que integran IoT con ESP32, interfaces gráficas con Flet, aplicaciones web con Vue.js y soluciones de inteligencia artificial utilizando Keras y TensorFlow.<br><br>Me apasiona transformar ideas en soluciones tecnológicas robustas y escalables, explorando constantemente nuevas herramientas y metodologías.<br><br>Disfruto enfrentar retos en entornos dinámicos, donde puedo aportar valor con innovación y creatividad.<br><br>Mi objetivo es seguir creciendo profesionalmente en una organización visionaria, contribuyendo al desarrollo de proyectos que impulsen la transformación digital y generen un impacto positivo.";
+
+export const logoTecno = {
+  csharp:{
+    nombre: 'csharp',
+    logo: 'https://i.postimg.cc/B6vJzXC8/cshart.png',
+    page: 'https://www.cshart.com/'
+  },
+  unity: {
+    nombre: 'unity',
+    logo: new URL('../assets-optimized/unity.png', import.meta.url).href,
+    page: 'https://unity.com/'
+  },
+  python: {
+    nombre: 'Python',
+    logo: new URL('../assets/img/btn/python.webp', import.meta.url).href,
+    page: 'https://www.python.org/'
+  },
+  cpp: {
+    nombre: 'C++',
+    logo: new URL('../assets-optimized/cpp.png', import.meta.url).href,
+    page: 'https://www.cplusplus.com/'
+  },
+  javascript: {
+    nombre: 'JavaScript',
+    logo: 'https://i.postimg.cc/zGpQ90C8/Java_Script_logo.png',
+    page: 'https://lenguajejs.com/javascript/'
+  },
+  vue: {
+    nombre: 'Vue.js',
+    logo: ('https://i.postimg.cc/XqhhDJdk/Vue_js_Logo_2_svg.png'),
+    page: 'https://vuejs.org/'
+  },
+  arduino: {
+    nombre: 'Arduino',
+    logo: new URL('../assets-optimized/arduino.png', import.meta.url).href,
+    page: 'https://www.arduino.cc/'
+  
+  },
+  flet: {
+    nombre: 'Flet',
+    logo: new URL('../assets-optimized/flet.png', import.meta.url).href,
+    page: 'https://flet.dev/'
+
+  },
+  meta: {
+    nombre: 'Meta',
+    logo: 'https://pngimg.com/uploads/meta/meta_PNG5.png',
+    page: 'https://business.meta.com/'
+
+  },
+  namecheap :{
+    nombre: 'Namecheap',
+    logo: new URL('../assets-optimized/namecheap.svg', import.meta.url).href,
+    page: 'https://www.namecheap.com/'
+  },
+  elementor: {
+    nombre: 'Elementor',
+    logo: new URL('../assets/img/btn/elementor.webp', import.meta.url).href,
+    page: 'https://elementor.com/'
+  },
+  figma: {
+    nombre: 'Figma',
+    logo: new URL('../assets-optimized/figma.svg', import.meta.url).href,
+    page: 'https://www.figma.com/'
+  },
+  framer: {
+    nombre: 'Framer Motion',
+    logo: new URL('../assets-optimized/framer.png', import.meta.url).href,
+    page: 'https://www.framer.com/'
+  },
+  wordpress: {
+    nombre: 'wordpress',
+    logo: new URL('../assets-optimized/wordpress.png', import.meta.url).href,
+    page: 'https://wordpress.org/'
+  },
+  customtkinter: {
+    nombre: 'CustomTkinter',
+    logo: new URL('../assets-optimized/customtkinter.png', import.meta.url).href,
+    page: 'https://customtkinter.tomschimansky.com/'
+  },
+  scratch: {
+    nombre: 'Scratch',
+    logo: new URL('../assets-optimized/scratch.png', import.meta.url).href,
+    page: 'https://scratch.mit.edu/'
+  },
+  legospike: {
+    nombre: 'legospike',
+    logo: new URL('../assets-optimized/legospike.png', import.meta.url).href,
+    page: 'https://education.lego.com/'
+  },
+  mblock: {
+    nombre: 'mblock',
+    logo: new URL('../assets-optimized/mblock.png', import.meta.url).href,
+    page: 'https://www.mblock.cc/'
+  },
+  lua: {
+    nombre: 'lua',
+    logo: 'https://i.postimg.cc/wBrYsmj0/Lua.png',
+    page: 'https://www.lua.org/'
+  },
+  microbit: {
+    nombre: 'microbit',
+    logo: new URL('../assets-optimized/microbit.png', import.meta.url).href,
+    page: 'https://microbit.org/'
+  },
+  tinkercad : {
+    nombre: 'tinkercad',
+    logo: new URL('../assets/img/btn/tinkercad.webp', import.meta.url).href,
+    page: 'https://www.tinkercad.com/'
+  },
+  robloxstudio: {
+    nombre: 'robloxstudio',
+    logo: 'https://i.postimg.cc/W4ycJk17/Roblox_Studio.png',
+    page: 'https://www.roblox.com/'
+  },
+  tailwindcss: {
+    nombre: 'tailwindcss',
+    logo: 'https://i.postimg.cc/R0YxnHZG/Tailwind.png',
+    page: 'https://tailwindcss.com/'
+  },
+  sasscss: {
+    nombre: 'sasscss',
+    logo: new URL('../assets-optimized/sass.png', import.meta.url).href,
+    page: 'https://sass-lang.com/'
+  },
+  git: {
+    nombre: 'git',
+    logo: 'https://i.postimg.cc/s2LCZhg4/Git.png',
+    page: 'https://git-scm.com/'
+  },
+  github: {
+    nombre: 'github',
+    logo: new URL('../assets-optimized/github.png', import.meta.url).href,
+    page: 'https://github.com/'
+  },
+  gitlab: {
+    nombre: 'gitlab',
+    logo: new URL('../assets-optimized/gitlab.png', import.meta.url).href,
+    page: 'https://about.gitlab.com/'
+  },
+  firebase: {
+    nombre: 'firebase',
+    logo: new URL('../assets-optimized/firebase.svg', import.meta.url).href,
+    page: 'https://firebase.google.com/'
+  },
+  supabase: {
+    nombre: 'supabase',
+    logo: new URL('../assets/img/btn/supabase.webp', import.meta.url).href,
+    page: 'https://supabase.io/'
+  },
+  google: {
+    nombre: 'google',
+    logo: new URL('../assets-optimized/google.png', import.meta.url).href,
+    page: 'https://www.google.com/'
+  },
+  office: {
+    nombre: 'office',
+    logo: 'https://i.postimg.cc/Y9K9LYmv/Office.png',
+    page: 'https://www.office.com/'
+  },
+  gemini: {
+    nombre: 'gemini',
+    logo: new URL('../assets-optimized/gemini.png', import.meta.url).href,
+    page: 'https://gemini.google.com/app'
+  },
+  canva: {
+    nombre: 'canva',
+    logo: new URL('../assets-optimized/canva.png', import.meta.url).href,
+    page: 'https://www.canva.com/'
+  },
+  note: {
+    nombre: 'note',
+    logo: new URL('../assets-optimized/notebooklm.png', import.meta.url).href,
+    page: 'https://notebooklm.google.com/'
+  },
+  keras: {
+    nombre: 'keras',
+    logo: new URL('../assets-optimized/keras.png', import.meta.url).href,
+    page: 'https://keras.io/'
+  },
+  tensorflow: {
+    nombre: 'tensorflow',
+    logo: 'https://i.postimg.cc/xCS7z1jj/Tensorflow.png',
+    page: 'https://www.tensorflow.org/'
+  },
+  teachablemachine: {
+    nombre: 'tm',
+    logo: new URL('../assets-optimized/tm.png', import.meta.url).href,
+    page: 'https://www.tm.com/'
+  },
+  html: {
+    nombre: 'html',
+    logo: new URL('../assets-optimized/html.png', import.meta.url).href,
+    page: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+  },
+  css: {
+    nombre: 'css',
+    logo: new URL('../assets/img/btn/css.webp', import.meta.url).href,
+    page: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+  },
+  rich: {
+    nombre: 'rich',
+    logo: new URL('../assets-optimized/Rich.png', import.meta.url).href,
+    page: 'https://github.com/Textualize/rich?tab=readme-ov-file'
+  },
+  requests: {
+    nombre: 'requests',
+    logo: new URL('../assets-optimized/Requests.webp', import.meta.url).href,
+    page: 'https://requests.readthedocs.io/en/latest/'
+  },
+  pyserial: {
+    nombre: 'pyserial',
+    logo: new URL('../assets-optimized/pyserial.png', import.meta.url).href,
+    page: 'https://pyserial.readthedocs.io/en/latest/'
+  },
+  pillow: {
+    nombre: 'pillow',
+    logo: new URL('../assets-optimized/pillow.png', import.meta.url).href,
+    page: 'https://pillow.readthedocs.io/en/stable/'
+  },
+  OpenWeatherMap: {
+    nombre: 'OpenWeatherMap',
+    logo: new URL('../assets-optimized/OpenWeatherMap.png', import.meta.url).href,
+    page: 'https://openweathermap.org/'
+  },
+  esp32: {
+    nombre: 'esp32',
+    logo: new URL('../assets-optimized/esp32.png', import.meta.url).href,
+    page: 'https://www.espressif.com/en/esp32'
+  },
+  Cryptocompare: {
+    nombre: 'Cryptocompare',
+    logo: new URL('../assets-optimized/Cryptocompare.png', import.meta.url).href,
+    page: 'https://www.cryptocompare.com/'
+  },
+  comtypes: {
+    nombre: 'comtypes',
+    logo: new URL('../assets-optimized/comtypes.png', import.meta.url).href,
+    page: 'https://comtypes.readthedocs.io/en/1.4.9/'
+  },
+  beautifulsoup: {
+    nombre: 'beautifulsoup',
+    logo: 'https://i.postimg.cc/QCk7kjpJ/beutifulsoup.png',
+    page: 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/'
+  }
+};
+
+export const logosTrabajos = {
+  Concepto: 'https://i.postimg.cc/mgrBfKF1/Diseño_sin_título_5_removebg_preview.png',
+  BB: 'https://i.postimg.cc/kGTzfp4t/bb_Logo.png',
+  AguaViva: 'https://i.postimg.cc/x1DyBPzq/Diseño_sin_título_4_removebg_preview.png',
+  STB: 'https://i.postimg.cc/JnnLHzXt/Diseno-sin-titulo-(6).png'
+};
+
+export const logosProyectos = {
+  "E-28":{
+    img: 'https://i.postimg.cc/8ChFFHT4/B-28.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Arduino'],
+  },
+  "B-28":{
+    img: 'https://i.postimg.cc/8ChFFHT4/B-28.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Selector-de-PET'],
+  },
+  "Oil-Bot": {
+    img: 'https://i.postimg.cc/tJqMx2WH/oil-bot.png',
+    page: ['Ver Pagina', 'https://monitoreo-acuatico-esp32.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Selector-de-PET'],
+  },
+  "HUB": {
+    img: 'https://i.postimg.cc/CMNmL43V/bootcamp_tecnologico.png',
+    page: ['Ver Pagina', 'https://www.instagram.com/hubnetworkingmgta/'],
+  },
+  "roz": {
+    img: 'https://i.postimg.cc/4dfLZV7v/roz.png',
+    roblox: ['Ver Roblox', 'https://www.roblox.com/es/games/17568423475/El-camino-de-ziko'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/The-Road-of-Ziko'],
+  },
+  "ecc": {
+    img: 'https://i.postimg.cc/j5LtdhXZ/ECC.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Evaluacion-Cognitiva-ECC'],
+  },
+  "sql":{
+    img: 'https://i.postimg.cc/h4mhLS8c/PySQL_Console.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/PySQL-Manager'],
+  },
+  "adv": {
+    img: 'https://i.postimg.cc/kXhN2MqQ/Ayudante_Da_Vinci.png',
+    page: ['Ver Pagina', 'https://ayudante-da-viniv.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/JavaScript/tree/main/app_cam_js'],
+  },
+  "tca": {
+    img: 'https://i.postimg.cc/RFRK44gg/testing_car_arduino.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Testing-Car-Arduino'],
+  },
+  "wtp": {
+    img: 'https://i.postimg.cc/6QQr6XLF/converPDF.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/converPDF-py'],
+  },
+  "mctk": {
+    img: 'https://i.postimg.cc/FKthsSqv/MultasCTK.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/CustomTkinter/tree/main/Multas-CTK---Generador-de-Reportes'],
+  },
+  "crawler": {
+    img: 'https://i.postimg.cc/GmwvZf2F/CrawlerCash.png',
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/CrawlerCash'],
+  },
+  "neo": {
+    img: new URL('../assets/img/Diseño_sin_título__12_-removebg-preview.png', import.meta.url).href,
+    page: ['Ver Pagina', 'https://mascota-feliz.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Neosalud'],
+  },
+  "planb": {
+    img: new URL('../assets/img/planb-completo-removebg-preview.png', import.meta.url).href,
+    page: ['Ver Pagina', 'https://administra.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/PlanB-Control-de-Gastos'],
+  },
+  "paralelo": {
+    img: new URL('../assets/img/alparalelo-isologo.png', import.meta.url).href,
+    page: ['Ver Pagina', 'https://al-cambio.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/alParalelo'],
+  },
+  "block": {
+    img: 'https://i.postimg.cc/50Fy34Vy/BlockCheck.png',
+    page: ['Ver Pagina', 'https://cotiza-lacrypto.netlify.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/BlockCheck'],
+  },
+  "clima": {
+    img: 'https://i.postimg.cc/nzYMB274/Climadex.png',
+    page: ['Ver Pagina', 'https://consulta-climatica-three.vercel.app/'],
+    github: ['Ver Repositorio', 'https://github.com/DaCazo15/Climadex'],
+  },
+};
+
+export const logoDespliegue = {
+  Vercel: {
+    img: new URL('../assets-optimized/vercel.png', import.meta.url).href,
+    page: 'https://vercel.com/'
+  },
+  Netlify: {
+    img: new URL('../assets-optimized/netlify.png', import.meta.url).href,
+    page: 'https://www.netlify.com/'
+  },
+  RobloxStudio: {
+    img: new URL('../assets-optimized/Roblox.png', import.meta.url).href,
+    page: 'https://www.roblox.com/'
+  },
+}
+
+export const logosInstituciones = {
+  "Colegio Guayamuri": {
+    img : new URL('../assets-optimized/guayamuri.png', import.meta.url).href,
+    url : 'https://www.guayamuri.com/' 
+  },
+  "HUB Networking": {
+    img : new URL('../assets-optimized/hub.jpg', import.meta.url).href,
+    url : 'https://www.instagram.com/hubnetworkingmgta/' 
+  }
+};
+</file>
+
+<file path="src/components/About.vue">
+<script setup>
+import Boton from './Boton.vue';
+import { abrirPage, initFileDownload } from '../helpers/downloadFile';
+
+defineProps({
+    esMovil: {
+        type: Boolean,
+        required: true
+    }
+});
+
+const profileImage = 'https://i.postimg.cc/PJztZ8bw/Foto_Perfil_avif.avif';
+const cvUrl = 'https://drive.google.com/file/d/1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U/view?usp=sharing';
+const cvDownloadUrl = 'https://drive.google.com/uc?export=download&id=1ynkUOJPeiWfLEIJnWk8P4vsqn6qpl82U';
+const downloadIcon = 'https://i.postimg.cc/VsxSyjHN/download_avif.avif';
+
+const socialButtons = [
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/danielcp5150190/',
+        icon: 'https://i.postimg.cc/FRPKnSdB/linkedin_negro_avif.avif',
+        imgClass: 'linkedin'
+    },
+    {
+        name: 'GitHub',
+        url: 'https://github.com/DaCazo15',
+        icon: 'https://i.postimg.cc/HkSPnsMt/github.avif',
+        imgClass: 'github'
+    }
+];
+</script>
+
+<template>
+    <div class="about">
+        <div class="border">
+            <img
+                :src="profileImage"
+                alt="Foto de perfil"
+                class="imagen"
+                fetchpriority="high"
+                width="160"
+                height="160"
+            />
+        </div>
+        <h1>Daniel Cazorla</h1>
+        <span>Ingeniero de Sistemas con experiencia en desarrollo web y Python Full-Stack</span>
+        <div class="contenedor-btn">
+            <Boton
+                v-for="social in socialButtons"
+                :key="social.name"
+                class="btn-red-social"
+                target="_blank"
+                @click="abrirPage(social.url)"
+            >
+                <img :class="social.imgClass" :src="social.icon" :alt="social.name">
+            </Boton>
+        </div>
+        <Boton
+            @click="initFileDownload(cvUrl, cvDownloadUrl, esMovil)"
+            class="btn-cv"
+        >
+            <img :src="downloadIcon" alt="Descargar CV">
+            <span>Descargar CV</span>
+        </Boton>
+    </div>
+</template>
+
+<style scoped>
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .about h1 {
+        font-family: var(--font-titulo);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gris-claro);
+        margin: 1.5rem 0 1rem 0;
+    }
+    .about span {
+        font-family: var(--font-titulo);
+        color: var(--gris-claro);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: .5rem;
+        padding: 0 .8rem;
+        text-wrap: balance;
+    }
+    .border {
+        width: 12rem;
+        height: 12rem;
+        margin-top: 4rem;
+        aspect-ratio: 1 / 1; /* Mantén el círculo siempre redondo */
+        border: 4px solid var(--gris-claro);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagen {
+        width: 10rem;
+        height: 10rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+        display: block;
+    }
+    .btn-red-social {
+        background-color: var(--gris-claro);
+        border: solid var(--gris-claro) 2px;
+        margin-top: .75rem;
+        padding: .4rem;
+        border-radius: .5rem;
+        height: auto;
+    }
+    .btn-red-social:hover {
+        background-color: var(--gris-oscuro);
+    }
+    .btn-red-social:hover .linkedin,
+    .btn-red-social:hover .github {
+        filter: invert(1) brightness(2);
+    }
+    .linkedin, .github {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .contenedor-btn {
+        display: flex;
+        gap: 1rem;
+    }
+    .btn-cv {
+        margin-top: .75rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: solid var(--gris-oscuro) 2px;
+        margin-bottom: 2rem; /* añade espacio debajo */
+    }
+    .btn-cv img {
+        filter: invert(1) brightness(2);
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .btn-cv span {
+        font-size: 1rem;
+    }
+    .btn-cv:hover {
+        background-color: transparent;
+        border: solid var(--gris-claro) 2px;
+    }
+    @media (max-height: 740px) {
+        .about {
+            margin-top:-4rem;
+        }
+        .btn-cv{
+            padding: .6rem;
+        }
+        .imagen {
+            width: 8rem;
+            height: 8rem;
+        }
+        .border {
+            margin-top: 0;
+            width: 10rem;
+            height: 10rem;
+        }
+        .about h1 {
+            font-size: 1.5rem;
+        }
+        .about span {
+            font-size: 1rem;
+        }
+        .linkedin, .github {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        .contenedor-btn {
+            gap: 1.2rem;
+        }
+    }
+    @media (max-height: 640px) {
+        .about {
+            margin-top:2rem;
+        }
+    }
+</style>
+</file>
+
+<file path="src/components/Nav.vue">
+<script setup>
+    import { computed, ref } from 'vue';
+    import Boton from './Boton.vue';
+
+    const emit = defineEmits(['setPage']);
+    const menuAbierto = ref(false);
+
+    const props = defineProps({
+        esMovil: {
+            type: Boolean,
+            required: true
+        }
+    });
+
+    const menuToggle = (tipo) => {
+        if (!menuAbierto.value && tipo == 'menu') {
+            menuAbierto.value = true; // solo abre si está cerrado
+        }
+        if (menuAbierto.value && tipo != 'menu') {
+            menuAbierto.value = false; // solo cierra si está abierto
+        }
+    };
+</script>
+
+<template>
+    <nav>
+        <div class="contenedor-nav">
+            <p class="nombre">Dacazo15</p>
+            <div class="contenedor-btn" v-if="!props.esMovil">
+                <Boton
+                    @click="emit('setPage', 'inicio')"
+                    class="btn-nav"
+                >Inicio</Boton>
+                <Boton
+                    @click="emit('setPage', 'experiencia')"
+                    class="btn-nav"
+                >Experiencia</Boton>
+                <Boton
+                    @click="emit('setPage', 'contribuciones')"
+                    class="btn-nav"
+                >Contribuciones</Boton>
+                <Boton
+                    @click="emit('setPage', 'proyectos')"
+                    class="btn-nav"
+                >Proyectos</Boton>
+            </div>
+            <Boton
+                v-if="props.esMovil"
+                class="menu"
+                @click="menuToggle('menu')"
+            ><img src="https://i.postimg.cc/L5cgNPGZ/MENU_lit.png" alt="menu">
+            </Boton>
+        </div>
+        <div class="contenedor-btn-inferior" v-if="menuAbierto && props.esMovil">
+            <Boton
+                @click="[emit('setPage', 'inicio'), menuToggle('inicio')]"
+                class="btn-inferior"
+            ><img src="https://i.postimg.cc/L6WxF0F4/home.png" alt="home" width="40">
+            </Boton>
+            <Boton
+                @click="[emit('setPage', 'experiencia'), menuToggle('experiencia')]"
+                class="btn-inferior"
+            ><img src="https://i.postimg.cc/TYstvHvP/clock.png" alt="experiencia" width="40">
+            </Boton>
+            <Boton
+                @click="[emit('setPage', 'contribuciones'), menuToggle('contribuciones')]"
+                class="btn-inferior"
+            ><img src="https://i.postimg.cc/VLhKPHPv/puzzle.png" alt="contribuciones" width="40">
+            </Boton>
+            <Boton
+                @click="[emit('setPage', 'proyectos'), menuToggle('proyectos')]"
+                class="btn-inferior"
+            ><img src="https://i.postimg.cc/Wby5cfc1/startup.png" alt="proyectos" width="40">
+            </Boton>
+        </div>
+    </nav>
+</template>
+
+<style scoped>
+    .contenedor-nav {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        top: .4rem; right: .4rem; left: .4rem;
+        width: auto;
+        z-index: 1000; /* asegura que esté por encima de otros elementos */
+        background-color: var(--gris-oscuro);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        padding: 0.5rem 2rem;
+        margin-bottom: 1rem;
+    }
+    .nombre{
+        padding: 0 0 0 .5rem;
+        width: 100%;
+        color: var(--gris-claro);
+        font-family: var(--font-titulo);
+        font-size: 1.5rem; font-weight: 700;
+
+        text-align: left;
+        margin: 0 auto;
+        letter-spacing: .1rem;
+    }
+    @media (max-width: 790px) {
+        .nombre {
+            font-size: 1.2rem;
+        }
+        .menu {
+            padding: .5rem;
+        }
+        .menu img {
+            height: 1.7rem;
+            width: 1.7rem;
+            filter: invert(1) brightness(2);
+        }
+        .menu img:hover {
+            filter: invert(0) brightness(0);
+        }
+        .contenedor-nav{
+            padding: 0.5rem 1rem;
+        }
+    }
+</style>
+</file>
+
+<file path="src/style.css">
+:root {
+  --fondo-negro: rgb(0, 11, 16);
+  --gris-oscuro: #242424;
+  --gris-claro: #e7e7e7;
+  --verde-cian: #008686;
+  --verde-cian-oscuro: #015f5f;
+  --gris-oscuroRGB: 36, 36, 36;
+  --font-titulo: 'Rubik', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;   
+  min-height: 100%;     
+  background-color: var(--fondo-negro);
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+
+nav {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  top: 0;
+}
+
+h2 {
+  font-family: var(--font-titulo);
+  color: var(--gris-claro);
+  font-size: 2rem;
+  margin: 1rem 0 .5rem 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--font-titulo);
+  color: var(--verde-cian);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  margin: -1rem 0 -.5rem 0;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* --- CLASES DE UTILIDAD --- */
+.flex-column-center {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.ancho{
+  flex-direction: column;
+}
+
+/* --- PANELES BASE --- */
+.panel {
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(var(--gris-oscuroRGB), 0.7);
+  border-radius: 1rem;
+  box-shadow: 16px 16px 15px -3px rgba(0, 0, 0, 0.1);
+  color: var(--gris-claro);
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-informacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(var(--gris-oscuroRGB), 0.5);
+  border: solid 5px rgba(var(--gris-oscuroRGB), 0.8);
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  gap: 2rem;
+}
+
+/* --- COMPONENTES ESPECIFICOS --- */
+
+.contenedor-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn-nav{
+  height: 2rem;
+}
+
+.contenedor-btn-inferior {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 5.5rem;
+  z-index: 2000;
+  background-color: var(--gris-oscuro);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.5rem 1rem;
+  gap: .5rem;
+}
+
+.btn-inferior img {
+  margin: .2rem;
+  padding: .4rem;
+  filter: invert(1) brightness(2);
+}
+
+.btn-inferior:hover {
+  background-color: var(--gris-oscuro);
+  box-shadow: none;
+}
+
+.btn-tecnologia {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.365);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-tecnologia:hover {
+  background-color: var(--gris-oscuro);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.btn-tecnologia img {
+  width: 30px;
+  height: auto;
+}
+
+.btn-tecnologia img[alt="javascript"] {
+  border-radius: .5rem;
+}
+
+.contenedor-experiencia {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.contenido-informacion .competencias {
+  padding: 1rem 0 1rem 1rem;
+  border-left: solid 2px var(--gris-claro);
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--gris-oscuro);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-wrap: balance;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.contenido .gif,
+.contenido .info {
+  width: 100%;
+  height: 100%;
+}
+
+.contenido .gif {
+  background-color: transparent;
+  box-shadow: none;
+  flex: auto;
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.contenido .gif img {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.contenido .info {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.contenido .info p {
+  color: var(--gris-claro);
+  font-family: var(--font-titulo);
+  padding: 0 1.2rem;
+  font-size: .9rem;
+  text-align: left;
+  white-space: pre-line;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  text-wrap: balance;
+  margin: 0 0 1rem 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  background-color: rgba(var(--gris-oscuroRGB), 0.8);
+  padding: 1rem;
+  color: var(--gris-claro);
+  border-radius: 1rem;
+}
+
+.card p {
+  font-family: var(--font-titulo);
+  width: auto;
+  line-height: 1.2;
+  font-size: 1rem;
+  margin: -.2rem 0 0 0;
+  text-align: center;
+}
+.fondo-cabecera-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  border-radius: .5rem .5rem 0 0;
+}
+.cabecera-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+
+  border-radius: .5rem .5rem 0 0;
+
+  width: 100%;
+  height: auto;
+
+  background-color: var(--gris-claro);
+}
+.cabecera-card img{
+  height: 200px;
+  width: auto;
+}
+.cabecera-card .img-institucion{
+  z-index: 10;
+  display: flex;
+  position: absolute;
+  right: .8rem;
+  bottom: .8rem;
+
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+.cabecera-card .flex-row-center{
+  gap: 1rem;
+}
+.btn-card{
+  margin: 0 1rem;
+}
+.btn-card.pagina{
+  background-color: var(--verde-cian);
+  color: var(--blanco);
+}
+.btn-card.repositorio{
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+}
+.btn-card:hover{
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+}
+.ancho .btn-card{
+  margin: .5rem 0;
+}
+
+.contenedor-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contenedor-text p {
+  text-wrap: balance;
+  line-height: 1.5;
+  font-family: var(--font-titulo);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--gris-claro);
+  width: 100%;
+}
+
+.cont-descripcion {
+  width: 100%;
+}
+
+.cont-descripcion p {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+.STB {
+  border-radius: 50%;
+  margin-bottom: .8rem;
+  width: 270px;
+}
+
+.contenido-width{
+  width: 90%;
+}
+.contenido-width .card{
+  background-color: rgba(var(--gris-oscuroRGB), 0.5)
+}
+
+.panel, .contenido-informacion {
+  min-height: auto; /* no fuerces height: 100% */
+}
+
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1231px) {
+  .contenido .gif img {
+    border: solid 4px var(--gris-claro);
+    border-radius: 50%;
+    width: 80%;
+  }
+  
+  .contenido-informacion {
+    flex-direction: column;
+  }
+  
+  .cont-descripcion p {
+    padding: 1rem;
+    border-left: solid 2px var(--gris-claro);
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--gris-oscuro);
+  }
+  
+  .card {
+    width: 600px;
+  }
+  .contenido-width .card{
+    width: 100%;
+  }
+  .grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 791px) {
+  h2 {
+    margin: .5rem 0 .5rem 0;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+  .flex-column-center{
+    padding-top: 2rem;
+  }
+  .contenido {
+    padding: 0 1rem;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .contenido .gif img {
+    margin-top: 2rem;
+  }
+
+  .contenido .info {
+    padding: 0;
+  }
+
+  .contenido .info p {
+    background-color: var(--gris-oscuro);
+    border-radius: 0 1rem 1rem 0;
+    border-left: solid 2px var(--gris-claro);
+    ;
+    padding: 1rem;
+    font-size: .8rem;
+    font-weight: 400;
+  }
+
+  .contenedor-card {
+    width: 100%;
+  }
+
+  .card {
+    width: auto;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--verde-cian);
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--verde-cian-oscuro);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--fondo-negro);
+}
+</file>
+
+</files>

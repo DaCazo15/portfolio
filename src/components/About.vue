@@ -1,5 +1,6 @@
 <script setup>
 import Boton from './Boton.vue';
+import CarruselDestacados from './carrusel/CarruselDestacados.vue';
 import { abrirPage, initFileDownload } from '../helpers/downloadFile';
 
 defineProps({
@@ -62,6 +63,9 @@ const socialButtons = [
             <img :src="downloadIcon" alt="Descargar CV">
             <span>Descargar CV</span>
         </Boton>
+
+        <!-- Carrusel de Proyectos Destacados -->
+        <CarruselDestacados />
     </div>
 </template>
 

@@ -1,29 +1,50 @@
 <script setup>
-  import { onMounted } from 'vue';
-
+  import { watch, nextTick, onUnmounted } from 'vue';
+  import gsap from 'gsap';
   import Boton from './Boton.vue';
   import Tecno from './Tecno.vue';
+  import ProyectosCharts from './charts/ProyectosCharts.vue';
 
-  import useData from '../composables/useData';
+  import { useFirestoreCollection } from '../composables/useFirestoreCollection';
   import useAnchoViewport from '../composables/useAnchoViewport';
   import { logosProyectos, logoTecno, logoDespliegue } from '../helpers/informacion';
   import { abrirPage } from '../helpers/downloadFile';
 
-
-  const { data, bajarData } = useData();
+  const { data } = useFirestoreCollection('proyectos', { realtime: true });
   const { ancho } = useAnchoViewport();
-
-
-  onMounted(() => {
-    bajarData("/data/Data_3.xlsx");
-  });
 
   defineProps({
     page: {
       type: true,
       required: true
     }
-  })
+  });
+
+  let animacionContext = null;
+
+  watch(data, () => {
+    nextTick(() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) return;
+
+      if (animacionContext) animacionContext.revert();
+      animacionContext = gsap.context(() => {
+        gsap.from('.card-proyecto-item', {
+          opacity: 0,
+          y: 28,
+          scale: 0.97,
+          stagger: 0.08,
+          duration: 0.55,
+          ease: 'power2.out',
+          clearProps: 'all'
+        });
+      });
+    });
+  }, { immediate: true });
+
+  onUnmounted(() => {
+    if (animacionContext) animacionContext.revert();
+  });
 
   const classMap = {
     roz: "roz",
@@ -36,8 +57,6 @@
     paralelo: "paralelo",
     adv: "adv",
   };
-
-
 </script>
 
 <template>
@@ -45,7 +64,7 @@
     <h2>Proyectos</h2>
     <div class="grid">
       <div 
-        class="panel contenido-informacion card flex-column-center contenido-width" 
+        class="panel contenido-informacion card flex-column-center contenido-width card-proyecto-item" 
         v-for="(item, idex) in data" :key="idex"
       >
         <div 
@@ -110,6 +129,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Gráficas dinámicas de proyectos -->
+    <ProyectosCharts />
   </template>
 </template>
 
